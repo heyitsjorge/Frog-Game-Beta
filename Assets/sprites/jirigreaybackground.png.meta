@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      jirigreaybackground_0: -2959825682241626116
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

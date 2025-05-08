@@ -1,19 +1,37 @@
 fileFormatVersion: 2
-guid: 3fbca42e62a494c56a628f8edb777351
+guid: f5e263e93e064324b84d55c87b368c34
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7461628827143845435
-    second: idleJiri_0
+      213: -8578111800719532423
+    second: Frog_Run_v3_0
   - first:
-      213: -2807802348331436831
-    second: idleJiri_1
+      213: -1622676971974093174
+    second: Frog_Run_v3_1
   - first:
-      213: 4277706252826299071
-    second: idleJiri_2
+      213: 738107049754318752
+    second: Frog_Run_v3_2
   - first:
-      213: -6882461811706486501
-    second: idleJiri_3
+      213: 907800453912493239
+    second: Frog_Run_v3_3
+  - first:
+      213: -4924487224840071331
+    second: Frog_Run_v3_4
+  - first:
+      213: -2064679185743582976
+    second: Frog_Run_v3_5
+  - first:
+      213: -325963642414594343
+    second: Frog_Run_v3_6
+  - first:
+      213: 7166076609170027921
+    second: Frog_Run_v3_7
+  - first:
+      213: 6675797870742396342
+    second: Frog_Run_v3_8
+  - first:
+      213: -9185997087012404812
+    second: Frog_Run_v3_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,13 +140,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: idleJiri_0
+      name: Frog_Run_v3_0
       rect:
         serializedVersion: 2
         x: 1
         y: 0
-        width: 30
-        height: 28
+        width: 31
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,19 +155,63 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b3639b782e70d8760800000000000000
-      internalID: 7461628827143845435
+      spriteID: 97e968a14cc64f880800000000000000
+      internalID: -8578111800719532423
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idleJiri_1
+      name: Frog_Run_v3_1
       rect:
         serializedVersion: 2
-        x: 33
+        x: 37
         y: 0
-        width: 31
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a86174c24e71b79e0800000000000000
+      internalID: -1622676971974093174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Run_v3_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a751da73784e3a00800000000000000
+      internalID: 738107049754318752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Run_v3_3
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 0
+        width: 29
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -159,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1e4723cf3aea809d0800000000000000
-      internalID: -2807802348331436831
+      spriteID: 7bc746ef3b7299c00800000000000000
+      internalID: 907800453912493239
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idleJiri_2
+      name: Frog_Run_v3_4
       rect:
         serializedVersion: 2
-        x: 65
+        x: 131
         y: 0
-        width: 30
-        height: 28
+        width: 27
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +243,42 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fbacd253c277d5b30800000000000000
-      internalID: 4277706252826299071
+      spriteID: d575576c5f4b8abb0800000000000000
+      internalID: -4924487224840071331
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idleJiri_3
+      name: Frog_Run_v3_5
       rect:
         serializedVersion: 2
-        x: 98
+        x: 165
         y: 0
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0096c9e3839c853e0800000000000000
+      internalID: -2064679185743582976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Run_v3_6
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 1
         width: 28
-        height: 27
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,8 +287,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b112b0572759c70a0800000000000000
-      internalID: -6882461811706486501
+      spriteID: 9d68f245bc1f97bf0800000000000000
+      internalID: -325963642414594343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Run_v3_7
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 0
+        width: 22
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 195b0d265b4037360800000000000000
+      internalID: 7166076609170027921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Run_v3_8
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 0
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bdd8e52bc235ac50800000000000000
+      internalID: 6675797870742396342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Run_v3_9
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 0
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b14ad0a158c48080800000000000000
+      internalID: -9185997087012404812
       vertices: []
       indices: 
       edges: []
@@ -222,11 +372,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      idleJiri_0: 7461628827143845435
-      idleJiri_1: -2807802348331436831
-      idleJiri_2: 4277706252826299071
-      idleJiri_3: -6882461811706486501
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

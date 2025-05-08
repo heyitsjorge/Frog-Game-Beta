@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 91f0a79c87ee64f33a8dceeeb24481a3
+guid: 2fe034ffcbacb5546b1f68063271fcc9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 976752754930329259
-    second: Frog_Big_Jump_0
+      213: -1289056524943332496
+    second: Frog_Idle_0
+  - first:
+      213: -7617497109469342470
+    second: Frog_Idle_1
+  - first:
+      213: -3775426981648322447
+    second: Frog_Idle_2
+  - first:
+      213: -7958846385981659248
+    second: Frog_Idle_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +122,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Frog_Big_Jump_0
+      name: Frog_Idle_0
       rect:
         serializedVersion: 2
         x: 1
@@ -128,8 +137,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ba6a10f947f1e8d00800000000000000
-      internalID: 976752754930329259
+      spriteID: 07b6a579be95c1ee0800000000000000
+      internalID: -1289056524943332496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 0
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af4d388fcb6394690800000000000000
+      internalID: -7617497109469342470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 0
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1703d6bc92dfa9bc0800000000000000
+      internalID: -3775426981648322447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 0
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09769a5316f7c8190800000000000000
+      internalID: -7958846385981659248
       vertices: []
       indices: 
       edges: []
@@ -147,8 +222,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Frog_Big_Jump_0: 976752754930329259
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

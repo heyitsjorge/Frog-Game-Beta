@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 91f0a79c87ee64f33a8dceeeb24481a3
+guid: 728a84b611db64d4f9f21210323ca273
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 976752754930329259
-    second: Frog_Big_Jump_0
+      213: 2837257013642637027
+    second: grass_1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Frog_Big_Jump_0
+      name: grass_1_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 0
-        width: 31
-        height: 29
+        width: 8
+        height: 3
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ba6a10f947f1e8d00800000000000000
-      internalID: 976752754930329259
+      spriteID: 3eea7a2b836ff5720800000000000000
+      internalID: 2837257013642637027
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Frog_Big_Jump_0: 976752754930329259
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
