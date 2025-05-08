@@ -38,7 +38,7 @@ public class JiriMovement : MonoBehaviour
 
         // Flip sprite based on direction
         if (moveX != 0)
-            sr.flipX = moveX < 0;
+            sr.flipX = moveX > 0;
 
         // Jump
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);

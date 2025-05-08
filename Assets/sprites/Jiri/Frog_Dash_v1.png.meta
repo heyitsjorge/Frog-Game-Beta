@@ -472,7 +472,21 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Frog_Dash_v1_0: -4180542970464928571
+      Frog_Dash_v1_1: -7564197177511952456
+      Frog_Dash_v1_10: 5924059750324662057
+      Frog_Dash_v1_11: -6496635835242784676
+      Frog_Dash_v1_12: 5922354970097370246
+      Frog_Dash_v1_13: 2135510329027173889
+      Frog_Dash_v1_2: -4944227378860589615
+      Frog_Dash_v1_3: 3892523939033692886
+      Frog_Dash_v1_4: 7373394096446196329
+      Frog_Dash_v1_5: 333445167401334967
+      Frog_Dash_v1_6: 3989915109603331369
+      Frog_Dash_v1_7: -7784745417365843416
+      Frog_Dash_v1_8: -7903576453429979249
+      Frog_Dash_v1_9: -6636789761521610187
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

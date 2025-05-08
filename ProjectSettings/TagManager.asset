@@ -13,7 +13,7 @@ TagManager:
   - UI
   - Ground
   - 
-  - 
+  - Background
   - 
   - 
   - 
@@ -40,6 +40,21 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2467137865
+    locked: 0
+  - name: Platform
+    uniqueID: 74814813
+    locked: 0
+  - name: Player
+    uniqueID: 838618731
+    locked: 0
+  - name: Goodies
+    uniqueID: 788198115
+    locked: 0
+  - name: UI
+    uniqueID: 3328829823
     locked: 0
   m_RenderingLayers:
   - Default

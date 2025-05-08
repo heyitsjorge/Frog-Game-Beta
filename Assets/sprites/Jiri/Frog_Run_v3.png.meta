@@ -372,7 +372,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Frog_Run_v3_0: -8578111800719532423
+      Frog_Run_v3_1: -1622676971974093174
+      Frog_Run_v3_2: 738107049754318752
+      Frog_Run_v3_3: 907800453912493239
+      Frog_Run_v3_4: -4924487224840071331
+      Frog_Run_v3_5: -2064679185743582976
+      Frog_Run_v3_6: -325963642414594343
+      Frog_Run_v3_7: 7166076609170027921
+      Frog_Run_v3_8: 6675797870742396342
+      Frog_Run_v3_9: -9185997087012404812
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
