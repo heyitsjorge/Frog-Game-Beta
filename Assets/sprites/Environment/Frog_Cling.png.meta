@@ -1,19 +1,22 @@
 fileFormatVersion: 2
-guid: 2fe034ffcbacb5546b1f68063271fcc9
+guid: a54e2e454c7ed214aa92e95c41415bdf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1289056524943332496
-    second: Frog_Idle_0
+      213: 3642235302715051702
+    second: Frog_Cling_0
   - first:
-      213: -7617497109469342470
-    second: Frog_Idle_1
+      213: -1234694394206512591
+    second: Frog_Cling_1
   - first:
-      213: -3775426981648322447
-    second: Frog_Idle_2
+      213: -6164847526341539199
+    second: Frog_Cling_2
   - first:
-      213: -7958846385981659248
-    second: Frog_Idle_3
+      213: 3711893517690867018
+    second: Frog_Cling_3
+  - first:
+      213: 5135721738428430062
+    second: Frog_Cling_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -84,7 +87,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -122,13 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Frog_Idle_0
+      name: Frog_Cling_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 128
-        height: 48
+        x: 1
+        y: 5
+        width: 26
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 07b6a579be95c1ee0800000000000000
-      internalID: -1289056524943332496
+      spriteID: 6bec7bed5b1db8230800000000000000
+      internalID: 3642235302715051702
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Idle_1
+      name: Frog_Cling_1
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 128
-        height: 48
+        x: 35
+        y: 2
+        width: 22
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +162,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: af4d388fcb6394690800000000000000
-      internalID: -7617497109469342470
+      spriteID: 13a972b7dfb7ddee0800000000000000
+      internalID: -1234694394206512591
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Idle_2
+      name: Frog_Cling_2
       rect:
         serializedVersion: 2
-        x: 256
-        y: 0
-        width: 128
-        height: 48
+        x: 66
+        y: 1
+        width: 21
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1703d6bc92dfa9bc0800000000000000
-      internalID: -3775426981648322447
+      spriteID: 18a87f966df027aa0800000000000000
+      internalID: -6164847526341539199
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Idle_3
+      name: Frog_Cling_3
       rect:
         serializedVersion: 2
-        x: 384
-        y: 0
-        width: 128
-        height: 48
+        x: 98
+        y: 1
+        width: 23
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,8 +206,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 09769a5316f7c8190800000000000000
-      internalID: -7958846385981659248
+      spriteID: a4d0a06ec7b438330800000000000000
+      internalID: 3711893517690867018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Cling_4
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 0
+        width: 21
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee6374cf5bfb54740800000000000000
+      internalID: 5135721738428430062
       vertices: []
       indices: 
       edges: []
@@ -213,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8dcf28f3c11c4f94dacb3beb1ae72575
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -221,14 +246,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":48.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
-    nameFileIdTable:
-      Frog_Idle_0: -1289056524943332496
-      Frog_Idle_1: -7617497109469342470
-      Frog_Idle_2: -3775426981648322447
-      Frog_Idle_3: -7958846385981659248
+      entries: []
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,37 +1,67 @@
 fileFormatVersion: 2
-guid: f5e263e93e064324b84d55c87b368c34
+guid: c61c449cc88e4ba41a3a11844b79a947
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8578111800719532423
-    second: Frog_Run_v3_0
+      213: 8918552301855225305
+    second: Frog_Attack_Double_0
   - first:
-      213: -1622676971974093174
-    second: Frog_Run_v3_1
+      213: -3622805404725195651
+    second: Frog_Attack_Double_1
   - first:
-      213: 738107049754318752
-    second: Frog_Run_v3_2
+      213: -4133445500791669862
+    second: Frog_Attack_Double_2
   - first:
-      213: 907800453912493239
-    second: Frog_Run_v3_3
+      213: -1147301757128700700
+    second: Frog_Attack_Double_3
   - first:
-      213: -4924487224840071331
-    second: Frog_Run_v3_4
+      213: 428700531598300750
+    second: Frog_Attack_Double_4
   - first:
-      213: -2064679185743582976
-    second: Frog_Run_v3_5
+      213: -1413677146995117953
+    second: Frog_Attack_Double_5
   - first:
-      213: -325963642414594343
-    second: Frog_Run_v3_6
+      213: -3289710654894260220
+    second: Frog_Attack_Double_6
   - first:
-      213: 7166076609170027921
-    second: Frog_Run_v3_7
+      213: -4682017336025056746
+    second: Frog_Attack_Double_7
   - first:
-      213: 6675797870742396342
-    second: Frog_Run_v3_8
+      213: -3925192397077860676
+    second: Frog_Attack_Double_8
   - first:
-      213: -9185997087012404812
-    second: Frog_Run_v3_9
+      213: -6314964614305698696
+    second: Frog_Attack_Double_9
+  - first:
+      213: -1665978730601260703
+    second: Frog_Attack_Double_10
+  - first:
+      213: -8226116806886167312
+    second: Frog_Attack_Double_11
+  - first:
+      213: 6935446481761395850
+    second: Frog_Attack_Double_12
+  - first:
+      213: 4714030919262277707
+    second: Frog_Attack_Double_13
+  - first:
+      213: 4833617106735559650
+    second: Frog_Attack_Double_14
+  - first:
+      213: 8685892402826480690
+    second: Frog_Attack_Double_15
+  - first:
+      213: 2907168161166642076
+    second: Frog_Attack_Double_16
+  - first:
+      213: -6618644232264391819
+    second: Frog_Attack_Double_17
+  - first:
+      213: -5249767712950534307
+    second: Frog_Attack_Double_18
+  - first:
+      213: 877888509115408844
+    second: Frog_Attack_Double_19
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -140,7 +170,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Frog_Run_v3_0
+      name: Frog_Attack_Double_0
       rect:
         serializedVersion: 2
         x: 0
@@ -155,14 +185,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 97e968a14cc64f880800000000000000
-      internalID: -8578111800719532423
+      spriteID: 9d5b2d6e01015cb70800000000000000
+      internalID: 8918552301855225305
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Run_v3_1
+      name: Frog_Attack_Double_1
       rect:
         serializedVersion: 2
         x: 128
@@ -177,14 +207,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a86174c24e71b79e0800000000000000
-      internalID: -1622676971974093174
+      spriteID: d7c4df8cda539bdc0800000000000000
+      internalID: -3622805404725195651
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Run_v3_2
+      name: Frog_Attack_Double_2
       rect:
         serializedVersion: 2
         x: 256
@@ -199,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0a751da73784e3a00800000000000000
-      internalID: 738107049754318752
+      spriteID: a9b30ea873d03a6c0800000000000000
+      internalID: -4133445500791669862
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Run_v3_3
+      name: Frog_Attack_Double_3
       rect:
         serializedVersion: 2
         x: 384
@@ -221,14 +251,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7bc746ef3b7299c00800000000000000
-      internalID: 907800453912493239
+      spriteID: 4ec892c6127f310f0800000000000000
+      internalID: -1147301757128700700
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Run_v3_4
+      name: Frog_Attack_Double_4
       rect:
         serializedVersion: 2
         x: 512
@@ -243,14 +273,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d575576c5f4b8abb0800000000000000
-      internalID: -4924487224840071331
+      spriteID: e4610f4bcdc03f500800000000000000
+      internalID: 428700531598300750
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Run_v3_5
+      name: Frog_Attack_Double_5
       rect:
         serializedVersion: 2
         x: 640
@@ -265,14 +295,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0096c9e3839c853e0800000000000000
-      internalID: -2064679185743582976
+      spriteID: f70b442ff1c916ce0800000000000000
+      internalID: -1413677146995117953
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Run_v3_6
+      name: Frog_Attack_Double_6
       rect:
         serializedVersion: 2
         x: 768
@@ -287,14 +317,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9d68f245bc1f97bf0800000000000000
-      internalID: -325963642414594343
+      spriteID: 400c539c6999852d0800000000000000
+      internalID: -3289710654894260220
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Run_v3_7
+      name: Frog_Attack_Double_7
       rect:
         serializedVersion: 2
         x: 896
@@ -309,14 +339,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 195b0d265b4037360800000000000000
-      internalID: 7166076609170027921
+      spriteID: 61a710e0a02260fb0800000000000000
+      internalID: -4682017336025056746
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Run_v3_8
+      name: Frog_Attack_Double_8
       rect:
         serializedVersion: 2
         x: 1024
@@ -331,14 +361,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6bdd8e52bc235ac50800000000000000
-      internalID: 6675797870742396342
+      spriteID: cbe2c19bf4ae689c0800000000000000
+      internalID: -3925192397077860676
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Run_v3_9
+      name: Frog_Attack_Double_9
       rect:
         serializedVersion: 2
         x: 1152
@@ -353,8 +383,140 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4b14ad0a158c48080800000000000000
-      internalID: -9185997087012404812
+      spriteID: 87ca523342dbc58a0800000000000000
+      internalID: -6314964614305698696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Attack_Double_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 128
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 169d727db2141e8e0800000000000000
+      internalID: -1665978730601260703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Attack_Double_11
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 128
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fceda41956f6dd80800000000000000
+      internalID: -8226116806886167312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Attack_Double_12
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 128
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a84ee1064d7af3060800000000000000
+      internalID: 6935446481761395850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Attack_Double_13
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 0
+        width: 128
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4016d2252a9b6140800000000000000
+      internalID: 4714030919262277707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Attack_Double_14
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 128
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e379332625741340800000000000000
+      internalID: 4833617106735559650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Attack_Double_15
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 128
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23c8cbbde1d7a8870800000000000000
+      internalID: 8685892402826480690
       vertices: []
       indices: 
       edges: []
@@ -363,7 +525,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 87239e1d7a02e52469bc5a39cd66555e
+    spriteID: 68d6f44b845ec0a47be772050f0cb974
     internalID: 0
     vertices: []
     indices: 
@@ -375,16 +537,22 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":48.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Frog_Run_v3_0: -8578111800719532423
-      Frog_Run_v3_1: -1622676971974093174
-      Frog_Run_v3_2: 738107049754318752
-      Frog_Run_v3_3: 907800453912493239
-      Frog_Run_v3_4: -4924487224840071331
-      Frog_Run_v3_5: -2064679185743582976
-      Frog_Run_v3_6: -325963642414594343
-      Frog_Run_v3_7: 7166076609170027921
-      Frog_Run_v3_8: 6675797870742396342
-      Frog_Run_v3_9: -9185997087012404812
+      Frog_Attack_Double_0: 8918552301855225305
+      Frog_Attack_Double_1: -3622805404725195651
+      Frog_Attack_Double_10: -1665978730601260703
+      Frog_Attack_Double_11: -8226116806886167312
+      Frog_Attack_Double_12: 6935446481761395850
+      Frog_Attack_Double_13: 4714030919262277707
+      Frog_Attack_Double_14: 4833617106735559650
+      Frog_Attack_Double_15: 8685892402826480690
+      Frog_Attack_Double_2: -4133445500791669862
+      Frog_Attack_Double_3: -1147301757128700700
+      Frog_Attack_Double_4: 428700531598300750
+      Frog_Attack_Double_5: -1413677146995117953
+      Frog_Attack_Double_6: -3289710654894260220
+      Frog_Attack_Double_7: -4682017336025056746
+      Frog_Attack_Double_8: -3925192397077860676
+      Frog_Attack_Double_9: -6314964614305698696
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

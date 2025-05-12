@@ -1,49 +1,67 @@
 fileFormatVersion: 2
-guid: 17c66114f1775f24eb9c9049ce5311af
+guid: f3939218b9f22f541a6d090b3312bb54
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4180542970464928571
-    second: Frog_Dash_v1_0
+      213: 8918552301855225305
+    second: Frog_Attack_Double_0
   - first:
-      213: -7564197177511952456
-    second: Frog_Dash_v1_1
+      213: -3622805404725195651
+    second: Frog_Attack_Double_1
   - first:
-      213: -4944227378860589615
-    second: Frog_Dash_v1_2
+      213: -4133445500791669862
+    second: Frog_Attack_Double_2
   - first:
-      213: 3892523939033692886
-    second: Frog_Dash_v1_3
+      213: -1147301757128700700
+    second: Frog_Attack_Double_3
   - first:
-      213: 7373394096446196329
-    second: Frog_Dash_v1_4
+      213: 428700531598300750
+    second: Frog_Attack_Double_4
   - first:
-      213: 333445167401334967
-    second: Frog_Dash_v1_5
+      213: -1413677146995117953
+    second: Frog_Attack_Double_5
   - first:
-      213: 3989915109603331369
-    second: Frog_Dash_v1_6
+      213: -3289710654894260220
+    second: Frog_Attack_Double_6
   - first:
-      213: -7784745417365843416
-    second: Frog_Dash_v1_7
+      213: -4682017336025056746
+    second: Frog_Attack_Double_7
   - first:
-      213: -7903576453429979249
-    second: Frog_Dash_v1_8
+      213: -3925192397077860676
+    second: Frog_Attack_Double_8
   - first:
-      213: -6636789761521610187
-    second: Frog_Dash_v1_9
+      213: -6314964614305698696
+    second: Frog_Attack_Double_9
   - first:
-      213: 5924059750324662057
-    second: Frog_Dash_v1_10
+      213: -1665978730601260703
+    second: Frog_Attack_Double_10
   - first:
-      213: -6496635835242784676
-    second: Frog_Dash_v1_11
+      213: -8226116806886167312
+    second: Frog_Attack_Double_11
   - first:
-      213: 5922354970097370246
-    second: Frog_Dash_v1_12
+      213: 6935446481761395850
+    second: Frog_Attack_Double_12
   - first:
-      213: 2135510329027173889
-    second: Frog_Dash_v1_13
+      213: 4714030919262277707
+    second: Frog_Attack_Double_13
+  - first:
+      213: 4833617106735559650
+    second: Frog_Attack_Double_14
+  - first:
+      213: 8685892402826480690
+    second: Frog_Attack_Double_15
+  - first:
+      213: 2907168161166642076
+    second: Frog_Attack_Double_16
+  - first:
+      213: -6618644232264391819
+    second: Frog_Attack_Double_17
+  - first:
+      213: -5249767712950534307
+    second: Frog_Attack_Double_18
+  - first:
+      213: 877888509115408844
+    second: Frog_Attack_Double_19
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -76,7 +94,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -114,7 +132,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -152,13 +170,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Frog_Dash_v1_0
+      name: Frog_Attack_Double_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 49
         y: 0
-        width: 128
-        height: 48
+        width: 31
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,20 +185,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5cc7e2d515abbf5c0800000000000000
-      internalID: -4180542970464928571
+      spriteID: 9d5b2d6e01015cb70800000000000000
+      internalID: 8918552301855225305
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Dash_v1_1
+      name: Frog_Attack_Double_1
       rect:
         serializedVersion: 2
-        x: 128
+        x: 483
         y: 0
-        width: 128
-        height: 48
+        width: 83
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,20 +207,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8bf336f6eb2960790800000000000000
-      internalID: -7564197177511952456
+      spriteID: d7c4df8cda539bdc0800000000000000
+      internalID: -3622805404725195651
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Dash_v1_2
+      name: Frog_Attack_Double_2
       rect:
         serializedVersion: 2
-        x: 256
+        x: 579
         y: 0
-        width: 128
-        height: 48
+        width: 61
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1ddf0420563926bb0800000000000000
-      internalID: -4944227378860589615
+      spriteID: a9b30ea873d03a6c0800000000000000
+      internalID: -4133445500791669862
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Dash_v1_3
+      name: Frog_Attack_Double_3
       rect:
         serializedVersion: 2
-        x: 384
+        x: 684
         y: 0
-        width: 128
-        height: 48
+        width: 52
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -233,20 +251,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6dabec926e5050630800000000000000
-      internalID: 3892523939033692886
+      spriteID: 4ec892c6127f310f0800000000000000
+      internalID: -1147301757128700700
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Dash_v1_4
+      name: Frog_Attack_Double_4
       rect:
         serializedVersion: 2
-        x: 512
+        x: 800
         y: 0
-        width: 128
-        height: 48
+        width: 25
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,20 +273,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 96a43a36dde835660800000000000000
-      internalID: 7373394096446196329
+      spriteID: e4610f4bcdc03f500800000000000000
+      internalID: 428700531598300750
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Dash_v1_5
+      name: Frog_Attack_Double_5
       rect:
         serializedVersion: 2
-        x: 640
+        x: 881
         y: 0
-        width: 128
-        height: 48
+        width: 40
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -277,20 +295,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7b8f603fc92a0a400800000000000000
-      internalID: 333445167401334967
+      spriteID: f70b442ff1c916ce0800000000000000
+      internalID: -1413677146995117953
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Dash_v1_6
+      name: Frog_Attack_Double_6
       rect:
         serializedVersion: 2
-        x: 768
+        x: 966
         y: 0
-        width: 128
-        height: 48
+        width: 50
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,20 +317,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 92dced717a60f5730800000000000000
-      internalID: 3989915109603331369
+      spriteID: 400c539c6999852d0800000000000000
+      internalID: -3289710654894260220
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Dash_v1_7
+      name: Frog_Attack_Double_7
       rect:
         serializedVersion: 2
-        x: 896
-        y: 0
-        width: 128
-        height: 48
+        x: 1094
+        y: 29
+        width: 18
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -321,20 +339,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8221f0bc94707f390800000000000000
-      internalID: -7784745417365843416
+      spriteID: 61a710e0a02260fb0800000000000000
+      internalID: -4682017336025056746
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Dash_v1_8
+      name: Frog_Attack_Double_8
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 1158
         y: 0
-        width: 128
-        height: 48
+        width: 50
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -343,20 +361,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f871a2e271bd05290800000000000000
-      internalID: -7903576453429979249
+      spriteID: cbe2c19bf4ae689c0800000000000000
+      internalID: -3925192397077860676
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Dash_v1_9
+      name: Frog_Attack_Double_9
       rect:
         serializedVersion: 2
-        x: 1152
+        x: 1276
         y: 0
-        width: 128
-        height: 48
+        width: 29
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -365,20 +383,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5321e8700e265e3a0800000000000000
-      internalID: -6636789761521610187
+      spriteID: 87ca523342dbc58a0800000000000000
+      internalID: -6314964614305698696
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Dash_v1_10
+      name: Frog_Attack_Double_10
       rect:
         serializedVersion: 2
-        x: 1280
+        x: 148
         y: 0
-        width: 128
-        height: 48
+        width: 25
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -387,20 +405,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 92f6a46b4fc763250800000000000000
-      internalID: 5924059750324662057
+      spriteID: 169d727db2141e8e0800000000000000
+      internalID: -1665978730601260703
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Dash_v1_11
+      name: Frog_Attack_Double_11
       rect:
         serializedVersion: 2
-        x: 1408
+        x: 234
         y: 0
-        width: 128
-        height: 48
+        width: 38
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -409,20 +427,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c58d745e02057d5a0800000000000000
-      internalID: -6496635835242784676
+      spriteID: 0fceda41956f6dd80800000000000000
+      internalID: -8226116806886167312
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Dash_v1_12
+      name: Frog_Attack_Double_12
       rect:
         serializedVersion: 2
-        x: 1536
+        x: 341
         y: 0
-        width: 128
-        height: 48
+        width: 31
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -431,20 +449,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6844c62a77e603250800000000000000
-      internalID: 5922354970097370246
+      spriteID: a84ee1064d7af3060800000000000000
+      internalID: 6935446481761395850
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Dash_v1_13
+      name: Frog_Attack_Double_13
       rect:
         serializedVersion: 2
-        x: 1664
+        x: 437
         y: 0
-        width: 128
-        height: 48
+        width: 33
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -453,8 +471,140 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 10e97df645bd2ad10800000000000000
-      internalID: 2135510329027173889
+      spriteID: b4016d2252a9b6140800000000000000
+      internalID: 4714030919262277707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Attack_Double_14
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 16
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e379332625741340800000000000000
+      internalID: 4833617106735559650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Attack_Double_15
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 0
+        width: 49
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23c8cbbde1d7a8870800000000000000
+      internalID: 8685892402826480690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Attack_Double_16
+      rect:
+        serializedVersion: 2
+        x: 1164
+        y: 18
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9bc9ac2a06585820800000000000000
+      internalID: 2907168161166642076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Attack_Double_17
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 0
+        width: 38
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5736139432ad524a0800000000000000
+      internalID: -6618644232264391819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Attack_Double_18
+      rect:
+        serializedVersion: 2
+        x: 1469
+        y: 0
+        width: 25
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5fb44c54141527b0800000000000000
+      internalID: -5249767712950534307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Attack_Double_19
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 6
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc1a832a2f2ee2c00800000000000000
+      internalID: 877888509115408844
       vertices: []
       indices: 
       edges: []
@@ -463,7 +613,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 015883f210509094ba3d524cfdc4ee10
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -471,24 +621,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":48.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
-    nameFileIdTable:
-      Frog_Dash_v1_0: -4180542970464928571
-      Frog_Dash_v1_1: -7564197177511952456
-      Frog_Dash_v1_10: 5924059750324662057
-      Frog_Dash_v1_11: -6496635835242784676
-      Frog_Dash_v1_12: 5922354970097370246
-      Frog_Dash_v1_13: 2135510329027173889
-      Frog_Dash_v1_2: -4944227378860589615
-      Frog_Dash_v1_3: 3892523939033692886
-      Frog_Dash_v1_4: 7373394096446196329
-      Frog_Dash_v1_5: 333445167401334967
-      Frog_Dash_v1_6: 3989915109603331369
-      Frog_Dash_v1_7: -7784745417365843416
-      Frog_Dash_v1_8: -7903576453429979249
-      Frog_Dash_v1_9: -6636789761521610187
+      entries: []
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
