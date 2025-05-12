@@ -36,6 +36,13 @@ public class JiriMovement : MonoBehaviour
     {
         if (isDashing) return;
 
+        //Falling
+        animator.SetFloat("FallSpeed", rb.linearVelocity.y);
+        if (rb.linearVelocity.y < 0)
+        {
+            animator.SetBool("isJumping", false);
+        }
+ 
         float moveX = Input.GetAxisRaw("Horizontal");
         Vector2 velocity = rb.linearVelocity;
         velocity.x = moveX * moveSpeed;
