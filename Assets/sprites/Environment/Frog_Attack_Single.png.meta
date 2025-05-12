@@ -472,7 +472,21 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Frog_Attack_Single_0: 8356110958947101387
+      Frog_Attack_Single_1: -1568840493433613428
+      Frog_Attack_Single_10: -5827022090325200607
+      Frog_Attack_Single_11: -8398289938000476493
+      Frog_Attack_Single_12: 8154050020832368209
+      Frog_Attack_Single_13: 670762636113095599
+      Frog_Attack_Single_2: -4388374645093244337
+      Frog_Attack_Single_3: -160458715473361547
+      Frog_Attack_Single_4: -5114918051007482568
+      Frog_Attack_Single_5: 8680261119498115680
+      Frog_Attack_Single_6: -820946308107628036
+      Frog_Attack_Single_7: -400769281108779464
+      Frog_Attack_Single_8: 4198871937755121162
+      Frog_Attack_Single_9: 1531853577716389795
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

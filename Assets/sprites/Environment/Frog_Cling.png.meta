@@ -247,7 +247,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Frog_Cling_0: 3642235302715051702
+      Frog_Cling_1: -1234694394206512591
+      Frog_Cling_2: -6164847526341539199
+      Frog_Cling_3: 3711893517690867018
+      Frog_Cling_4: 5135721738428430062
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
