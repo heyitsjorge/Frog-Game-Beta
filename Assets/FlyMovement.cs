@@ -7,9 +7,14 @@ public class FlyMovement : MonoBehaviour
 
     public float speed;
     private GameObject player;
-    public bool Chase = false;
+    private bool Chase = false;
+    public float detectionRadius = 5f; // Radius within which the fly will chase the player
 
-
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
+    }
 
 
 
@@ -25,9 +30,6 @@ public class FlyMovement : MonoBehaviour
         if (player == null)
         {
             return;
-        }if (Chase == true)
-        {
-            ChasePlayer();
         }
         else
         {
@@ -40,14 +42,16 @@ public class FlyMovement : MonoBehaviour
             if (moveX != 0)
                 sr.flipX = moveX > 0;
             // Check if the fly is close to the player
-            if (Vector2.Distance(transform.position, player.transform.position) < 5f)
+            if (detectionRadius > Vector2.Distance(transform.position, player.transform.position))
             {
-                Chase = true; // Start chasing the player
+                Chase = true;
+                ChasePlayer(); // Start chasing the player
             }
         
     }
     void ChasePlayer()
     {
+        detectionRadius = 10f; // increase the distance hell chase you for
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
     }
 }

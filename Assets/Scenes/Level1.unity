@@ -516,6 +516,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d5acfc8d70a245b2a4374552ddbee69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 3
+  Chase: 0
+  detectionRadius: 5
 --- !u!58 &304423205
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -560,7 +563,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304423200}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -577,7 +580,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &325508803
 GameObject:
@@ -592,6 +595,7 @@ GameObject:
   - component: {fileID: 325508808}
   - component: {fileID: 325508807}
   - component: {fileID: 325508806}
+  - component: {fileID: 325508809}
   m_Layer: 0
   m_Name: idleJiri_3
   m_TagString: Player
@@ -677,7 +681,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 325508803}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b6943abfd1f054084b083f16b6bc2428, type: 3}
   m_Name: 
@@ -764,6 +768,36 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &325508809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325508803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d973f45fbc249fb975380710c8fd0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpVelocity: 10
+  gravityUp: 30
+  gravityDown: 50
+  jumpCutMultiplier: 0.5
+  moveSpeed: 8
+  airControl: 0.5
+  coyoteTime: 0.1
+  coyoteTimer: 0
+  jumpBufferTime: 0.1
+  jumpBufferTimer: 0
+  groundCheck: {fileID: 151164095}
+  groundCheckRadius: 0.2
+  ground:
+    serializedVersion: 2
+    m_Bits: 64
+  dashSpeed: 20
+  dashDuration: 0.15
+  groundDashCoolDown: 0.5
 --- !u!1 &338528367
 GameObject:
   m_ObjectHideFlags: 0
