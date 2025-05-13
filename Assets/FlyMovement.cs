@@ -37,7 +37,7 @@ public class FlyMovement : MonoBehaviour
             float moveX = Random.Range(-1f, 1f);
             float moveY = Random.Range(-1f, 1f);
             Vector2 moveDirection = new Vector2(moveX, moveY).normalized;
-            rb.velocity = moveDirection * speed;
+            rb.linearVelocity = moveDirection * speed;
             // Flip sprite based on direction
             if (moveX != 0)
                 sr.flipX = moveX > 0;

@@ -4,6 +4,8 @@ public class FrogPhysics : MonoBehaviour
 {
     private Rigidbody2D rb; //rigidbody of the frog
     private SpriteRenderer sr; //sprite renderer of the frog
+
+    public Animator animator; //animator of the frog
     private float moveInput = 0f; //input from the player
 //Jump Variables
     public float jumpVelocity= 10f; //uparwd velocity
@@ -92,7 +94,7 @@ public class FrogPhysics : MonoBehaviour
         if (isDashing)
     {
         float dashDirection = sr.flipX ? -1 : 1;
-        rb.velocity = new Vector2(dashDirection * dashSpeed, 0f);
+        rb.linearVelocity = new Vector2(dashDirection * dashSpeed, 0f);
         dashTimer -= Time.fixedDeltaTime;
 
         if (dashTimer <= 0f)
@@ -109,31 +111,31 @@ public class FrogPhysics : MonoBehaviour
     }
 
     void Jump(){
-        rb.velocity = new Vector2(rb.velocity.x, jumpVelocity); //set the upward velocity
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpVelocity); //set the upward velocity
     }
 
     void ApplyCustomGravity(){
         //shorten jump is player realses to early
-        if (rb.velocity.y > 0 && !jumpInputHeld)
+        if (rb.linearVelocity.y > 0 && !jumpInputHeld)
         {
-            rb.velocity += Vector2.down *gravityUp * jumpCutMultiplier * Time.fixedDeltaTime; //apply upward gravity
+            rb.linearVelocity += Vector2.down *gravityUp * jumpCutMultiplier * Time.fixedDeltaTime; //apply upward gravity
         }
         //regualr jump
-        else if (rb.velocity.y > 0)
+        else if (rb.linearVelocity.y > 0)
         {
-            rb.velocity += Vector2.up * gravityUp * Time.fixedDeltaTime; //apply upward gravity
+            rb.linearVelocity += Vector2.up * gravityUp * Time.fixedDeltaTime; //apply upward gravity
         }
         //faling down
         else
         {
-            rb.velocity += Vector2.down * gravityDown * Time.fixedDeltaTime; //apply downward gravity
+            rb.linearVelocity += Vector2.down * gravityDown * Time.fixedDeltaTime; //apply downward gravity
         }
     }
 
     void HandleHorizontalMovement(){
 
         float control = isGrounded ? 1f : airControl; //if the player is on the ground, give them full control, otherwise give them less control
-        rb.velocity = new Vector2(moveInput * moveSpeed * control, rb.velocity.y); //set the horizontal velocity
+        rb.linearVelocity = new Vector2(moveInput * moveSpeed * control, rb.linearVelocity.y); //set the horizontal velocity
         //flip the sprite based on the direction
         // Flip sprite based on direction
         if (moveInput != 0)
