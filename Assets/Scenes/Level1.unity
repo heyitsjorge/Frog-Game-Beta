@@ -144,7 +144,7 @@ Transform:
   m_GameObject: {fileID: 151164094}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.1, z: 0}
+  m_LocalPosition: {x: 0, y: -0.241, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -385,7 +385,7 @@ Transform:
   m_GameObject: {fileID: 262164366}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.52, y: -3.05, z: -15}
+  m_LocalPosition: {x: -11.52, y: -2, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -593,11 +593,12 @@ GameObject:
   - component: {fileID: 325508805}
   - component: {fileID: 325508804}
   - component: {fileID: 325508808}
+  - component: {fileID: 325508809}
   - component: {fileID: 325508807}
   - component: {fileID: 325508806}
   - component: {fileID: 325508809}
   m_Layer: 0
-  m_Name: idleJiri_3
+  m_Name: Jiri
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -647,12 +648,12 @@ SpriteRenderer:
   m_SortingLayerID: 838618731
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6882461811706486501, guid: 3fbca42e62a494c56a628f8edb777351, type: 3}
+  m_Sprite: {fileID: 8356110958947101387, guid: f462a62c91800b74486221da95a09813, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.28, y: 0.27}
+  m_Size: {x: 1.28, y: 0.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -667,7 +668,7 @@ Transform:
   m_GameObject: {fileID: 325508803}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.52, y: -3.05, z: 0}
+  m_LocalPosition: {x: -11.52, y: -2, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -686,6 +687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6943abfd1f054084b083f16b6bc2428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 325508810}
   moveSpeed: 5
   jumpForce: 10
   dashSpeed: 15
@@ -729,17 +731,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.009853065, y: -0.048423786}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.28, y: 0.27}
-    newSize: {x: 0.28, y: 0.27}
+    oldSize: {x: 1.28, y: 0.48}
+    newSize: {x: 1.28, y: 0.48}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.28, y: 0.27}
+  m_Size: {x: 0.18137169, y: 0.1769568}
   m_EdgeRadius: 0
 --- !u!50 &325508808
 Rigidbody2D:
@@ -1328,7 +1330,7 @@ Transform:
   m_GameObject: {fileID: 726278792}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.52, y: -3.05, z: -15}
+  m_LocalPosition: {x: -11.52, y: -2, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

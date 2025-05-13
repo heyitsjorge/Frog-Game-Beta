@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class JiriMovement : MonoBehaviour
 {
+    [Header("Animations")]
+    public Animator animator;
+
     [Header("Movement")]
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
@@ -18,8 +21,10 @@ public class JiriMovement : MonoBehaviour
 
     [Header("Ground Check")]
     public Transform groundCheck;
-    public float groundCheckRadius = 0.1f;
+    public float groundCheckRadius = 0.05f;
     public LayerMask groundLayer;
+
+    private bool wasGroundedLastFrame = false;
 
     void Start()
     {
@@ -31,10 +36,18 @@ public class JiriMovement : MonoBehaviour
     {
         if (isDashing) return;
 
+        //Falling
+        animator.SetFloat("FallSpeed", rb.linearVelocity.y);
+        if (rb.linearVelocity.y < 0)
+        {
+            animator.SetBool("isJumping", false);
+        }
+ 
         float moveX = Input.GetAxisRaw("Horizontal");
-        Vector2 velocity = rb.velocity;
+        Vector2 velocity = rb.linearVelocity;
         velocity.x = moveX * moveSpeed;
-        rb.velocity = new Vector2(velocity.x, rb.velocity.y);
+        rb.linearVelocity = new Vector2(velocity.x, rb.linearVelocity.y);
+        animator.SetFloat("Speed", Mathf.Abs(moveX));
 
         // Flip sprite based on direction
         if (moveX != 0)
@@ -42,9 +55,11 @@ public class JiriMovement : MonoBehaviour
 
         // Jump
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            animator.SetBool("isJumping", true);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
 
         // Dash
@@ -54,16 +69,25 @@ public class JiriMovement : MonoBehaviour
         }
         Debug.Log("Grounded: " + isGrounded);
 
+        // Update player state to no longer jumping
+        if(isGrounded && !wasGroundedLastFrame)
+        {
+            animator.SetBool("isJumping", false);
+        }
+
+        wasGroundedLastFrame = isGrounded;
+
 
     }
 
     private System.Collections.IEnumerator Dash(float direction)
     {
         isDashing = true;
+        animator.SetBool("isDashing", true);
         dashTime = dashDuration;
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0;
-        rb.velocity = new Vector2(Mathf.Sign(direction) * dashSpeed, 0);
+        rb.linearVelocity = new Vector2(Mathf.Sign(direction) * dashSpeed, 0);
 
         while (dashTime > 0)
         {
@@ -73,6 +97,7 @@ public class JiriMovement : MonoBehaviour
 
         rb.gravityScale = originalGravity;
         isDashing = false;
+        animator.SetBool("isDashing", false);
     }
 
     void OnDrawGizmosSelected()
@@ -83,4 +108,5 @@ public class JiriMovement : MonoBehaviour
             Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
         }
     }
+
 }

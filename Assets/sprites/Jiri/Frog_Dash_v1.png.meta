@@ -76,7 +76,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -114,7 +114,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -155,10 +155,10 @@ TextureImporter:
       name: Frog_Dash_v1_0
       rect:
         serializedVersion: 2
-        x: 5
+        x: 0
         y: 0
-        width: 31
-        height: 29
+        width: 128
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,10 +177,10 @@ TextureImporter:
       name: Frog_Dash_v1_1
       rect:
         serializedVersion: 2
-        x: 44
+        x: 128
         y: 0
-        width: 30
-        height: 29
+        width: 128
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,10 +199,10 @@ TextureImporter:
       name: Frog_Dash_v1_2
       rect:
         serializedVersion: 2
-        x: 82
+        x: 256
         y: 0
-        width: 31
-        height: 27
+        width: 128
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,10 +221,10 @@ TextureImporter:
       name: Frog_Dash_v1_3
       rect:
         serializedVersion: 2
-        x: 123
+        x: 384
         y: 0
-        width: 29
-        height: 24
+        width: 128
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -243,10 +243,10 @@ TextureImporter:
       name: Frog_Dash_v1_4
       rect:
         serializedVersion: 2
-        x: 163
+        x: 512
         y: 0
-        width: 31
-        height: 19
+        width: 128
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,10 +265,10 @@ TextureImporter:
       name: Frog_Dash_v1_5
       rect:
         serializedVersion: 2
-        x: 201
+        x: 640
         y: 0
-        width: 34
-        height: 27
+        width: 128
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -287,10 +287,10 @@ TextureImporter:
       name: Frog_Dash_v1_6
       rect:
         serializedVersion: 2
-        x: 241
-        y: 2
-        width: 37
-        height: 36
+        x: 768
+        y: 0
+        width: 128
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -309,10 +309,10 @@ TextureImporter:
       name: Frog_Dash_v1_7
       rect:
         serializedVersion: 2
-        x: 279
-        y: 10
-        width: 42
-        height: 21
+        x: 896
+        y: 0
+        width: 128
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -331,10 +331,10 @@ TextureImporter:
       name: Frog_Dash_v1_8
       rect:
         serializedVersion: 2
-        x: 319
-        y: 12
-        width: 42
-        height: 21
+        x: 1024
+        y: 0
+        width: 128
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -353,10 +353,10 @@ TextureImporter:
       name: Frog_Dash_v1_9
       rect:
         serializedVersion: 2
-        x: 360
-        y: 5
-        width: 40
-        height: 25
+        x: 1152
+        y: 0
+        width: 128
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -375,10 +375,10 @@ TextureImporter:
       name: Frog_Dash_v1_10
       rect:
         serializedVersion: 2
-        x: 401
-        y: 1
-        width: 34
-        height: 28
+        x: 1280
+        y: 0
+        width: 128
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -397,10 +397,10 @@ TextureImporter:
       name: Frog_Dash_v1_11
       rect:
         serializedVersion: 2
-        x: 443
+        x: 1408
         y: 0
-        width: 29
-        height: 24
+        width: 128
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -419,10 +419,10 @@ TextureImporter:
       name: Frog_Dash_v1_12
       rect:
         serializedVersion: 2
-        x: 482
+        x: 1536
         y: 0
-        width: 31
-        height: 27
+        width: 128
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -441,10 +441,10 @@ TextureImporter:
       name: Frog_Dash_v1_13
       rect:
         serializedVersion: 2
-        x: 525
+        x: 1664
         y: 0
-        width: 31
-        height: 29
+        width: 128
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -463,7 +463,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 015883f210509094ba3d524cfdc4ee10
     internalID: 0
     vertices: []
     indices: 
@@ -471,7 +471,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":48.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Frog_Dash_v1_0: -4180542970464928571
       Frog_Dash_v1_1: -7564197177511952456

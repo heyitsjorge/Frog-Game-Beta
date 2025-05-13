@@ -1,43 +1,49 @@
 fileFormatVersion: 2
-guid: bac1c59844bb24f47b179aae7e80d38d
+guid: f462a62c91800b74486221da95a09813
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 976752754930329259
-    second: Frog_Big_Jump_0
+      213: 8356110958947101387
+    second: Frog_Attack_Single_0
   - first:
-      213: 1031479333453776247
-    second: Frog_Big_Jump_1
+      213: -1568840493433613428
+    second: Frog_Attack_Single_1
   - first:
-      213: 3955698393274101646
-    second: Frog_Big_Jump_2
+      213: -4388374645093244337
+    second: Frog_Attack_Single_2
   - first:
-      213: 7086722969339326932
-    second: Frog_Big_Jump_3
+      213: -160458715473361547
+    second: Frog_Attack_Single_3
   - first:
-      213: -7898938544477287234
-    second: Frog_Big_Jump_4
+      213: -5114918051007482568
+    second: Frog_Attack_Single_4
   - first:
-      213: -7889109631486827627
-    second: Frog_Big_Jump_5
+      213: 8680261119498115680
+    second: Frog_Attack_Single_5
   - first:
-      213: 4015606252626566814
-    second: Frog_Big_Jump_6
+      213: -820946308107628036
+    second: Frog_Attack_Single_6
   - first:
-      213: 3246985005394568033
-    second: Frog_Big_Jump_7
+      213: -400769281108779464
+    second: Frog_Attack_Single_7
   - first:
-      213: 8804231694036309182
-    second: Frog_Big_Jump_8
+      213: 4198871937755121162
+    second: Frog_Attack_Single_8
   - first:
-      213: -7965892868276266760
-    second: Frog_Big_Jump_9
+      213: 1531853577716389795
+    second: Frog_Attack_Single_9
   - first:
-      213: 91200984900516524
-    second: Frog_Big_Jump_10
+      213: -5827022090325200607
+    second: Frog_Attack_Single_10
   - first:
-      213: 6914345331434963791
-    second: Frog_Big_Jump_11
+      213: -8398289938000476493
+    second: Frog_Attack_Single_11
+  - first:
+      213: 8154050020832368209
+    second: Frog_Attack_Single_12
+  - first:
+      213: 670762636113095599
+    second: Frog_Attack_Single_13
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -70,7 +76,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -108,7 +114,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -146,123 +152,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Frog_Big_Jump_0
+      name: Frog_Attack_Single_0
       rect:
         serializedVersion: 2
-        x: 229
-        y: 41
-        width: 23
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ba6a10f947f1e8d00800000000000000
-      internalID: 976752754930329259
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Frog_Big_Jump_1
-      rect:
-        serializedVersion: 2
-        x: 261
-        y: 49
-        width: 23
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7754baf1dfc805e00800000000000000
-      internalID: 1031479333453776247
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Frog_Big_Jump_2
-      rect:
-        serializedVersion: 2
-        x: 293
-        y: 53
-        width: 23
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e8fafa10bb675e630800000000000000
-      internalID: 3955698393274101646
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Frog_Big_Jump_3
-      rect:
-        serializedVersion: 2
-        x: 322
-        y: 64
-        width: 29
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4d172195ef8195260800000000000000
-      internalID: 7086722969339326932
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Frog_Big_Jump_4
-      rect:
-        serializedVersion: 2
-        x: 353
-        y: 67
-        width: 31
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ebc4ac18e35516290800000000000000
-      internalID: -7898938544477287234
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Frog_Big_Jump_5
-      rect:
-        serializedVersion: 2
-        x: 1
+        x: 0
         y: 0
-        width: 31
-        height: 29
+        width: 128
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,20 +167,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5936d15a690448290800000000000000
-      internalID: -7889109631486827627
+      spriteID: bca6ac305aed6f370800000000000000
+      internalID: 8356110958947101387
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Big_Jump_6
+      name: Frog_Attack_Single_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 128
         y: 0
-        width: 30
-        height: 29
+        width: 128
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -293,20 +189,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e9ed4a57c9c4ab730800000000000000
-      internalID: 4015606252626566814
+      spriteID: c8314af12eb5a3ae0800000000000000
+      internalID: -1568840493433613428
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Big_Jump_7
+      name: Frog_Attack_Single_2
       rect:
         serializedVersion: 2
-        x: 63
+        x: 256
         y: 0
-        width: 30
-        height: 27
+        width: 128
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,20 +211,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 163209db8ab9f0d20800000000000000
-      internalID: 3246985005394568033
+      spriteID: f42e2e9c28c5913c0800000000000000
+      internalID: -4388374645093244337
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Big_Jump_8
+      name: Frog_Attack_Single_3
       rect:
         serializedVersion: 2
-        x: 95
+        x: 384
         y: 0
-        width: 29
-        height: 24
+        width: 128
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,20 +233,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eb41543341aee2a70800000000000000
-      internalID: 8804231694036309182
+      spriteID: 575481ff5afe5cdf0800000000000000
+      internalID: -160458715473361547
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Big_Jump_9
+      name: Frog_Attack_Single_4
       rect:
         serializedVersion: 2
-        x: 127
+        x: 512
         y: 0
-        width: 31
-        height: 19
+        width: 128
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -359,20 +255,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8f8539334a6737190800000000000000
-      internalID: -7965892868276266760
+      spriteID: 8353772f1292409b0800000000000000
+      internalID: -5114918051007482568
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Big_Jump_10
+      name: Frog_Attack_Single_5
       rect:
         serializedVersion: 2
-        x: 162
+        x: 640
         y: 0
-        width: 28
-        height: 33
+        width: 128
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -381,20 +277,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: caa392400d2044100800000000000000
-      internalID: 91200984900516524
+      spriteID: 06ad1598f7b767870800000000000000
+      internalID: 8680261119498115680
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Big_Jump_11
+      name: Frog_Attack_Single_6
       rect:
         serializedVersion: 2
-        x: 197
+        x: 768
         y: 0
-        width: 23
-        height: 45
+        width: 128
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -403,8 +299,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f43cf86f170b4ff50800000000000000
-      internalID: 6914345331434963791
+      spriteID: cf1939daea96b94f0800000000000000
+      internalID: -820946308107628036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Attack_Single_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83e5f92567e207af0800000000000000
+      internalID: -400769281108779464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Attack_Single_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 128
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a060043e7c3654a30800000000000000
+      internalID: 4198871937755121162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Attack_Single_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 128
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a752bb76bc324510800000000000000
+      internalID: 1531853577716389795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Attack_Single_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 128
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 121ffcf1842422fa0800000000000000
+      internalID: -5827022090325200607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_Attack_Single_11
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 128
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b68eb42cc7437b80800000000000000
+      internalID: -8398289938000476493
       vertices: []
       indices: 
       edges: []
@@ -413,7 +419,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7e087ec73db7cd345a3a74afc11820d3
     internalID: 0
     vertices: []
     indices: 
@@ -421,20 +427,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":48.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Frog_Big_Jump_0: 976752754930329259
-      Frog_Big_Jump_1: 1031479333453776247
-      Frog_Big_Jump_10: 91200984900516524
-      Frog_Big_Jump_11: 6914345331434963791
-      Frog_Big_Jump_2: 3955698393274101646
-      Frog_Big_Jump_3: 7086722969339326932
-      Frog_Big_Jump_4: -7898938544477287234
-      Frog_Big_Jump_5: -7889109631486827627
-      Frog_Big_Jump_6: 4015606252626566814
-      Frog_Big_Jump_7: 3246985005394568033
-      Frog_Big_Jump_8: 8804231694036309182
-      Frog_Big_Jump_9: -7965892868276266760
+      Frog_Attack_Single_0: 8356110958947101387
+      Frog_Attack_Single_1: -1568840493433613428
+      Frog_Attack_Single_10: -5827022090325200607
+      Frog_Attack_Single_11: -8398289938000476493
+      Frog_Attack_Single_2: -4388374645093244337
+      Frog_Attack_Single_3: -160458715473361547
+      Frog_Attack_Single_4: -5114918051007482568
+      Frog_Attack_Single_5: 8680261119498115680
+      Frog_Attack_Single_6: -820946308107628036
+      Frog_Attack_Single_7: -400769281108779464
+      Frog_Attack_Single_8: 4198871937755121162
+      Frog_Attack_Single_9: 1531853577716389795
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
