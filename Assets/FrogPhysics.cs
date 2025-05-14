@@ -42,6 +42,22 @@ public class FrogPhysics : MonoBehaviour
     private float dashTimer = 0f; //time left in the dash
     private float groundDashCooldownTimer = 0f; //time left in the dash cooldown
 
+//Attack Variables
+    public float attackDuration = 0.75f; //duration of the attack
+    public float firstAttackDuration = 0.75f; //duration of the first attack
+    public float secondAttackDuration = 0.66f; //duration of the second attack
+    private bool isAttacking = false; //is the player attacking'
+    private bool isSecondAttackSet = false; //is the second attack set
+
+    [SerializeField] private Collider2D weaponFirstAttackFirstCollider1; //first attack collider
+    [SerializeField] private Collider2D weaponFirstAttackFirstCollider2; //first attack collider
+    [SerializeField] private Collider2D weaponFirstAttackSecondCollider1; //second attack collider
+    [SerializeField] private Collider2D weaponFirstAttackSecondCollider2; //second attack collider
+    [SerializeField] private Collider2D weaponFirstAttackSecondCollider3; //second attack collider
+    [SerializeField] private Collider2D weaponSecondAttackFirstCollider1; //first attack collider
+    [SerializeField] private Collider2D weaponSecondAttackSecondCollider1; //second attack collider
+
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -49,13 +65,25 @@ public class FrogPhysics : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0; //set gravity scale to 0 so we can control the gravity ourselves
+
+        // Disable all attack colliders at the start
+        weaponFirstAttackFirstCollider1.enabled = false;
+        weaponFirstAttackFirstCollider2.enabled = false;
+        weaponFirstAttackSecondCollider1.enabled = false;
+        weaponFirstAttackSecondCollider2.enabled = false;
+        weaponFirstAttackSecondCollider3.enabled = false;
+        weaponSecondAttackFirstCollider1.enabled = false;
+        weaponSecondAttackSecondCollider1.enabled = false;
+    
     }
 
     // Update is called once per frame
     void Update()
     {
         moveInput = Input.GetAxisRaw("Horizontal"); //get input from player
-        //Coyote Time
+        animator.SetFloat("Speed", Mathf.Abs(moveInput));
+        animator.SetFloat("FallSpeed", rb.linearVelocity.y);
+        //Coyote Timea
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, ground);
         if (isGrounded)
         {
@@ -88,46 +116,97 @@ public class FrogPhysics : MonoBehaviour
         {
             TryDash();
         }
+
+        //Attack input
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            if(!isAttacking)
+            {
+                animator.SetBool("isAttacking", true);
+                isAttacking = true;
+            }
+            else
+            {
+                isSecondAttackSet = true;
+            }
+            
+        }
+        //falling
+        if (rb.linearVelocity.y <= 0)
+        {
+            animator.SetBool("isJumping", false);
+        }
+
     }
         
     void FixedUpdate(){
         if (isDashing)
-    {
-        float dashDirection = sr.flipX ? -1 : 1;
-        rb.linearVelocity = new Vector2(dashDirection * dashSpeed, 0f);
-        dashTimer -= Time.fixedDeltaTime;
-
-        if (dashTimer <= 0f)
         {
-            isDashing = false;
+            float dashDirection = sr.flipX ? 1 : -1;
+            rb.linearVelocity = new Vector2(dashDirection * dashSpeed, 0f);
+            dashTimer -= Time.fixedDeltaTime;
+
+            if (dashTimer <= 0f)
+            {
+                isDashing = false;
+                animator.SetBool("isDashing", false);        
+            }
+
+            return; // Skip other movement while dashing
         }
-
-        return; // Skip other movement while dashing
-    }
-
 
         ApplyCustomGravity();
         HandleHorizontalMovement();
+
+        if(isAttacking)
+        {
+            attackDuration -= Time.fixedDeltaTime;
+            if (attackDuration <= 0f)
+            {
+                animator.SetBool("isAttacking", false);
+                isAttacking = false;
+                attackDuration = firstAttackDuration;
+                if (isSecondAttackSet)
+                {
+                    attackDuration = secondAttackDuration;
+                } else{
+                    animator.SetBool("isSheething", true);
+                }
+            }
+        }
+
+        if (isSecondAttackSet && !isAttacking)
+        {
+            animator.SetBool("isSecondAttacking", true);
+            attackDuration -= Time.fixedDeltaTime;
+            if (attackDuration <= 0f)
+            {
+                animator.SetBool("isSecondAttacking", false);
+                isSecondAttackSet = false;
+                attackDuration = secondAttackDuration;
+            }
+        }
+        
     }
 
     void Jump(){
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpVelocity); //set the upward velocity
+        animator.SetBool("isJumping", true); //set the jump animation
     }
 
     void ApplyCustomGravity(){
-        //shorten jump is player realses to early
+        //shorten jump is player releases to early
         if (rb.linearVelocity.y > 0 && !jumpInputHeld)
         {
             rb.linearVelocity += Vector2.down *gravityUp * jumpCutMultiplier * Time.fixedDeltaTime; //apply upward gravity
         }
-        //regualr jump
+        //regular jump
         else if (rb.linearVelocity.y > 0)
         {
             rb.linearVelocity += Vector2.up * gravityUp * Time.fixedDeltaTime; //apply upward gravity
         }
-        //faling down
-        else
-        {
+        //falling down
+        else  {
             rb.linearVelocity += Vector2.down * gravityDown * Time.fixedDeltaTime; //apply downward gravity
         }
     }
@@ -140,7 +219,12 @@ public class FrogPhysics : MonoBehaviour
         // Flip sprite based on direction
         if (moveInput != 0)
         {
-            sr.flipX = moveInput < 0;
+            bool prevFlipX = sr.flipX;
+            sr.flipX = moveInput > 0;
+            if (prevFlipX != sr.flipX)
+            {
+                FlipWeaponColliders();
+            }
         }   
     }
 
@@ -154,29 +238,132 @@ public class FrogPhysics : MonoBehaviour
     }
 
     void TryDash()
-{
-    // Can't dash while already dashing or during cooldown on ground
-    if (isDashing) return;
+    {   
+        // Can't dash while already dashing or during cooldown on ground or while attacking
+        if (isDashing || isAttacking || isSecondAttackSet) return;
 
-    if (isGrounded && groundDashCooldownTimer <= 0f)
-    {
-        StartDash();
-        groundDashCooldownTimer = groundDashCoolDown; // Cooldown starts
+        if (isGrounded && groundDashCooldownTimer <= 0f)
+        {
+            StartDash();
+            groundDashCooldownTimer = groundDashCoolDown; // Cooldown starts
+        }
+        else if (!isGrounded && canDash)
+        {
+            StartDash();
+            canDash = false; // Use up air dash
+        }
     }
-    else if (!isGrounded && canDash)
+    void StartDash()
     {
-        StartDash();
-        canDash = false; // Use up air dash
+        isDashing = true;
+        dashTimer = dashDuration;
+        animator.SetBool("isDashing", true); // Set dashing animation
+
+        // Optional: Add a visual or sound effect here
     }
-}
-void StartDash()
-{
-    isDashing = true;
-    dashTimer = dashDuration;
 
-    // Optional: Add a visual or sound effect here
-}
+    public void EnableFirstAttackFirstHitboxCollider()
+    {
+        // Debug.Log("First Attack Hitbox Enabled");
+        weaponFirstAttackFirstCollider1.enabled = true;
+        weaponFirstAttackFirstCollider2.enabled = true;
+    }
+    public void EnableFirstAttackSecondHitboxCollider()
+    {
+        // Debug.Log("Second Attack Hitbox Enabled");
+        weaponFirstAttackSecondCollider1.enabled = true;
+        weaponFirstAttackSecondCollider2.enabled = true;
+        weaponFirstAttackSecondCollider3.enabled = true;
+    }
 
+    public void DisableFirstAttackWeaponCollider()
+    {
+        // Debug.Log("First Attack Hitbox Disabled");
+        
+        weaponFirstAttackFirstCollider1.enabled = false;
+        weaponFirstAttackFirstCollider2.enabled = false;
+        weaponFirstAttackSecondCollider1.enabled = false;
+        weaponFirstAttackSecondCollider2.enabled = false;
+        weaponFirstAttackSecondCollider3.enabled = false;
+    }
+
+    public void EnableSecondAttackFirstHitboxCollider()
+    {
+        // Debug.Log("Second Attack Hitbox Enabled");
+        weaponSecondAttackFirstCollider1.enabled = true;
+    }
+    
+    public void EnableSecondAttackSecondHitboxCollider()
+    {
+        // Debug.Log("Second Attack Hitbox Enabled");
+        weaponSecondAttackSecondCollider1.enabled = true;
+    }
+
+    public void DisableSecondAttackWeaponCollider()
+    {
+        // Debug.Log("Second Attack Hitbox Disabled");
+        weaponSecondAttackFirstCollider1.enabled = false;
+        weaponSecondAttackSecondCollider1.enabled = false;
+    }
+
+    private void FlipWeaponColliders()
+    {
+        Vector3 weaponPosition;
+        Vector3 weaponRotation;
+
+        // 1 1 1
+        weaponPosition = weaponFirstAttackFirstCollider1.transform.localPosition;
+        weaponRotation = weaponFirstAttackFirstCollider1.transform.localEulerAngles;
+        weaponPosition.x = -weaponPosition.x;
+        weaponFirstAttackFirstCollider1.transform.localPosition = weaponPosition;
+        weaponRotation.z = -weaponRotation.z;
+        weaponFirstAttackFirstCollider1.transform.localEulerAngles = weaponRotation;
+        // 1 1 2
+        weaponPosition = weaponFirstAttackFirstCollider2.transform.localPosition;
+        weaponRotation = weaponFirstAttackFirstCollider2.transform.localEulerAngles;
+        weaponPosition.x = -weaponPosition.x;
+        weaponFirstAttackFirstCollider2.transform.localPosition = weaponPosition;
+        weaponRotation.z = -weaponRotation.z;
+        weaponFirstAttackFirstCollider2.transform.localEulerAngles = weaponRotation;
+
+        // 1 2 1
+        weaponPosition = weaponFirstAttackSecondCollider1.transform.localPosition;
+        weaponRotation = weaponFirstAttackSecondCollider1.transform.localEulerAngles;
+        weaponPosition.x = -weaponPosition.x;
+        weaponFirstAttackSecondCollider1.transform.localPosition = weaponPosition;
+        weaponRotation.z = -weaponRotation.z;
+        weaponFirstAttackSecondCollider1.transform.localEulerAngles = weaponRotation;
+        // 1 2 2
+        weaponPosition = weaponFirstAttackSecondCollider2.transform.localPosition;
+        weaponRotation = weaponFirstAttackSecondCollider2.transform.localEulerAngles;
+        weaponPosition.x = -weaponPosition.x;
+        weaponFirstAttackSecondCollider2.transform.localPosition = weaponPosition;
+        weaponRotation.z = -weaponRotation.z;
+        weaponFirstAttackSecondCollider2.transform.localEulerAngles = weaponRotation;
+        // 1 2 3
+        weaponPosition = weaponFirstAttackSecondCollider3.transform.localPosition;
+        weaponRotation = weaponFirstAttackSecondCollider3.transform.localEulerAngles;
+        weaponPosition.x = -weaponPosition.x;
+        weaponFirstAttackSecondCollider3.transform.localPosition = weaponPosition;
+        weaponRotation.z = -weaponRotation.z;
+        weaponFirstAttackSecondCollider3.transform.localEulerAngles = weaponRotation;
+
+        // 2 1 1
+        weaponPosition = weaponSecondAttackFirstCollider1.transform.localPosition;
+        weaponRotation = weaponSecondAttackFirstCollider1.transform.localEulerAngles;
+        weaponPosition.x = -weaponPosition.x;
+        weaponSecondAttackFirstCollider1.transform.localPosition = weaponPosition;
+        weaponRotation.z = -weaponRotation.z;
+        weaponSecondAttackFirstCollider1.transform.localEulerAngles = weaponRotation;
+
+        // 2 2 1
+        weaponPosition = weaponSecondAttackSecondCollider1.transform.localPosition;
+        weaponRotation = weaponSecondAttackSecondCollider1.transform.localEulerAngles;
+        weaponPosition.x = -weaponPosition.x;
+        weaponSecondAttackSecondCollider1.transform.localPosition = weaponPosition;
+        weaponRotation.z = -weaponRotation.z;
+        weaponSecondAttackSecondCollider1.transform.localEulerAngles = weaponRotation;
+    }
 
 }
 
