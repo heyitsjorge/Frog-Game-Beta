@@ -120,7 +120,8 @@ public class FrogPhysics : MonoBehaviour
         //Attack input
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            if(!isAttacking)
+
+            if(!isAttacking && !isSecondAttackSet)
             {
                 animator.SetBool("isAttacking", true);
                 isAttacking = true;
