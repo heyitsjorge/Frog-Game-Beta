@@ -14,10 +14,16 @@ public class MainMenuManager : MonoBehaviour
     }
 
     public void StartGame()
-    {
-        // Load the game scene (replace "GameScene" with the actual name of your game scene)
-        SceneManager.LoadScene("IntroCutScene");
-    }
+{
+    StartCoroutine(DelayedIntro());
+}
+
+private System.Collections.IEnumerator DelayedIntro()
+{
+    yield return new WaitForSeconds(1.2f); // Wait for audio to finish
+    SceneManager.LoadScene("IntroCutScene");
+}
+
     public void QuitGame()
     {
         // Quit the application
