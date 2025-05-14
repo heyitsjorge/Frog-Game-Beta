@@ -1,19 +1,25 @@
 fileFormatVersion: 2
-guid: 2fe034ffcbacb5546b1f68063271fcc9
+guid: c8bcf17665eab0940aa4b6c86f3e2031
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1289056524943332496
-    second: Frog_Idle_0
+      213: -8276311611478457872
+    second: Frog_Death_0
   - first:
-      213: -7617497109469342470
-    second: Frog_Idle_1
+      213: 2910092868117952983
+    second: Frog_Death_1
   - first:
-      213: -3775426981648322447
-    second: Frog_Idle_2
+      213: 2604478854568351055
+    second: Frog_Death_2
   - first:
-      213: -7958846385981659248
-    second: Frog_Idle_3
+      213: 1970143968885303085
+    second: Frog_Death_3
+  - first:
+      213: 2463233196256278908
+    second: Frog_Death_4
+  - first:
+      213: -1197075848072142019
+    second: Frog_Death_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Frog_Idle_0
+      name: Frog_Death_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +143,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 07b6a579be95c1ee0800000000000000
-      internalID: -1289056524943332496
+      spriteID: 0f1c26b6072a42d80800000000000000
+      internalID: -8276311611478457872
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Idle_1
+      name: Frog_Death_1
       rect:
         serializedVersion: 2
         x: 128
@@ -159,14 +165,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: af4d388fcb6394690800000000000000
-      internalID: -7617497109469342470
+      spriteID: 7d971939b0ab26820800000000000000
+      internalID: 2910092868117952983
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Idle_2
+      name: Frog_Death_2
       rect:
         serializedVersion: 2
         x: 256
@@ -181,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1703d6bc92dfa9bc0800000000000000
-      internalID: -3775426981648322447
+      spriteID: f45109718b7f42420800000000000000
+      internalID: 2604478854568351055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frog_Idle_3
+      name: Frog_Death_3
       rect:
         serializedVersion: 2
         x: 384
@@ -203,8 +209,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 09769a5316f7c8190800000000000000
-      internalID: -7958846385981659248
+      spriteID: d2769cd508b575b10800000000000000
+      internalID: 1970143968885303085
       vertices: []
       indices: 
       edges: []
@@ -213,7 +219,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8dcf28f3c11c4f94dacb3beb1ae72575
+    spriteID: f2f0ab4129030f546a6b3a2ea2f1d925
     internalID: 0
     vertices: []
     indices: 
@@ -223,12 +229,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":48.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":48.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Frog_Idle_0: -1289056524943332496
-      Frog_Idle_1: -7617497109469342470
-      Frog_Idle_2: -3775426981648322447
-      Frog_Idle_3: -7958846385981659248
+      Frog_Death_0: -8276311611478457872
+      Frog_Death_1: 2910092868117952983
+      Frog_Death_2: 2604478854568351055
+      Frog_Death_3: 1970143968885303085
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

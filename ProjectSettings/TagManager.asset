@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Wall
+  - Enemy
+  - WeaponHitbox
+  - FlyEnemy
   layers:
   - Default
   - TransparentFX
@@ -16,7 +19,7 @@ TagManager:
   - 
   - Background
   - BadGuys
-  - 
+  - WeaponHitbox
   - 
   - 
   - 
