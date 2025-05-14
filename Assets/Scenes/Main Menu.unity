@@ -404,6 +404,7 @@ GameObject:
   - component: {fileID: 159120319}
   - component: {fileID: 159120318}
   - component: {fileID: 159120321}
+  - component: {fileID: 159120322}
   m_Layer: 5
   m_Name: Exit Button
   m_TagString: Untagged
@@ -450,7 +451,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -526,6 +527,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SlashingSound: {fileID: 8300000, guid: 8cc9cfaf5977a4540a40e90beccc7f4c, type: 3}
+--- !u!114 &159120322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159120316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0360fe4a1d891493f90973772659f059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetText: {fileID: 0}
+  normalColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
+  hoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!1 &275216777
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,6 +555,7 @@ GameObject:
   - component: {fileID: 275216780}
   - component: {fileID: 275216779}
   - component: {fileID: 275216782}
+  - component: {fileID: 275216783}
   m_Layer: 5
   m_Name: Start Button
   m_TagString: Untagged
@@ -585,7 +602,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -661,6 +678,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SlashingSound: {fileID: 8300000, guid: 8cc9cfaf5977a4540a40e90beccc7f4c, type: 3}
+--- !u!114 &275216783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275216777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0360fe4a1d891493f90973772659f059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetText: {fileID: 0}
+  normalColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
+  hoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!1 &431179931
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,6 +781,7 @@ GameObject:
   - component: {fileID: 674864976}
   - component: {fileID: 674864975}
   - component: {fileID: 674864974}
+  - component: {fileID: 674864978}
   m_Layer: 5
   m_Name: Credit Button
   m_TagString: Untagged
@@ -808,7 +841,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -871,6 +904,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 674864972}
   m_CullTransparentMesh: 1
+--- !u!114 &674864978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674864972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0360fe4a1d891493f90973772659f059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetText: {fileID: 0}
+  normalColor: {r: 0, g: 0, b: 0, a: 1}
+  hoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!1 &812065556
 GameObject:
   m_ObjectHideFlags: 0
