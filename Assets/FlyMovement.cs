@@ -5,10 +5,16 @@ public class FlyMovement : MonoBehaviour
     private Rigidbody2D rb; //rigidbody of the fly
     private SpriteRenderer sr; //sprite renderer of the fly
 
+    public Animator animator; //animator of the frog
+
     public float speed;
     private GameObject player;
     private bool Chase = false;
     public float detectionRadius = 5f; // Radius within which the fly will chase the player
+    
+    private bool isDying = false;
+
+    [SerializeField] private float health = 3;
 
     void Awake()
     {
@@ -26,8 +32,11 @@ public class FlyMovement : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        if (player == null)
+    {   
+        if (isDying) {
+            return;
+        }
+        else if (player == null)
         {
             return;
         }
@@ -47,12 +56,47 @@ public class FlyMovement : MonoBehaviour
                 Chase = true;
                 ChasePlayer(); // Start chasing the player
             }
+            else{
+                
+            }
         
     }
+}
     void ChasePlayer()
     {
         detectionRadius = 10f; // increase the distance hell chase you for
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
     }
-}
+    public void OnHit(float damage){
+        animator.SetTrigger("isHit");
+        health -= damage;
+        Chase = false;
+        ChasePlayer();
+        if (health <= 0)
+        {
+            OnDeath();
+        }
+    }
+    public void OnDeath(){
+        animator.SetTrigger("isDead");
+        isDying = true;
+        rb.linearVelocity = Vector2.zero;
+        rb.bodyType = RigidbodyType2D.Static;
+    }
+    public void DestroyFly()
+    {
+        Destroy(gameObject);
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            Debug.Log("Hit " + collision.name);
+            FrogPhysics player = collision.GetComponent<FrogPhysics>();
+            if (player != null)
+            {
+                player.OnHit(1);
+            }
+        }
+    }
 }

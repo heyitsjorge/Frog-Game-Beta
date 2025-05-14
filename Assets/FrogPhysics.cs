@@ -49,6 +49,10 @@ public class FrogPhysics : MonoBehaviour
     private bool isAttacking = false; //is the player attacking'
     private bool isSecondAttackSet = false; //is the second attack set
 
+// Health Variables
+    public float health = 3;
+    private bool isDying = false;
+
     [SerializeField] private Collider2D weaponFirstAttackFirstCollider1; //first attack collider
     [SerializeField] private Collider2D weaponFirstAttackFirstCollider2; //first attack collider
     [SerializeField] private Collider2D weaponFirstAttackSecondCollider1; //second attack collider
@@ -80,6 +84,7 @@ public class FrogPhysics : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(isDying)return;
         moveInput = Input.GetAxisRaw("Horizontal"); //get input from player
         animator.SetFloat("Speed", Mathf.Abs(moveInput));
         animator.SetFloat("FallSpeed", rb.linearVelocity.y);
@@ -141,8 +146,44 @@ public class FrogPhysics : MonoBehaviour
     }
         
     void FixedUpdate(){
+        if(isAttacking)
+        {
+            attackDuration -= Time.fixedDeltaTime;
+            if (attackDuration <= 0f)
+            {
+                animator.SetBool("isAttacking", false);
+                isAttacking = false;
+                attackDuration = firstAttackDuration;
+                if (isSecondAttackSet)
+                {
+                    attackDuration = secondAttackDuration;
+                } else{
+                    animator.SetBool("isSheething", true);
+                    DisableFirstAttackWeaponCollider();
+                }
+            }
+        }
+
+        if (isSecondAttackSet && !isAttacking)
+        {
+            animator.SetBool("isSecondAttacking", true);
+            attackDuration -= Time.fixedDeltaTime;
+            if (attackDuration <= 0f)
+            {
+                animator.SetBool("isSecondAttacking", false);
+                isSecondAttackSet = false;
+                attackDuration = secondAttackDuration;
+                DisableFirstAttackWeaponCollider();
+                DisableSecondAttackWeaponCollider();
+            }
+        }
+
         if (isDashing)
         {
+            // Clean up sword hitboxes:
+            DisableFirstAttackWeaponCollider();
+            DisableSecondAttackWeaponCollider();
+
             float dashDirection = sr.flipX ? 1 : -1;
             rb.linearVelocity = new Vector2(dashDirection * dashSpeed, 0f);
             dashTimer -= Time.fixedDeltaTime;
@@ -158,36 +199,6 @@ public class FrogPhysics : MonoBehaviour
 
         ApplyCustomGravity();
         HandleHorizontalMovement();
-
-        if(isAttacking)
-        {
-            attackDuration -= Time.fixedDeltaTime;
-            if (attackDuration <= 0f)
-            {
-                animator.SetBool("isAttacking", false);
-                isAttacking = false;
-                attackDuration = firstAttackDuration;
-                if (isSecondAttackSet)
-                {
-                    attackDuration = secondAttackDuration;
-                } else{
-                    animator.SetBool("isSheething", true);
-                }
-            }
-        }
-
-        if (isSecondAttackSet && !isAttacking)
-        {
-            animator.SetBool("isSecondAttacking", true);
-            attackDuration -= Time.fixedDeltaTime;
-            if (attackDuration <= 0f)
-            {
-                animator.SetBool("isSecondAttacking", false);
-                isSecondAttackSet = false;
-                attackDuration = secondAttackDuration;
-            }
-        }
-        
     }
 
     void Jump(){
@@ -262,7 +273,26 @@ public class FrogPhysics : MonoBehaviour
 
         // Optional: Add a visual or sound effect here
     }
+    public void OnHit(float damage)
+    {
+        health -= damage;
+        //TODO: Add hit animation
+        // animator.SetTrigger("isHit");
+        if(health <= 0)
+        {
+            OnDeath();
+        }
+    }
 
+    public void OnDeath()
+    {
+        animator.SetTrigger("isDying");
+        animator.SetBool("isDead", true);
+        isDying = true;
+        rb.bodyType = RigidbodyType2D.Static;
+        DisableFirstAttackWeaponCollider();
+        DisableSecondAttackWeaponCollider();
+    }
     public void EnableFirstAttackFirstHitboxCollider()
     {
         // Debug.Log("First Attack Hitbox Enabled");
@@ -364,6 +394,11 @@ public class FrogPhysics : MonoBehaviour
         weaponSecondAttackSecondCollider1.transform.localPosition = weaponPosition;
         weaponRotation.z = -weaponRotation.z;
         weaponSecondAttackSecondCollider1.transform.localEulerAngles = weaponRotation;
+    }
+
+    public void Sheeth(){
+        animator.SetBool("isSheething", false);
+
     }
 
 }

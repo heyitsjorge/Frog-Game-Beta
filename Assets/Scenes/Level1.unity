@@ -472,10 +472,9 @@ GameObject:
   - component: {fileID: 304423206}
   - component: {fileID: 304423205}
   - component: {fileID: 304423204}
-  - component: {fileID: 304423207}
   m_Layer: 9
   m_Name: Giant Fly Sprite Sheet_0
-  m_TagString: Enemy
+  m_TagString: FlyEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -584,8 +583,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d5acfc8d70a245b2a4374552ddbee69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 304423201}
   speed: 3
   detectionRadius: 5
+  health: 3
 --- !u!58 &304423205
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -616,7 +617,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -649,19 +650,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &304423207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 304423200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b7610352d4e854479370967c09e278b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
 --- !u!1 &325508803
 GameObject:
   m_ObjectHideFlags: 0
@@ -888,6 +876,7 @@ MonoBehaviour:
   attackDuration: 0.5
   firstAttackDuration: 0.5
   secondAttackDuration: 0.5
+  health: 3
   weaponFirstAttackFirstCollider1: {fileID: 1957936067}
   weaponFirstAttackFirstCollider2: {fileID: 1528115170}
   weaponFirstAttackSecondCollider1: {fileID: 768159920}

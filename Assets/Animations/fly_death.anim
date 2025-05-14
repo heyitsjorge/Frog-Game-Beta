@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player_Attack_Single_Sheeth_Sword
+  m_Name: fly_death
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,11 +21,15 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 1531853577716389795, guid: f462a62c91800b74486221da95a09813, type: 3}
+      value: {fileID: 5554290792119338916, guid: 23244f81c12f04342b5d25625ae813ab, type: 3}
     - time: 0.083333336
-      value: {fileID: -5827022090325200607, guid: f462a62c91800b74486221da95a09813, type: 3}
+      value: {fileID: -8637940582172464431, guid: 23244f81c12f04342b5d25625ae813ab, type: 3}
     - time: 0.16666667
-      value: {fileID: -8398289938000476493, guid: f462a62c91800b74486221da95a09813, type: 3}
+      value: {fileID: 2186948957924812826, guid: 23244f81c12f04342b5d25625ae813ab, type: 3}
+    - time: 0.25
+      value: {fileID: 5148073625660638527, guid: 23244f81c12f04342b5d25625ae813ab, type: 3}
+    - time: 0.33333334
+      value: {fileID: 364677262103596984, guid: 23244f81c12f04342b5d25625ae813ab, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -48,15 +52,17 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 1531853577716389795, guid: f462a62c91800b74486221da95a09813, type: 3}
-    - {fileID: -5827022090325200607, guid: f462a62c91800b74486221da95a09813, type: 3}
-    - {fileID: -8398289938000476493, guid: f462a62c91800b74486221da95a09813, type: 3}
+    - {fileID: 5554290792119338916, guid: 23244f81c12f04342b5d25625ae813ab, type: 3}
+    - {fileID: -8637940582172464431, guid: 23244f81c12f04342b5d25625ae813ab, type: 3}
+    - {fileID: 2186948957924812826, guid: 23244f81c12f04342b5d25625ae813ab, type: 3}
+    - {fileID: 5148073625660638527, guid: 23244f81c12f04342b5d25625ae813ab, type: 3}
+    - {fileID: 364677262103596984, guid: 23244f81c12f04342b5d25625ae813ab, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.25
+    m_StopTime: 0.4166667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -76,8 +82,8 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.25
-    functionName: Sheeth
+  - time: 0.41666666
+    functionName: DestroyFly
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

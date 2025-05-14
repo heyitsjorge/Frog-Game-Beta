@@ -17,10 +17,10 @@ public class PlayerSwordHitbox : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Hit " + collision.name);
-        if (collision.CompareTag("Enemy"))
+        if (collision.CompareTag("FlyEnemy"))
         {
-            HealthSystem enemy = collision.GetComponent<HealthSystem>();
-            enemy.TakeDamage(1);
+            FlyMovement enemy = collision.GetComponent<FlyMovement>();
+            enemy.OnHit(1);
         }
     }
 }
