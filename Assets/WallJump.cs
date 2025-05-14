@@ -9,6 +9,8 @@ public class WallJump : MonoBehaviour
 
     private Rigidbody2D rb;
     private SpriteRenderer sr;
+
+    public Animator animator;
     private bool isTouchingWall = false;
     private bool isGrounded = false; // You’ll update this via FrogPhysics or from a shared state
     private float wallJumpTimer = 0f;
@@ -35,14 +37,15 @@ public class WallJump : MonoBehaviour
     }
 
     void PerformWallJump()
-{
-    wallJumpTimer = wallJumpCooldown;
+    {
+        animator.SetBool("isWallJumping", true);
+        wallJumpTimer = wallJumpCooldown;
 
-    rb.velocity = new Vector2(wallSide * wallJumpPush, wallJumpForce);
+        rb.linearVelocity = new Vector2(wallSide * wallJumpPush, wallJumpForce);
 
-    if (frogPhysics != null)
-        frogPhysics.ResetDash();
-}
+        if (frogPhysics != null)
+            frogPhysics.ResetDash();
+    }
 
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -50,7 +53,9 @@ public class WallJump : MonoBehaviour
         if (collision.gameObject.CompareTag("Wall"))
         {
             isTouchingWall = true;
-
+            Debug.Log("Touching wall");
+            animator.SetBool("isClinging", true);
+            animator.SetTrigger("startCling");
             // Use contact normal to determine wall side
             ContactPoint2D contact = collision.GetContact(0);
             wallSide = contact.normal.x > 0 ? -1 : 1; // Wall is on left → push right
@@ -62,6 +67,8 @@ public class WallJump : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Wall"))
         {
+            Debug.Log("Not touching wall");
+            animator.SetBool("isClinging", false);
             isTouchingWall = false;
         }
     }

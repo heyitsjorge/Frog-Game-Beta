@@ -565,7 +565,7 @@ public class FrogPhysics : MonoBehaviour
 
         moveInput = Input.GetAxisRaw("Horizontal");
         animator.SetFloat("Speed", Mathf.Abs(moveInput));
-        animator.SetFloat("FallSpeed", rb.velocity.y);
+        animator.SetFloat("FallSpeed", rb.linearVelocity.y);
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, ground);
         if (isGrounded)
@@ -595,6 +595,7 @@ public class FrogPhysics : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             TryDash();
+            
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
@@ -610,9 +611,10 @@ public class FrogPhysics : MonoBehaviour
             }
         }
 
-        if (rb.velocity.y <= 0)
+        if (rb.linearVelocity.y <= 0)
         {
             animator.SetBool("isJumping", false);
+            animator.SetBool("isWallJumping", false);
         }
 
         if (moveInput != 0)
@@ -675,7 +677,7 @@ public class FrogPhysics : MonoBehaviour
             DisableSecondAttackWeaponCollider();
 
             float dashDirection = sr.flipX ? 1 : -1;
-            rb.velocity = new Vector2(dashDirection * dashSpeed, 0f);
+            rb.linearVelocity = new Vector2(dashDirection * dashSpeed, 0f);
             dashTimer -= Time.fixedDeltaTime;
 
             if (dashTimer <= 0f)
@@ -693,30 +695,31 @@ public class FrogPhysics : MonoBehaviour
 
     void Jump()
     {
-        rb.velocity = new Vector2(rb.velocity.x, jumpVelocity);
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpVelocity);
         animator.SetBool("isJumping", true);
+        animator.SetBool("isSheething", false);
     }
 
     void ApplyCustomGravity()
     {
-        if (rb.velocity.y > 0 && !jumpInputHeld)
+        if (rb.linearVelocity.y > 0 && !jumpInputHeld)
         {
-            rb.velocity += Vector2.down * gravityUp * jumpCutMultiplier * Time.fixedDeltaTime;
+            rb.linearVelocity += Vector2.down * gravityUp * jumpCutMultiplier * Time.fixedDeltaTime;
         }
-        else if (rb.velocity.y > 0)
+        else if (rb.linearVelocity.y > 0)
         {
-            rb.velocity += Vector2.down * gravityUp * Time.fixedDeltaTime;
+            rb.linearVelocity += Vector2.down * gravityUp * Time.fixedDeltaTime;
         }
         else
         {
-            rb.velocity += Vector2.down * gravityDown * Time.fixedDeltaTime;
+            rb.linearVelocity += Vector2.down * gravityDown * Time.fixedDeltaTime;
         }
     }
 
     void HandleHorizontalMovement()
     {
         float control = isGrounded ? 1f : airControl;
-        rb.velocity = new Vector2(moveInput * moveSpeed * control, rb.velocity.y);
+        rb.linearVelocity = new Vector2(moveInput * moveSpeed * control, rb.linearVelocity.y);
     }
 
     void TryDash()
@@ -740,6 +743,7 @@ public class FrogPhysics : MonoBehaviour
         isDashing = true;
         dashTimer = dashDuration;
         animator.SetBool("isDashing", true);
+        animator.SetBool("isSheething", false);
     }
 
     public void ResetDash()
