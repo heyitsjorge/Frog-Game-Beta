@@ -511,13 +511,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304423200}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d5acfc8d70a245b2a4374552ddbee69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  Chase: 0
   detectionRadius: 5
 --- !u!58 &304423205
 CircleCollider2D:
@@ -596,6 +595,7 @@ GameObject:
   - component: {fileID: 325508807}
   - component: {fileID: 325508806}
   - component: {fileID: 325508809}
+  - component: {fileID: 325508810}
   m_Layer: 0
   m_Name: idleJiri_3
   m_TagString: Player
@@ -686,7 +686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6943abfd1f054084b083f16b6bc2428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 6
   jumpForce: 10
   dashSpeed: 15
   dashDuration: 0.2
@@ -780,9 +780,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56d973f45fbc249fb975380710c8fd0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpVelocity: 10
-  gravityUp: 30
-  gravityDown: 50
+  jumpVelocity: 17
+  gravityUp: 28
+  gravityDown: 40
   jumpCutMultiplier: 0.5
   moveSpeed: 8
   airControl: 0.5
@@ -798,6 +798,21 @@ MonoBehaviour:
   dashSpeed: 20
   dashDuration: 0.15
   groundDashCoolDown: 0.5
+--- !u!114 &325508810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325508803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6e7edd8412b447dba7c01c93eebb3a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallJumpForce: 14
+  wallJumpPush: 8
+  wallJumpCooldown: 0.2
 --- !u!1 &338528367
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,7 +1000,7 @@ GameObject:
   - component: {fileID: 610146035}
   m_Layer: 6
   m_Name: wall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1100,7 +1115,7 @@ Transform:
   m_GameObject: {fileID: 610146034}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 24.92, y: 4.24, z: 0}
+  m_LocalPosition: {x: 24.83, y: 6.39, z: 0}
   m_LocalScale: {x: 24.59, y: 10.89, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1826,7 +1841,7 @@ GameObject:
   - component: {fileID: 1451298559}
   m_Layer: 6
   m_Name: wall (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

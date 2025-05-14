@@ -32,9 +32,9 @@ public class JiriMovement : MonoBehaviour
         if (isDashing) return;
 
         float moveX = Input.GetAxisRaw("Horizontal");
-        Vector2 velocity = rb.velocity;
+        Vector2 velocity = rb.linearVelocity;
         velocity.x = moveX * moveSpeed;
-        rb.velocity = new Vector2(velocity.x, rb.velocity.y);
+        rb.linearVelocity = new Vector2(velocity.x, rb.linearVelocity.y);
 
         // Flip sprite based on direction
         if (moveX != 0)
@@ -44,7 +44,7 @@ public class JiriMovement : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
 
         // Dash
@@ -63,7 +63,7 @@ public class JiriMovement : MonoBehaviour
         dashTime = dashDuration;
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0;
-        rb.velocity = new Vector2(Mathf.Sign(direction) * dashSpeed, 0);
+        rb.linearVelocity = new Vector2(Mathf.Sign(direction) * dashSpeed, 0);
 
         while (dashTime > 0)
         {

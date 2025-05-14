@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class FrogPhysics : MonoBehaviour
 {
+    private WallJump wallJump; //reference to the wall jump script
     private Rigidbody2D rb; //rigidbody of the frog
     private SpriteRenderer sr; //sprite renderer of the frog
     private float moveInput = 0f; //input from the player
@@ -47,6 +48,7 @@ public class FrogPhysics : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0; //set gravity scale to 0 so we can control the gravity ourselves
+        wallJump = GetComponent<WallJump>(); //get the wall jump script
     }
 
     // Update is called once per frame
@@ -86,12 +88,21 @@ public class FrogPhysics : MonoBehaviour
         {
             TryDash();
         }
+        //fix direction of the sprite
+        if (moveInput != 0)
+        {
+            sr.flipX = moveInput > 0;
+        }
+        if (wallJump != null)
+        {
+        wallJump.SetGrounded(isGrounded);
+        }
     }
         
     void FixedUpdate(){
         if (isDashing)
     {
-        float dashDirection = sr.flipX ? -1 : 1;
+        float dashDirection = sr.flipX ? 1 : -1;
         rb.velocity = new Vector2(dashDirection * dashSpeed, 0f);
         dashTimer -= Time.fixedDeltaTime;
 
@@ -121,7 +132,7 @@ public class FrogPhysics : MonoBehaviour
         //regualr jump
         else if (rb.velocity.y > 0)
         {
-            rb.velocity += Vector2.up * gravityUp * Time.fixedDeltaTime; //apply upward gravity
+            rb.velocity += Vector2.down * gravityUp * Time.fixedDeltaTime; //apply upward gravity
         }
         //faling down
         else
@@ -174,7 +185,10 @@ void StartDash()
 
     // Optional: Add a visual or sound effect here
 }
-
+public void ResetDash()
+{
+    canDash = true;
+}
 
 }
 
