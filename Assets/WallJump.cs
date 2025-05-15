@@ -30,8 +30,15 @@ public class WallJump : MonoBehaviour
     {
         wallJumpTimer -= Time.deltaTime;
 
+        if (isTouchingWall)
+        {
+            animator.SetBool("isClinging", true);
+            animator.SetBool("isSheething", false);
+        }
+
         if (Input.GetButtonDown("Jump") && isTouchingWall && !isGrounded && wallJumpTimer <= 0f)
         {
+            Debug.Log("Wall Jump Triggered");
             PerformWallJump();
         }
     }
@@ -52,10 +59,9 @@ public class WallJump : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Wall"))
         {
-            isTouchingWall = true;
-            Debug.Log("Touching wall");
             animator.SetBool("isClinging", true);
             animator.SetTrigger("startCling");
+            isTouchingWall = true;
             // Use contact normal to determine wall side
             ContactPoint2D contact = collision.GetContact(0);
             wallSide = contact.normal.x > 0 ? -1 : 1; // Wall is on left → push right
@@ -67,7 +73,6 @@ public class WallJump : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Wall"))
         {
-            Debug.Log("Not touching wall");
             animator.SetBool("isClinging", false);
             isTouchingWall = false;
         }

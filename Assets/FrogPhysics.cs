@@ -103,7 +103,7 @@ public class FrogPhysics : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             TryDash();
-            
+
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
@@ -282,8 +282,8 @@ public class FrogPhysics : MonoBehaviour
     }
     private System.Collections.IEnumerator LoadMainMenuAfterDelay(float delay)
     {
-    yield return new WaitForSeconds(delay);
-    SceneManager.LoadScene("Main Menu");
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene("Main Menu");
     }
 
     public void EnableFirstAttackFirstHitboxCollider()
