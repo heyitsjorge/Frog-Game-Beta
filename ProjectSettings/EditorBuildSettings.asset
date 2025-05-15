@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ClosingScence.unity
     guid: 1b04809c0acdf4f6a87df5a3c8eea615
+  - enabled: 1
+    path: Assets/Scenes/Credit Scene.unity
+    guid: f7f5d237954f249348cfdeb2c6dc94dd
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

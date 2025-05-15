@@ -1802,6 +1802,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startButton: {fileID: 275216779}
   exitButton: {fileID: 159120318}
+  creditButton: {fileID: 674864975}
 --- !u!4 &2065526766
 Transform:
   m_ObjectHideFlags: 0
