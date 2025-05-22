@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Wall
+  - Enemy
+  - WeaponHitbox
+  - FlyEnemy
+  - WIN
   layers:
   - Default
   - TransparentFX
@@ -14,8 +19,8 @@ TagManager:
   - Ground
   - 
   - Background
-  - 
-  - 
+  - BadGuys
+  - WeaponHitbox
   - 
   - 
   - 

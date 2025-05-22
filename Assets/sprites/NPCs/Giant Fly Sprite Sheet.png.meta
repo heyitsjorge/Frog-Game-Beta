@@ -112,7 +112,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -150,7 +150,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -191,10 +191,10 @@ TextureImporter:
       name: Giant Fly Sprite Sheet_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 134
-        width: 19
-        height: 19
+        x: 0
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,10 +213,10 @@ TextureImporter:
       name: Giant Fly Sprite Sheet_1
       rect:
         serializedVersion: 2
-        x: 38
-        y: 137
-        width: 22
-        height: 16
+        x: 32
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,10 +235,10 @@ TextureImporter:
       name: Giant Fly Sprite Sheet_2
       rect:
         serializedVersion: 2
-        x: 69
-        y: 136
-        width: 24
-        height: 16
+        x: 64
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,10 +257,10 @@ TextureImporter:
       name: Giant Fly Sprite Sheet_3
       rect:
         serializedVersion: 2
-        x: 101
-        y: 136
-        width: 23
-        height: 15
+        x: 96
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,10 +279,10 @@ TextureImporter:
       name: Giant Fly Sprite Sheet_4
       rect:
         serializedVersion: 2
-        x: 6
-        y: 102
-        width: 19
-        height: 19
+        x: 0
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -301,10 +301,10 @@ TextureImporter:
       name: Giant Fly Sprite Sheet_5
       rect:
         serializedVersion: 2
-        x: 37
-        y: 104
-        width: 23
-        height: 18
+        x: 32
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -323,10 +323,10 @@ TextureImporter:
       name: Giant Fly Sprite Sheet_6
       rect:
         serializedVersion: 2
-        x: 69
-        y: 100
-        width: 24
-        height: 24
+        x: 64
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -345,10 +345,10 @@ TextureImporter:
       name: Giant Fly Sprite Sheet_7
       rect:
         serializedVersion: 2
-        x: 101
-        y: 101
-        width: 23
-        height: 21
+        x: 96
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -367,10 +367,10 @@ TextureImporter:
       name: Giant Fly Sprite Sheet_8
       rect:
         serializedVersion: 2
-        x: 6
-        y: 70
-        width: 19
-        height: 19
+        x: 0
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -389,10 +389,10 @@ TextureImporter:
       name: Giant Fly Sprite Sheet_9
       rect:
         serializedVersion: 2
-        x: 37
-        y: 73
-        width: 19
-        height: 18
+        x: 32
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -411,10 +411,10 @@ TextureImporter:
       name: Giant Fly Sprite Sheet_10
       rect:
         serializedVersion: 2
-        x: 67
-        y: 72
-        width: 24
-        height: 22
+        x: 64
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -433,10 +433,10 @@ TextureImporter:
       name: Giant Fly Sprite Sheet_11
       rect:
         serializedVersion: 2
-        x: 101
-        y: 72
-        width: 23
-        height: 15
+        x: 96
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -455,10 +455,10 @@ TextureImporter:
       name: Giant Fly Sprite Sheet_12
       rect:
         serializedVersion: 2
-        x: 6
-        y: 38
-        width: 19
-        height: 19
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -477,10 +477,10 @@ TextureImporter:
       name: Giant Fly Sprite Sheet_13
       rect:
         serializedVersion: 2
-        x: 37
-        y: 40
-        width: 23
-        height: 18
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -499,10 +499,10 @@ TextureImporter:
       name: Giant Fly Sprite Sheet_14
       rect:
         serializedVersion: 2
-        x: 69
-        y: 36
-        width: 24
-        height: 24
+        x: 64
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -521,10 +521,10 @@ TextureImporter:
       name: Giant Fly Sprite Sheet_15
       rect:
         serializedVersion: 2
-        x: 98
-        y: 46
-        width: 17
-        height: 15
+        x: 96
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -543,10 +543,10 @@ TextureImporter:
       name: Giant Fly Sprite Sheet_16
       rect:
         serializedVersion: 2
-        x: 101
-        y: 40
-        width: 11
-        height: 7
+        x: 128
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -565,10 +565,10 @@ TextureImporter:
       name: Giant Fly Sprite Sheet_17
       rect:
         serializedVersion: 2
-        x: 110
-        y: 36
-        width: 13
-        height: 12
+        x: 160
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -587,10 +587,10 @@ TextureImporter:
       name: Giant Fly Sprite Sheet_18
       rect:
         serializedVersion: 2
-        x: 113
-        y: 46
-        width: 10
-        height: 9
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -609,10 +609,10 @@ TextureImporter:
       name: Giant Fly Sprite Sheet_19
       rect:
         serializedVersion: 2
-        x: 115
-        y: 54
-        width: 8
-        height: 8
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -627,143 +627,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Giant Fly Sprite Sheet_20
-      rect:
-        serializedVersion: 2
-        x: 129
-        y: 46
-        width: 17
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 051f9a93cb439c920800000000000000
-      internalID: 3010995808899821904
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Giant Fly Sprite Sheet_21
-      rect:
-        serializedVersion: 2
-        x: 131
-        y: 37
-        width: 10
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 685bd07fb3a2660b0800000000000000
-      internalID: -5735850638373440122
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Giant Fly Sprite Sheet_22
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 32
-        width: 15
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6c7402a8e56ac62e0800000000000000
-      internalID: -2131145598678579258
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Giant Fly Sprite Sheet_23
-      rect:
-        serializedVersion: 2
-        x: 149
-        y: 36
-        width: 40
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a08aba422d5315480800000000000000
-      internalID: -8912283010914867190
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Giant Fly Sprite Sheet_24
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 13
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5d5958ea2099b73c0800000000000000
-      internalID: -4360723577381218859
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Giant Fly Sprite Sheet_25
-      rect:
-        serializedVersion: 2
-        x: 45
-        y: 13
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e65ac6d544e57b280800000000000000
-      internalID: -9027643280322681490
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -771,7 +639,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":5.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Giant Fly Sprite Sheet_0: 5688147070955505208
       Giant Fly Sprite Sheet_1: 8384208292938742519
@@ -786,12 +656,6 @@ TextureImporter:
       Giant Fly Sprite Sheet_18: -3756505764769585838
       Giant Fly Sprite Sheet_19: 3348737754902886296
       Giant Fly Sprite Sheet_2: -6374281179672626349
-      Giant Fly Sprite Sheet_20: 3010995808899821904
-      Giant Fly Sprite Sheet_21: -5735850638373440122
-      Giant Fly Sprite Sheet_22: -2131145598678579258
-      Giant Fly Sprite Sheet_23: -8912283010914867190
-      Giant Fly Sprite Sheet_24: -4360723577381218859
-      Giant Fly Sprite Sheet_25: -9027643280322681490
       Giant Fly Sprite Sheet_3: 5866171095540178726
       Giant Fly Sprite Sheet_4: 3683817691753095175
       Giant Fly Sprite Sheet_5: 275597817930062194

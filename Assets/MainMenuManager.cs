@@ -6,20 +6,40 @@ public class MainMenuManager : MonoBehaviour
 {
     public Button startButton;
     public Button exitButton;
+    public Button creditButton;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         startButton.onClick.AddListener(StartGame);
         exitButton.onClick.AddListener(QuitGame);
+        creditButton.onClick.AddListener(ShowCredits);
     }
 
     public void StartGame()
-    {
-        // Load the game scene (replace "GameScene" with the actual name of your game scene)
-        SceneManager.LoadScene("IntroCutScene");
-    }
-    public void QuitGame()
-    {
+{
+    StartCoroutine(DelayedIntro());
+}
+
+private System.Collections.IEnumerator DelayedIntro()
+{
+    yield return new WaitForSeconds(1.2f); // Wait for audio to finish
+    SceneManager.LoadScene("IntroCutScene");
+}
+
+private System.Collections.IEnumerator DelayedCredits()
+{
+    yield return new WaitForSeconds(1.2f); // Wait for audio to finish
+    SceneManager.LoadScene("Credit Scene");
+}
+
+
+private void ShowCredits()
+{
+    StartCoroutine(DelayedCredits());
+}
+
+public void QuitGame()
+{
         // Quit the application
         Application.Quit();
 
@@ -27,11 +47,5 @@ public class MainMenuManager : MonoBehaviour
         #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
         #endif
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+}
 }
