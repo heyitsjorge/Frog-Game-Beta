@@ -46,10 +46,10 @@ public class FrogPhysics : MonoBehaviour
     private bool isSecondAttackSet = false;
 
     // Kunai
-    public GameObject kunai;
+    public GameObject kunaiPrefab;
     public Transform kunaiSpawnPoint;
     public float kunaiSpeed = 15f;
-    public float throwCooldownTime = 10f;
+    public float throwCooldownTime = 0f;
     private bool isThrowing = false;
     private float throwDuration = 0.25f;
     private float throwDurationLeft = 0.25f;
@@ -118,16 +118,6 @@ public class FrogPhysics : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse0) && !isThrowing)
         {
-            if (isGrounded)
-            {
-                animator.SetBool("isSheething", false);
-                animator.SetBool("isAttacking", false);
-                animator.SetBool("isSecondAttacking", false);
-                isSecondAttackSet = false;
-                isThrowing = true;
-            }
-        }
-        {
             if (!isAttacking && !isSecondAttackSet)
             {
                 animator.SetBool("isAttacking", true);
@@ -144,7 +134,7 @@ public class FrogPhysics : MonoBehaviour
             animator.SetTrigger("startThrow");
             throwCooldown = throwCooldownTime;
             throwDurationLeft = throwDuration;
-
+            isThrowing = true;
         }
 
         if (rb.linearVelocity.y <= 0)
@@ -160,6 +150,7 @@ public class FrogPhysics : MonoBehaviour
             if (prevFlipX != sr.flipX)
             {
                 FlipWeaponColliders();
+                FlipKunaiSpawnPoint();
             }
         }
 
@@ -216,6 +207,7 @@ public class FrogPhysics : MonoBehaviour
             {
                 isThrowing = false;
                 throwDurationLeft = throwDuration;
+                animator.SetBool("isThrowing", false);
             }
         }
 
@@ -391,6 +383,20 @@ public class FrogPhysics : MonoBehaviour
         Flip(weaponFirstAttackSecondCollider3);
         Flip(weaponSecondAttackFirstCollider1);
         Flip(weaponSecondAttackSecondCollider1);
+    }
+
+    private void FlipKunaiSpawnPoint()
+    {
+        Vector3 spawnPosition = kunaiSpawnPoint.localPosition;
+        spawnPosition.x = -spawnPosition.x;
+        kunaiSpawnPoint.localPosition = spawnPosition;
+    }
+
+    public void ThrowKunai()
+    {
+        GameObject go = Instantiate(kunaiPrefab, kunaiSpawnPoint.position, kunaiSpawnPoint.rotation);
+        var proj = go.GetComponent<KunaiProjectile>();
+        proj.InititializeProjectile(sr.flipX ? Vector2.right : Vector2.left, go.GetComponent<Rigidbody2D>(), go.GetComponent<SpriteRenderer>());
     }
 }
 

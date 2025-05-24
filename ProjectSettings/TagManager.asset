@@ -9,6 +9,7 @@ TagManager:
   - WeaponHitbox
   - FlyEnemy
   - WIN
+  - Kunai
   layers:
   - Default
   - TransparentFX
