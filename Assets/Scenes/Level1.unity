@@ -858,6 +858,7 @@ GameObject:
   - component: {fileID: 325508806}
   - component: {fileID: 325508810}
   - component: {fileID: 325508811}
+  - component: {fileID: 325508812}
   m_Layer: 0
   m_Name: Jiri
   m_TagString: Player
@@ -1067,6 +1068,10 @@ MonoBehaviour:
   attackDuration: 0.5
   firstAttackDuration: 0.5
   secondAttackDuration: 0.5
+  kunai: {fileID: 0}
+  kunaiSpawnPoint: {fileID: 0}
+  kunaiSpeed: 15
+  throwCooldownTime: 10
   health: 5
   weaponFirstAttackFirstCollider1: {fileID: 1957936067}
   weaponFirstAttackFirstCollider2: {fileID: 1528115170}
@@ -1113,6 +1118,18 @@ MonoBehaviour:
   wallJumpPush: 8
   wallJumpCooldown: 0.2
   animator: {fileID: 325508810}
+--- !u!114 &325508812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325508803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b02526722cdb61d4c9da1424bbe43462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &338528367
 GameObject:
   m_ObjectHideFlags: 0

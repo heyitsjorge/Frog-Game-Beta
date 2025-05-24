@@ -45,6 +45,16 @@ public class FrogPhysics : MonoBehaviour
     private bool isAttacking = false;
     private bool isSecondAttackSet = false;
 
+    // Kunai
+    public GameObject kunai;
+    public Transform kunaiSpawnPoint;
+    public float kunaiSpeed = 15f;
+    public float throwCooldownTime = 10f;
+    private bool isThrowing = false;
+    private float throwDuration = 0.25f;
+    private float throwDurationLeft = 0.25f;
+    private float throwCooldown = 0f;
+
     public float health = 3;
     private bool isDying = false;
 
@@ -106,7 +116,17 @@ public class FrogPhysics : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !isThrowing)
+        {
+            if (isGrounded)
+            {
+                animator.SetBool("isSheething", false);
+                animator.SetBool("isAttacking", false);
+                animator.SetBool("isSecondAttacking", false);
+                isSecondAttackSet = false;
+                isThrowing = true;
+            }
+        }
         {
             if (!isAttacking && !isSecondAttackSet)
             {
@@ -117,6 +137,14 @@ public class FrogPhysics : MonoBehaviour
             {
                 isSecondAttackSet = true;
             }
+        }
+        if (Input.GetKeyDown(KeyCode.Mouse1) && !isAttacking && throwCooldown <= 0)
+        {
+            animator.SetBool("isThrowing", true);
+            animator.SetTrigger("startThrow");
+            throwCooldown = throwCooldownTime;
+            throwDurationLeft = throwDuration;
+
         }
 
         if (rb.linearVelocity.y <= 0)
@@ -143,6 +171,8 @@ public class FrogPhysics : MonoBehaviour
 
     void FixedUpdate()
     {
+        throwCooldown -= Time.fixedDeltaTime;
+
         if (isAttacking)
         {
             attackDuration -= Time.fixedDeltaTime;
@@ -176,6 +206,16 @@ public class FrogPhysics : MonoBehaviour
                 attackDuration = secondAttackDuration;
                 DisableFirstAttackWeaponCollider();
                 DisableSecondAttackWeaponCollider();
+            }
+        }
+
+        if (isThrowing)
+        {
+            throwDurationLeft -= Time.fixedDeltaTime;
+            if (throwDurationLeft <= 0f)
+            {
+                isThrowing = false;
+                throwDurationLeft = throwDuration;
             }
         }
 
@@ -232,7 +272,7 @@ public class FrogPhysics : MonoBehaviour
 
     void TryDash()
     {
-        if (isDashing || isAttacking || isSecondAttackSet) return;
+        if (isDashing || isAttacking || isSecondAttackSet || isThrowing) return;
 
         if (isGrounded && groundDashCooldownTimer <= 0f)
         {
