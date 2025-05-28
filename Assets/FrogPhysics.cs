@@ -181,6 +181,7 @@ public class FrogPhysics : MonoBehaviour
                 {
                     animator.SetBool("isSheething", true);
                     DisableFirstAttackWeaponCollider();
+                    
                 }
             }
         }

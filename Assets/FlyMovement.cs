@@ -11,7 +11,7 @@ public class FlyMovement : MonoBehaviour
     private GameObject player;
     private bool Chase = false;
     public float detectionRadius = 5f; // Radius within which the fly will chase the player
-    
+
     private bool isDying = false;
 
     [SerializeField] private float health = 3;
@@ -32,8 +32,9 @@ public class FlyMovement : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {   
-        if (isDying) {
+    {
+        if (isDying)
+        {
             return;
         }
         else if (player == null)
@@ -56,28 +57,34 @@ public class FlyMovement : MonoBehaviour
                 Chase = true;
                 ChasePlayer(); // Start chasing the player
             }
-            else{
-                
+            else
+            {
+
             }
-        
+
+        }
     }
-}
     void ChasePlayer()
     {
         detectionRadius = 10f; // increase the distance hell chase you for
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
     }
-    public void OnHit(float damage){
-        animator.SetTrigger("isHit");
-        health -= damage;
-        Chase = false;
-        ChasePlayer();
-        if (health <= 0)
+    public void OnHit(float damage)
+    {
+        if (health > 0)
+        {
+            animator.SetTrigger("isHit");
+            health -= damage;
+            Chase = false;
+            ChasePlayer();
+        }
+        if (health <= 0 && !isDying)
         {
             OnDeath();
         }
     }
-    public void OnDeath(){
+    public void OnDeath()
+    {
         animator.SetTrigger("isDead");
         isDying = true;
         rb.linearVelocity = Vector2.zero;
