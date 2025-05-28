@@ -22,5 +22,10 @@ public class PlayerSwordHitbox : MonoBehaviour
             FlyMovement enemy = collision.GetComponent<FlyMovement>();
             enemy.OnHit(1);
         }
+        else if (collision.CompareTag("MarioBeetle"))
+        {
+            BeetleMovementController enemy = collision.GetComponent<BeetleMovementController>();
+            enemy.OnHit(1);
+        }
     }
 }
