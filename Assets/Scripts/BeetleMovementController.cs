@@ -9,6 +9,7 @@ public class BeetleMovementController : MonoBehaviour
 
     [SerializeField] Transform floorDetector;
     [SerializeField] Transform wallDetector;
+    [SerializeField] Transform groundedDetector;
 
     [SerializeField] private LayerMask wallLayer;
     [SerializeField] private LayerMask enemyLayer;
@@ -31,13 +32,16 @@ public class BeetleMovementController : MonoBehaviour
     {
         Vector2 tempVelocity = gameObject.GetComponent<Rigidbody2D>().linearVelocity;
 
-        if (Physics2D.OverlapCircle(wallDetector.position, 0.05f, wallLayer) || Physics2D.OverlapCircle(wallDetector.position, 0.05f, enemyLayer)
-        && Physics2D.OverlapCircle(floorDetector.position, 0.05f, wallLayer))
+        if ((Physics2D.OverlapCircle(wallDetector.position, 0.05f, wallLayer)
+            || Physics2D.OverlapCircle(wallDetector.position, 0.05f, enemyLayer))
+            && Physics2D.OverlapCircle(groundedDetector.position, 0.05f, wallLayer))
         {
+            Debug.Log("green koopa flip");
             FlipSprite();
         }
         else if (!walkOffPlatform && (!Physics2D.OverlapCircle(floorDetector.position, 0.05f, wallLayer)))
         {
+            Debug.Log("red koopa flip");
             FlipSprite();
         }
 
@@ -62,19 +66,6 @@ public class BeetleMovementController : MonoBehaviour
         temp.x = temp.x * -1;
         transform.localScale = temp;
         facingRight = !facingRight;
-    }
-
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            Debug.Log("Hit " + collision.name);
-            FrogPhysics player = collision.GetComponent<FrogPhysics>();
-            if (player != null)
-            {
-                player.OnHit(1);
-            }
-        }
     }
 
     public void OnHit(float damage){

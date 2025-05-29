@@ -10,6 +10,7 @@ TagManager:
   - FlyEnemy
   - WIN
   - Kunai
+  - MarioBeetle
   layers:
   - Default
   - TransparentFX

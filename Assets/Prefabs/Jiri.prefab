@@ -1560,6 +1560,10 @@ MonoBehaviour:
   attackDuration: 0.5
   firstAttackDuration: 0.5
   secondAttackDuration: 0.5
+  kunaiPrefab: {fileID: 5070081169849606045, guid: c0592272e49e84146b1f72fae1a6cdc0, type: 3}
+  kunaiSpawnPoint: {fileID: 0}
+  kunaiSpeed: 15
+  throwCooldownTime: 0
   health: 5
   weaponFirstAttackFirstCollider1: {fileID: 1989049514527748499}
   weaponFirstAttackFirstCollider2: {fileID: 2564195352840899533}

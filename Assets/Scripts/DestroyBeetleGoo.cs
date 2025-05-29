@@ -8,7 +8,7 @@ public class DestroyBeetleGoo : MonoBehaviour
     {
         float animTime = GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length;
         
-        Destroy(gameObject, animTime + delay);
+        Destroy(gameObject, animTime + delay - 0.001f);
     }
 }
 
