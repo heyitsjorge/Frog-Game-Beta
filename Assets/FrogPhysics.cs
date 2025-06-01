@@ -10,10 +10,10 @@ public class FrogPhysics : MonoBehaviour
     public Animator animator;
     private float moveInput = 0f;
 
-    public float jumpVelocity = 10f;
+    public float jumpVelocity = 15f;
     public float gravityUp = 30f;
-    public float gravityDown = 50f;
-    public float jumpCutMultiplier = 0.5f;
+    public float gravityDown = 60f;
+    public float jumpCutMultiplier = 2f;
 
     public float moveSpeed = 8f;
     public float airControl = 0.5f;
@@ -24,6 +24,15 @@ public class FrogPhysics : MonoBehaviour
     public float jumpBufferTime = 0.1f;
     private float jumpBufferTimer = 0f;
     private bool jumpInputHeld;
+
+    private bool isJumpingUp = false;
+
+    private bool hasJumped = false;
+    private float jumpStartY = 0f;
+    public float maxJumpHeight = 5f;
+    public float apexVelocityThreshold = 1f; // Threshold to consider the apex of the jump
+    public float apexExtraGravity = 120f; // Velocity at which the player is considered at the apex of the jump
+
 
     private bool isGrounded;
     public Transform groundCheck;
@@ -83,12 +92,14 @@ public class FrogPhysics : MonoBehaviour
 
         moveInput = Input.GetAxisRaw("Horizontal");
         animator.SetFloat("Speed", Mathf.Abs(moveInput));
-        animator.SetFloat("FallSpeed", rb.linearVelocity.y);
+        animator.SetFloat("FallSpeed", rb.velocity.y);
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, ground);
         if (isGrounded)
         {
+            isJumpingUp = false;
             canDash = true;
+            hasJumped = false;
             coyoteTimer = coyoteTime;
             groundDashCooldownTimer -= Time.deltaTime;
         }
@@ -104,11 +115,12 @@ public class FrogPhysics : MonoBehaviour
 
         jumpInputHeld = Input.GetButton("Jump");
 
-        if (jumpBufferTimer > 0 && coyoteTimer > 0)
+        if (jumpBufferTimer > 0 && coyoteTimer > 0 && !hasJumped)
         {
             Jump();
             jumpBufferTimer = 0f;
         }
+
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
@@ -137,7 +149,7 @@ public class FrogPhysics : MonoBehaviour
             isThrowing = true;
         }
 
-        if (rb.linearVelocity.y <= 0)
+        if (rb.velocity.y <= 0)
         {
             animator.SetBool("isJumping", false);
             animator.SetBool("isWallJumping", false);
@@ -218,7 +230,7 @@ public class FrogPhysics : MonoBehaviour
             DisableSecondAttackWeaponCollider();
 
             float dashDirection = sr.flipX ? 1 : -1;
-            rb.linearVelocity = new Vector2(dashDirection * dashSpeed, 0f);
+            rb.velocity = new Vector2(dashDirection * dashSpeed, 0f);
             dashTimer -= Time.fixedDeltaTime;
 
             if (dashTimer <= 0f)
@@ -236,31 +248,49 @@ public class FrogPhysics : MonoBehaviour
 
     void Jump()
     {
-        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpVelocity);
+        rb.velocity = new Vector2(rb.velocity.x, jumpVelocity);
         animator.SetBool("isJumping", true);
         animator.SetBool("isSheething", false);
+
+        // Track jump start
+        isJumpingUp = true;
+        hasJumped = true;
+        jumpStartY = transform.position.y;
     }
 
     void ApplyCustomGravity()
     {
-        if (rb.linearVelocity.y > 0 && !jumpInputHeld)
+        float gravityStrength = 0f;
+        float currentJumpHeight = transform.position.y - jumpStartY;
+
+        if (rb.velocity.y > 0)
         {
-            rb.linearVelocity += Vector2.down * gravityUp * jumpCutMultiplier * Time.fixedDeltaTime;
-        }
-        else if (rb.linearVelocity.y > 0)
-        {
-            rb.linearVelocity += Vector2.down * gravityUp * Time.fixedDeltaTime;
+            if (!jumpInputHeld || currentJumpHeight >= maxJumpHeight)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, 0); // STOP flying upward
+                gravityStrength = gravityDown; // FORCE gravity to kick in
+                isJumpingUp = false;
+            }
+            else
+            {
+                gravityStrength = gravityUp; // still rising normally while holding jump
+            }
         }
         else
         {
-            rb.linearVelocity += Vector2.down * gravityDown * Time.fixedDeltaTime;
+            gravityStrength = gravityDown;
+            isJumpingUp = false;
         }
-    }
+
+        rb.velocity += Vector2.down * gravityStrength * Time.fixedDeltaTime;
+        rb.velocity = new Vector2(rb.velocity.x, Mathf.Max(rb.velocity.y, -gravityDown * 0.75f));   
+      }
+
 
     void HandleHorizontalMovement()
     {
         float control = isGrounded ? 1f : airControl;
-        rb.linearVelocity = new Vector2(moveInput * moveSpeed * control, rb.linearVelocity.y);
+        rb.velocity = new Vector2(moveInput * moveSpeed * control, rb.velocity.y);
     }
 
     void TryDash()
