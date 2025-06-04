@@ -17,20 +17,9 @@ public class PlayerSwordHitbox : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Hit " + collision.name);
-        if (collision.CompareTag("FlyEnemy"))
+        if (collision.CompareTag("Enemy"))
         {
-            FlyMovement enemy = collision.GetComponent<FlyMovement>();
-            enemy.OnHit(1);
-        }
-
-        else if (collision.CompareTag("MarioBeetle"))
-        {
-            BeetleMovementController enemy = collision.GetComponent<BeetleMovementController>();
-            enemy.OnHit(1);
-        }
-        else if (collision.CompareTag("Red_Beetle"))
-        {
-            RedBeetleMovement enemy = collision.GetComponent<RedBeetleMovement>();
+            Enemy enemy = collision.GetComponent<Enemy>();
             enemy.OnHit(1);
         }
     }

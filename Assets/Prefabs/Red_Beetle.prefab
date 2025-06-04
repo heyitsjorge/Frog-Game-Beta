@@ -198,6 +198,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fb015b2f070d40f8bc07ce52bd0bd9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  speed: 2
   health: 3
+  moveSpeed: 5
+  damage: 1
+  doesContactDamage: 1
+  deathAnimationObject: {fileID: 0}
+  animator: {fileID: 0}

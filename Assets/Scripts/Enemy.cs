@@ -22,12 +22,13 @@ public class Enemy : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
-            onDeath();
+            OnDeath();
         }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        CollisionHelper(collision);
         if (doesContactDamage && collision.CompareTag("Player"))
         {
             Debug.Log("Hit " + collision.name);
@@ -38,7 +39,11 @@ public class Enemy : MonoBehaviour
             }
         }
     }
-    public virtual void onDeath()
+    public virtual void CollisionHelper(Collider2D collision)
+    {
+        
+    }
+    public virtual void OnDeath()
     {
         Instantiate(deathAnimationObject, gameObject.transform.position, gameObject.transform.localRotation);
         Destroy(gameObject);

@@ -81,7 +81,7 @@ public class FlyMovement : Enemy
     //         OnDeath();
     //     }
     // }
-    public override void onDeath()
+    public override void OnDeath()
     {
         animator.SetTrigger("isDead");
         isDying = true;
