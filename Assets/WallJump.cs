@@ -42,26 +42,6 @@ public class WallJump : MonoBehaviour
     {
         animator.SetBool("isClinging", false);
     }
-
-    // Debug all the conditions when jump is pressed
-    if (Input.GetButtonDown("Jump"))
-    {
-        Debug.Log("=== JUMP BUTTON PRESSED ===");
-        Debug.Log($"isTouchingWall: {isTouchingWall}");
-        Debug.Log($"isGrounded: {isGrounded}");
-        Debug.Log($"wallJumpTimer: {wallJumpTimer}");
-        Debug.Log($"wallSide: {wallSide}");
-        Debug.Log($"All conditions met: {(isTouchingWall && !isGrounded && wallJumpTimer <= 0f)}");
-        
-        // Check each condition individually
-        if (!isTouchingWall) Debug.Log("FAIL: Not touching wall");
-        if (isGrounded) Debug.Log("FAIL: Player is grounded");
-        if (wallJumpTimer > 0f) Debug.Log($"FAIL: Wall jump on cooldown ({wallJumpTimer:F2}s remaining)");
-        if (wallSide == 0) Debug.Log("FAIL: Wall side not detected");
-        
-        Debug.Log("=== END JUMP DEBUG ===");
-    }
-
     // Flag the wall-jump request when conditions are met
     if (Input.GetButtonDown("Jump") && isTouchingWall && !isGrounded && wallJumpTimer <= 0f)
     {
@@ -93,34 +73,21 @@ public class WallJump : MonoBehaviour
 
     void PerformWallJump()
 {
-    Debug.Log($"=== WALL JUMP START ===");
-    Debug.Log($"Wall Side: {wallSide} (should be -1 for left wall, 1 for right wall)");
-    Debug.Log($"Player facing left (flipX): {sr.flipX}");
-    Debug.Log($"Current velocity before jump: {rb.velocity}");
 
     animator.SetBool("isWallJumping", true);
     wallJumpTimer = wallJumpCooldown;  // reset local cooldown
 
     // Calculate the jump direction - this should push AWAY from the wall
     float jumpDirection = wallSide * wallJumpPush;
-    Debug.Log($"Jump direction calculation: {wallSide} * {wallJumpPush} = {jumpDirection}");
-
     // Apply diagonal velocity immediately
-    Vector2 wallJumpVelocity = new Vector2(jumpDirection, wallJumpForce);
-    Debug.Log($"Setting velocity to: {wallJumpVelocity}");
-    
+    Vector2 wallJumpVelocity = new Vector2(jumpDirection, wallJumpForce);    
     rb.velocity = wallJumpVelocity;
     
-    // Verify velocity was actually set
-    Debug.Log($"Velocity after setting: {rb.velocity}");
-    Debug.Log($"=== WALL JUMP END ===");
-
     if (frogPhysics != null)
     {
         // Lock horizontal movement for a short window
         frogPhysics.isWallJumping = true;
         frogPhysics.wallJumpTimer = frogPhysics.wallJumpDuration;
-        Debug.Log($"LOCK SET → isWallJumping={frogPhysics.isWallJumping}, timer={frogPhysics.wallJumpTimer:F2}");
         frogPhysics.isGrounded = false; // Ensure grounded state is false during wall jump
         frogPhysics.ResetDash();
 
@@ -135,7 +102,6 @@ public class WallJump : MonoBehaviour
     if (wallSide != 0)
     {
         bool shouldFlipX = wallSide < 0; // If wall is on left (wallSide = -1), flip to face right
-        Debug.Log($"Flipping sprite: wallSide={wallSide}, setting flipX to {shouldFlipX}");
         sr.flipX = shouldFlipX;
     }
 
@@ -189,7 +155,6 @@ public class WallJump : MonoBehaviour
                     isTouchingWall = true;
                     animator.SetBool("isClinging", true);
                     animator.SetTrigger("startCling");
-                    Debug.Log("Started clinging to wall");
                 }
 
                 Debug.Log($"Final wallSide: {wallSide}");

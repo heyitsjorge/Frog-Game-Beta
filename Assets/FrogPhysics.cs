@@ -41,7 +41,6 @@ public class FrogPhysics : MonoBehaviour
     public bool suppressGravity = false;
     public float suppressGravityTime = 0f;
 
-
     public bool isGrounded;
     public Transform groundCheck;
     public float groundCheckRadius = 0.2f;
