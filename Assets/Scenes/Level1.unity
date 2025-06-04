@@ -1080,14 +1080,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 325508810}
-  jumpVelocity: 12
-  gravityUp: 20
-  gravityDown: 40
+  jumpVelocity: 25
+  gravityUp: 35
+  gravityDown: 50
   jumpCutMultiplier: 0.5
   moveSpeed: 8
   airControl: 0.5
   coyoteTime: 0.1
   jumpBufferTime: 0.1
+  maxJumpHeight: 15
+  apexVelocityThreshold: 1
+  apexExtraGravity: 120
   groundCheck: {fileID: 151164095}
   groundCheckRadius: 0.2
   ground:

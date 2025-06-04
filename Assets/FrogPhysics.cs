@@ -33,8 +33,16 @@ public class FrogPhysics : MonoBehaviour
     public float apexVelocityThreshold = 1f; // Threshold to consider the apex of the jump
     public float apexExtraGravity = 120f; // Velocity at which the player is considered at the apex of the jump
 
+    // Repurposed: using these to match new WallJump logic
+    public bool isWallJumping = false;
+    public float wallJumpTimer = 0f;
+    public float wallJumpDuration = 0.15f;
 
-    private bool isGrounded;
+    public bool suppressGravity = false;
+    public float suppressGravityTime = 0f;
+
+
+    public bool isGrounded;
     public Transform groundCheck;
     public float groundCheckRadius = 0.2f;
     public LayerMask ground;
@@ -121,11 +129,9 @@ public class FrogPhysics : MonoBehaviour
             jumpBufferTimer = 0f;
         }
 
-
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             TryDash();
-
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse0) && !isThrowing)
@@ -167,14 +173,32 @@ public class FrogPhysics : MonoBehaviour
         }
 
         if (wallJump != null)
-        {
             wallJump.SetGrounded(isGrounded);
+
+        if (suppressGravity)
+        {
+            suppressGravityTime -= Time.deltaTime;
+            if (suppressGravityTime <= 0f)
+            {
+                suppressGravity = false;
+            }
+        }
+
+        // Count down the wall-jump lock timer
+        if (isWallJumping)
+        {
+            wallJumpTimer -= Time.deltaTime;
+            if (wallJumpTimer <= 0f)
+                isWallJumping = false;
         }
     }
 
     void FixedUpdate()
     {
-        throwCooldown -= Time.fixedDeltaTime;
+        if (isWallJumping && wallJumpTimer > 0f)
+        {
+            Debug.Log($"FixedUpdate START - isWallJumping: {isWallJumping}, wallJumpTimer: {wallJumpTimer:F2}, RB Velocity: {rb.velocity}");
+        }
 
         if (isAttacking)
         {
@@ -193,7 +217,6 @@ public class FrogPhysics : MonoBehaviour
                 {
                     animator.SetBool("isSheething", true);
                     DisableFirstAttackWeaponCollider();
-                    
                 }
             }
         }
@@ -226,6 +249,7 @@ public class FrogPhysics : MonoBehaviour
 
         if (isDashing)
         {
+            if (isWallJumping) Debug.Log("Wall jumping but also dashing!");
             DisableFirstAttackWeaponCollider();
             DisableSecondAttackWeaponCollider();
 
@@ -242,8 +266,24 @@ public class FrogPhysics : MonoBehaviour
             return;
         }
 
+        if (isWallJumping && wallJumpTimer > 0f)
+        {
+            Debug.Log($"Before ApplyCustomGravity - RB Velocity: {rb.velocity}");
+        }
+
         ApplyCustomGravity();
+        if (isWallJumping && wallJumpTimer > 0f)
+        {
+            Debug.Log($"Before HandleHorizontalMovement - RB Velocity: {rb.velocity}");
+        }
         HandleHorizontalMovement();
+        if (isWallJumping && wallJumpTimer > 0f)
+        {
+            Debug.Log($"FixedUpdate END - RB Velocity: {rb.velocity}");
+        }
+
+        Debug.Log($"POST-JUMP Frame → isGrounded={isGrounded}, isWallJumping={isWallJumping}, rb.velocity={rb.velocity}");
+        Debug.Log($"FixedUpdate #1 → isWallJumping={isWallJumping}, timer={wallJumpTimer:F2}");
     }
 
     void Jump()
@@ -260,20 +300,25 @@ public class FrogPhysics : MonoBehaviour
 
     void ApplyCustomGravity()
     {
+        if (suppressGravity) return;
+
         float gravityStrength = 0f;
         float currentJumpHeight = transform.position.y - jumpStartY;
+
+        // Preserve horizontal velocity if within wall-jump window
+        float preservedHorizontalVelocity = rb.velocity.x;
 
         if (rb.velocity.y > 0)
         {
             if (!jumpInputHeld || currentJumpHeight >= maxJumpHeight)
             {
-                rb.velocity = new Vector2(rb.velocity.x, 0); // STOP flying upward
-                gravityStrength = gravityDown; // FORCE gravity to kick in
+                rb.velocity = new Vector2(preservedHorizontalVelocity, 0);
+                gravityStrength = gravityDown;
                 isJumpingUp = false;
             }
             else
             {
-                gravityStrength = gravityUp; // still rising normally while holding jump
+                gravityStrength = gravityUp;
             }
         }
         else
@@ -283,15 +328,51 @@ public class FrogPhysics : MonoBehaviour
         }
 
         rb.velocity += Vector2.down * gravityStrength * Time.fixedDeltaTime;
-        rb.velocity = new Vector2(rb.velocity.x, Mathf.Max(rb.velocity.y, -gravityDown * 0.75f));   
-      }
 
+        // Reapply preserved X if still wall-jumping
+        if (isWallJumping && wallJumpTimer > 0f)
+        {
+            rb.velocity = new Vector2(preservedHorizontalVelocity, Mathf.Max(rb.velocity.y, -gravityDown * 0.75f));
+        }
+        else
+        {
+            rb.velocity = new Vector2(rb.velocity.x, Mathf.Max(rb.velocity.y, -gravityDown * 0.75f));
+        }
+    }
 
     void HandleHorizontalMovement()
+{
+    // CRITICAL: Exit immediately if wall jumping - don't touch horizontal velocity at all
+    if (isWallJumping && wallJumpTimer > 0f)
     {
-        float control = isGrounded ? 1f : airControl;
-        rb.velocity = new Vector2(moveInput * moveSpeed * control, rb.velocity.y);
+        Debug.Log($"[HandleX] WALL JUMP ACTIVE - Skipping all horizontal movement (timer: {wallJumpTimer:F2})");
+        return; // Exit the entire function
     }
+
+    // Normal horizontal movement (only when NOT wall jumping)
+    float control = isGrounded ? 1f : airControl;
+    Vector2 oldVel = rb.velocity;
+
+    // Apply movement input
+    if (moveInput != 0)
+    {
+        float newX = moveInput * moveSpeed * control;
+        rb.velocity = new Vector2(newX, oldVel.y);
+        
+        Debug.Log($"[HandleX] Movement applied: oldX={oldVel.x:F2} → newX={newX:F2}, input={moveInput}");
+    }
+    // Apply air resistance when airborne and no input
+    else if (!isGrounded && Mathf.Abs(oldVel.x) > 0.1f)
+    {
+        rb.velocity = new Vector2(oldVel.x * 0.98f, oldVel.y);
+        Debug.Log($"[HandleX] Air resistance applied: {oldVel.x:F2} → {rb.velocity.x:F2}");
+    }
+    // Stop horizontal movement when grounded and no input
+    else if (isGrounded)
+    {
+        rb.velocity = new Vector2(0f, oldVel.y);
+    }
+}
 
     void TryDash()
     {
@@ -341,7 +422,6 @@ public class FrogPhysics : MonoBehaviour
         DisableSecondAttackWeaponCollider();
 
         StartCoroutine(LoadMainMenuAfterDelay(2f));
-
     }
     private System.Collections.IEnumerator LoadMainMenuAfterDelay(float delay)
     {
@@ -430,4 +510,3 @@ public class FrogPhysics : MonoBehaviour
         proj.InititializeProjectile(sr.flipX ? Vector2.right : Vector2.left, go.GetComponent<Rigidbody2D>(), go.GetComponent<SpriteRenderer>());
     }
 }
-
