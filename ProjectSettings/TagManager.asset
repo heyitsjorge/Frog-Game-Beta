@@ -11,6 +11,7 @@ TagManager:
   - WIN
   - Kunai
   - MarioBeetle
+  - DeathPlane
   layers:
   - Default
   - TransparentFX

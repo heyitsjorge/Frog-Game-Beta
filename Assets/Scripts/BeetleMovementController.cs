@@ -1,10 +1,7 @@
 using UnityEngine;
 
-public class BeetleMovementController : MonoBehaviour
+public class BeetleMovementController : Enemy
 {
-
-    [SerializeField] float health;
-    [SerializeField] float speed;
     [SerializeField] float dropMultiplier;
 
     [SerializeField] Transform floorDetector;
@@ -47,11 +44,11 @@ public class BeetleMovementController : MonoBehaviour
 
         if (facingRight)
         {
-            tempVelocity.x = transform.right.x * speed * Time.fixedDeltaTime;
+            tempVelocity.x = transform.right.x * moveSpeed * Time.fixedDeltaTime;
         }
         else
         {
-            tempVelocity.x = transform.right.x * speed * Time.fixedDeltaTime * -1;
+            tempVelocity.x = transform.right.x * moveSpeed * Time.fixedDeltaTime * -1;
         }
         tempVelocity.y = gameObject.GetComponent<Rigidbody2D>().linearVelocityY * dropMultiplier;
 
@@ -66,14 +63,5 @@ public class BeetleMovementController : MonoBehaviour
         temp.x = temp.x * -1;
         transform.localScale = temp;
         facingRight = !facingRight;
-    }
-
-    public void OnHit(float damage){
-        health -= damage;
-        if (health <= 0)
-        {
-            Instantiate(deathAnimation, gameObject.transform.position, gameObject.transform.localRotation);
-            Destroy(gameObject);
-        }
     }
 }
