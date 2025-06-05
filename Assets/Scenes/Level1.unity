@@ -753,14 +753,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 325508810}
-  jumpVelocity: 12
-  gravityUp: 20
-  gravityDown: 40
+  jumpVelocity: 25
+  gravityUp: 35
+  gravityDown: 50
   jumpCutMultiplier: 0.5
   moveSpeed: 8
-  airControl: 0.5
+  airControl: 1
   coyoteTime: 0.1
   jumpBufferTime: 0.1
+  maxJumpHeight: 15
+  apexVelocityThreshold: 1
+  apexExtraGravity: 120
+  isWallJumping: 0
+  wallJumpTimer: 0
+  wallJumpDuration: 0.15
+  suppressGravity: 0
+  suppressGravityTime: 0
+  isGrounded: 0
   groundCheck: {fileID: 151164095}
   groundCheckRadius: 0.2
   ground:
@@ -822,6 +831,7 @@ MonoBehaviour:
   wallJumpPush: 8
   wallJumpCooldown: 0.2
   animator: {fileID: 325508810}
+  wallJumpTimer: 0
 --- !u!1 &328138128
 GameObject:
   m_ObjectHideFlags: 0
