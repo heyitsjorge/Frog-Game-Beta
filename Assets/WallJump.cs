@@ -51,13 +51,10 @@ public class WallJump : MonoBehaviour
 }
 
     void FixedUpdate()
-{
-    Debug.Log($"FixedUpdate: wallJumpRequested = {wallJumpRequested}");
-    
+{    
     // Execute the wall jump here for consistent physics timing
     if (wallJumpRequested)
     {
-        Debug.Log("WALL JUMP REQUEST DETECTED - About to call PerformWallJump()");
         wallJumpRequested = false;
         PerformWallJump();
     }

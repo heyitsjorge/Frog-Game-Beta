@@ -1,6 +1,7 @@
 
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 public class FrogPhysics : MonoBehaviour
 {
     private WallJump wallJump;
@@ -71,6 +72,8 @@ public class FrogPhysics : MonoBehaviour
     private float throwDurationLeft = 0.25f;
     private float throwCooldown = 0f;
 
+    public Transform respawnPoint;
+    public float maxHealth = 3;
     public float health = 3;
     private bool isDying = false;
 
@@ -281,8 +284,6 @@ public class FrogPhysics : MonoBehaviour
             Debug.Log($"FixedUpdate END - RB Velocity: {rb.velocity}");
         }
 
-        Debug.Log($"POST-JUMP Frame → isGrounded={isGrounded}, isWallJumping={isWallJumping}, rb.velocity={rb.velocity}");
-        Debug.Log($"FixedUpdate #1 → isWallJumping={isWallJumping}, timer={wallJumpTimer:F2}");
     }
 
     void Jump()
@@ -340,38 +341,38 @@ public class FrogPhysics : MonoBehaviour
     }
 
     void HandleHorizontalMovement()
-{
-    // CRITICAL: Exit immediately if wall jumping - don't touch horizontal velocity at all
-    if (isWallJumping && wallJumpTimer > 0f)
     {
-        Debug.Log($"[HandleX] WALL JUMP ACTIVE - Skipping all horizontal movement (timer: {wallJumpTimer:F2})");
-        return; // Exit the entire function
-    }
+        // CRITICAL: Exit immediately if wall jumping - don't touch horizontal velocity at all
+        if (isWallJumping && wallJumpTimer > 0f)
+        {
+            Debug.Log($"[HandleX] WALL JUMP ACTIVE - Skipping all horizontal movement (timer: {wallJumpTimer:F2})");
+            return; // Exit the entire function
+        }
 
-    // Normal horizontal movement (only when NOT wall jumping)
-    float control = isGrounded ? 1f : airControl;
-    Vector2 oldVel = rb.velocity;
+        // Normal horizontal movement (only when NOT wall jumping)
+        float control = isGrounded ? 1f : airControl;
+        Vector2 oldVel = rb.velocity;
 
-    // Apply movement input
-    if (moveInput != 0)
-    {
-        float newX = moveInput * moveSpeed * control;
-        rb.velocity = new Vector2(newX, oldVel.y);
-        
-        Debug.Log($"[HandleX] Movement applied: oldX={oldVel.x:F2} → newX={newX:F2}, input={moveInput}");
+        // Apply movement input
+        if (moveInput != 0)
+        {
+            float newX = moveInput * moveSpeed * control;
+            rb.velocity = new Vector2(newX, oldVel.y);
+
+            Debug.Log($"[HandleX] Movement applied: oldX={oldVel.x:F2} → newX={newX:F2}, input={moveInput}");
+        }
+        // Apply air resistance when airborne and no input
+        else if (!isGrounded && Mathf.Abs(oldVel.x) > 0.1f)
+        {
+            rb.velocity = new Vector2(oldVel.x * 0.98f, oldVel.y);
+            Debug.Log($"[HandleX] Air resistance applied: {oldVel.x:F2} → {rb.velocity.x:F2}");
+        }
+        // Stop horizontal movement when grounded and no input
+        else if (isGrounded)
+        {
+            rb.velocity = new Vector2(0f, oldVel.y);
+        }
     }
-    // Apply air resistance when airborne and no input
-    else if (!isGrounded && Mathf.Abs(oldVel.x) > 0.1f)
-    {
-        rb.velocity = new Vector2(oldVel.x * 0.98f, oldVel.y);
-        Debug.Log($"[HandleX] Air resistance applied: {oldVel.x:F2} → {rb.velocity.x:F2}");
-    }
-    // Stop horizontal movement when grounded and no input
-    else if (isGrounded)
-    {
-        rb.velocity = new Vector2(0f, oldVel.y);
-    }
-}
 
     void TryDash()
     {
@@ -420,7 +421,7 @@ public class FrogPhysics : MonoBehaviour
         DisableFirstAttackWeaponCollider();
         DisableSecondAttackWeaponCollider();
 
-        StartCoroutine(LoadMainMenuAfterDelay(2f));
+        StartCoroutine(RespawnAfterDelay(2f));
     }
     private System.Collections.IEnumerator LoadMainMenuAfterDelay(float delay)
     {
@@ -508,4 +509,26 @@ public class FrogPhysics : MonoBehaviour
         var proj = go.GetComponent<KunaiProjectile>();
         proj.InititializeProjectile(sr.flipX ? Vector2.right : Vector2.left, go.GetComponent<Rigidbody2D>(), go.GetComponent<SpriteRenderer>());
     }
+    
+    private IEnumerator RespawnAfterDelay(float delay)
+{
+    yield return new WaitForSeconds(delay);
+
+    // Move Jiri to the respawn point
+    transform.position = respawnPoint.position;
+    
+    // Reset health and dying state
+    health = maxHealth;
+    isDying = false;
+
+    // Reset animator state
+    animator.SetBool("isDead", false);
+    animator.ResetTrigger("isDying");
+
+    // Reactivate controls/physics
+    rb.bodyType = RigidbodyType2D.Dynamic;
+
+    // Optional: Add invincibility frames, particle effects, or UI feedback here!
+}
+
 }
