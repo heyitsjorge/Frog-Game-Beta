@@ -5,7 +5,7 @@ public class ToriGate : MonoBehaviour
 {
     public AudioClip VictorySound;
     private AudioSource audioSource;
-    public string nextSceneName = "ClosingScence";
+    public string nextSceneName = "TestScene";
     public float delayBeforeLoad = 5f; // Delay in seconds before loading the next scene
     private bool levelCompleted = false;
     

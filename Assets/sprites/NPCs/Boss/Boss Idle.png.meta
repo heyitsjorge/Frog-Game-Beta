@@ -128,20 +128,20 @@ TextureImporter:
       name: Boss Idle_0
       rect:
         serializedVersion: 2
-        x: 86
+        x: 87
         y: 0
-        width: 131
-        height: 68
+        width: 129
+        height: 67
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c55f04800b3a967c0800000000000000
-      internalID: -4077548011159227044
+      spriteID: 116296f4c22f7453c9772ec46a1334bc
+      internalID: -1165023733
       vertices: []
       indices: 
       edges: []
@@ -150,20 +150,20 @@ TextureImporter:
       name: Boss Idle_1
       rect:
         serializedVersion: 2
-        x: 310
+        x: 311
         y: 0
-        width: 124
-        height: 68
+        width: 122
+        height: 67
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 81fbe3e47bde896c0800000000000000
-      internalID: -4136294886192267496
+      spriteID: c43d0328c01d84dd087e77e0ecd2039e
+      internalID: 560187678
       vertices: []
       indices: 
       edges: []
@@ -172,20 +172,20 @@ TextureImporter:
       name: Boss Idle_2
       rect:
         serializedVersion: 2
-        x: 534
+        x: 535
         y: 0
-        width: 124
-        height: 66
+        width: 122
+        height: 65
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e62754bb0076c1420800000000000000
-      internalID: 2602067937552855662
+      spriteID: 3768bbb7b2c7743919e9724f34f7bb39
+      internalID: 1115570170
       vertices: []
       indices: 
       edges: []
@@ -194,20 +194,20 @@ TextureImporter:
       name: Boss Idle_3
       rect:
         serializedVersion: 2
-        x: 758
+        x: 759
         y: 0
-        width: 125
-        height: 66
+        width: 123
+        height: 65
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fe92de475e8996820800000000000000
-      internalID: 2912026745348368879
+      spriteID: aebbafab5332c4dbebea67e61afe803d
+      internalID: -1191896848
       vertices: []
       indices: 
       edges: []
@@ -216,20 +216,20 @@ TextureImporter:
       name: Boss Idle_4
       rect:
         serializedVersion: 2
-        x: 982
+        x: 983
         y: 0
-        width: 123
-        height: 68
+        width: 121
+        height: 67
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2ecaf8641ff62ead0800000000000000
-      internalID: -2674452146643030814
+      spriteID: c8901c1bf3ed34b1fa8c8617184f8702
+      internalID: 1658661193
       vertices: []
       indices: 
       edges: []
@@ -238,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ad8800f5b3ca1473ab2d8042eef0ab03
     internalID: 0
     vertices: []
     indices: 
@@ -246,8 +246,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
-    nameFileIdTable: {}
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Boss Idle_0: -1165023733
+      Boss Idle_1: 560187678
+      Boss Idle_2: 1115570170
+      Boss Idle_3: -1191896848
+      Boss Idle_4: 1658661193
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
