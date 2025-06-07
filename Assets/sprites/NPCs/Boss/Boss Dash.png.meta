@@ -297,7 +297,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Boss Dash_0: -2667563145796659614
+      Boss Dash_1: -3341293787588416998
+      Boss Dash_2: -3497362203918228277
+      Boss Dash_3: -3608661649926196877
+      Boss Dash_4: -6157512650513664255
+      Boss Dash_5: 3751202944356753588
+      Boss Dash_6: 1337548867956636580
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
