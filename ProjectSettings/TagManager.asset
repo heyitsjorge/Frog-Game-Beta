@@ -12,6 +12,7 @@ TagManager:
   - Kunai
   - MarioBeetle
   - DeathPlane
+  - Red_Beetle
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - Background
   - BadGuys
   - WeaponHitbox
-  - 
+  - Kunai
   - 
   - 
   - 

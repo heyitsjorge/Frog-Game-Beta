@@ -456,7 +456,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2528714268271422980}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: KunaiSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -856,6 +856,8 @@ MonoBehaviour:
   kunaiSpawnPoint: {fileID: 2528714268271422980}
   kunaiSpeed: 15
   throwCooldownTime: 0
+  respawnPoint: {fileID: 0}
+  maxHealth: 3
   health: 5
   weaponFirstAttackFirstCollider1: {fileID: 6273438129774502877}
   weaponFirstAttackFirstCollider2: {fileID: 2063981218023226943}
@@ -898,7 +900,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.009853065, y: -0.10165188}
+  m_Offset: {x: 0.009853065, y: -0.09504892}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -908,7 +910,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.18137169, y: 0.29714918}
+  m_Size: {x: 0.18137169, y: 0.2839433}
   m_EdgeRadius: 0
 --- !u!114 &1303343481013335083
 MonoBehaviour:
