@@ -3036,6 +3036,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2309077719043974418, guid: a9d01f7ac7bc3c8489e2bf398646d0cc, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2810000699463587209, guid: a9d01f7ac7bc3c8489e2bf398646d0cc, type: 3}
       propertyPath: respawnPoint
       value: 
