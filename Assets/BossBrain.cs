@@ -34,14 +34,14 @@ public class BossBrain : MonoBehaviour
         // Play idle animation if not already playing
         animator.Play("Boss Idle");
         // Could add idle logic here
-        rb.velocity = Vector2.zero; // Stop movement
+        rb.linearVelocity = Vector2.zero; // Stop movement
     }
 
      void WalkingUpdate()
     {
         animator.Play("Boss Move");
         Vector2 direction = new Vector2(player.position.x - transform.position.x, 0).normalized;
-        rb.velocity = new Vector2(direction.x * walkSpeed, rb.velocity.y);
+        rb.linearVelocity = new Vector2(direction.x * walkSpeed, rb.linearVelocity.y);
 
        
         float facing = player.position.x > transform.position.x ? -1 : 1;
@@ -62,13 +62,13 @@ public class BossBrain : MonoBehaviour
         }
         float dashDirection = player.position.x > transform.position.x ? 1 : -1;
 
-        rb.velocity = new Vector2(dashDirection * dashSpeed, rb.velocity.y);
+        rb.linearVelocity = new Vector2(dashDirection * dashSpeed, rb.linearVelocity.y);
         dashTimer -= Time.deltaTime;
 
         if (dashTimer <= 0f)
         {
             isDashing = false;
-            rb.velocity = Vector2.zero;
+            rb.linearVelocity = Vector2.zero;
             dashCooldownTimer = dashCooldown;
             ChangeState(BossState.Walking);
         }

@@ -78,7 +78,7 @@ public class WallJump : MonoBehaviour
     float jumpDirection = wallSide * wallJumpPush;
     // Apply diagonal velocity immediately
     Vector2 wallJumpVelocity = new Vector2(jumpDirection, wallJumpForce);    
-    rb.velocity = wallJumpVelocity;
+    rb.linearVelocity = wallJumpVelocity;
     
     if (frogPhysics != null)
     {
@@ -109,7 +109,7 @@ public class WallJump : MonoBehaviour
     private System.Collections.IEnumerator DebugVelocityNextFrame()
     {
         yield return new WaitForFixedUpdate();
-        Debug.Log($"Velocity after one frame: {rb.velocity}");
+        Debug.Log($"Velocity after one frame: {rb.linearVelocity}");
     }
 
     private IEnumerator DisableWallTouchTemporarily()
