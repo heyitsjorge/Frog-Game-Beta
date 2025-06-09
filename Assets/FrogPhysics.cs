@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using System;
 public class FrogPhysics : MonoBehaviour
 {
     private WallJump wallJump;
@@ -84,9 +85,10 @@ public class FrogPhysics : MonoBehaviour
     [SerializeField] private Collider2D weaponFirstAttackSecondCollider3;
     [SerializeField] private Collider2D weaponSecondAttackFirstCollider1;
     [SerializeField] private Collider2D weaponSecondAttackSecondCollider1;
-
+    public HealthDisplayer healthDisplayer;
     void Awake()
     {
+        
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
@@ -406,6 +408,7 @@ public class FrogPhysics : MonoBehaviour
     public void OnHit(float damage)
     {
         health -= damage;
+        healthDisplayer.DrawHearts();
         if (health <= 0)
         {
             OnDeath();
@@ -520,7 +523,7 @@ public class FrogPhysics : MonoBehaviour
     // Reset health and dying state
     health = maxHealth;
     isDying = false;
-
+    healthDisplayer.DrawHearts();
     // Reset animator state
     animator.SetBool("isDead", false);
     animator.ResetTrigger("isDying");

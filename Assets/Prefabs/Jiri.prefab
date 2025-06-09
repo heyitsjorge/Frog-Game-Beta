@@ -858,7 +858,7 @@ MonoBehaviour:
   kunaiSpeed: 15
   throwCooldownTime: 0
   respawnPoint: {fileID: 0}
-  maxHealth: 3
+  maxHealth: 5
   health: 5
   weaponFirstAttackFirstCollider1: {fileID: 6273438129774502877}
   weaponFirstAttackFirstCollider2: {fileID: 2063981218023226943}
@@ -867,6 +867,7 @@ MonoBehaviour:
   weaponFirstAttackSecondCollider3: {fileID: 6948004215765745428}
   weaponSecondAttackFirstCollider1: {fileID: 3317037697492901295}
   weaponSecondAttackSecondCollider1: {fileID: 1520647888175382503}
+  healthDisplayer: {fileID: 0}
 --- !u!61 &6874741991355407420
 BoxCollider2D:
   m_ObjectHideFlags: 0
