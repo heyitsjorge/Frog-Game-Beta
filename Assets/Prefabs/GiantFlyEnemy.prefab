@@ -192,6 +192,7 @@ MonoBehaviour:
   moveSpeed: 5
   damage: 1
   doesContactDamage: 1
+  flashColor: {r: 1, g: 0, b: 0, a: 1}
   deathAnimationObject: {fileID: 2219413098735270920, guid: 9df09804eeec62243b7f5a76f716037a, type: 3}
   animator: {fileID: 2200734096844912065}
   detectionRadius: 5

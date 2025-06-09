@@ -21,6 +21,10 @@ public class RedBeetleMovement : Enemy
     public float damageCooldown = 1f;
     private float damageTimer = 0f;
 
+    void Start()
+    {
+        base.Start();
+    }
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -40,6 +44,7 @@ public class RedBeetleMovement : Enemy
 
     void Update()
     {
+        base.Update();
         if (isDying) return;
 
         rb.linearVelocity = new Vector2(movingRight ? speed : -speed, rb.linearVelocity.y);

@@ -372,7 +372,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Boss Dodge_0: 7018477496544251695
+      Boss Dodge_1: 5137594128257926043
+      Boss Dodge_2: 2141965008912615980
+      Boss Dodge_3: -1870270558251253826
+      Boss Dodge_4: -6698684913731234298
+      Boss Dodge_5: 5550068740411522642
+      Boss Dodge_6: -9090138619441761031
+      Boss Dodge_7: 4885223657759040401
+      Boss Dodge_8: 6052383656172204661
+      Boss Dodge_9: -8114240984798665393
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

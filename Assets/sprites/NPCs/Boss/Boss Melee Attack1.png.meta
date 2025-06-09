@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Boss Melee Attack1_0: -2595063242662596829
+      Boss Melee Attack1_1: 20731376003238456
+      Boss Melee Attack1_2: -9008370918437725271
+      Boss Melee Attack1_3: 8406956719732310076
+      Boss Melee Attack1_4: 7131739693362366924
+      Boss Melee Attack1_5: 5163780443301394556
+      Boss Melee Attack1_6: 4030784087376986684
+      Boss Melee Attack1_7: 8004276005988067647
+      Boss Melee Attack1_8: 4637867710271642745
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
