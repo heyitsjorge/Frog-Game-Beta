@@ -102,7 +102,10 @@ public class FrogPhysics : MonoBehaviour
 
         moveInput = Input.GetAxisRaw("Horizontal");
         animator.SetFloat("Speed", Mathf.Abs(moveInput));
-        animator.SetFloat("FallSpeed", rb.linearVelocity.y);
+        float fallSpeed = rb.linearVelocity.y;
+        const float fallThreshold = -0.001f;
+        float adjustedFallSpeed = (fallSpeed < 0 && fallSpeed >= fallThreshold) ? 0f : fallSpeed;
+        animator.SetFloat("FallSpeed", adjustedFallSpeed);
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, ground);
         if (isGrounded)
