@@ -46,7 +46,8 @@ public class GroundPound : MonoBehaviour
 
         if (animator != null)
         {
-            animator.SetTrigger("isGroundPounding");
+            animator.SetTrigger("startGroundPounding");
+            animator.SetBool("isGroundPounding", true);
         }
     }
 
@@ -55,6 +56,10 @@ public class GroundPound : MonoBehaviour
         PerformGroundPoundImpact();
         isGroundPounding = false;
         poundTriggeredInAir = false;
+        if (animator != null)
+        {
+            animator.SetBool("isGroundPounding", false);
+        }
     }
 
     void PerformGroundPoundImpact()
