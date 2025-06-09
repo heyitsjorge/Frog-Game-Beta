@@ -53,7 +53,7 @@ public class BeetleMovementController : Enemy
             tempVelocity.x = transform.right.x * moveSpeed * Time.deltaTime * -1;
         }
         
-        tempVelocity.y = gameObject.GetComponent<Rigidbody2D>().linearVelocityY * dropMultiplier * Time.deltaTime;
+        tempVelocity.y = gameObject.GetComponent<Rigidbody2D>().linearVelocityY * dropMultiplier;
 
         if (tempVelocity.y > 0)
         {
