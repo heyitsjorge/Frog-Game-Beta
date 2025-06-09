@@ -1,34 +1,37 @@
 fileFormatVersion: 2
-guid: f40f7b1516d35420c8569454e2f8832b
+guid: c09472ceba73c6743abb776c8e9fa707
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7495572894757881797
-    second: FFrog Link Attack_0
+      213: 7018477496544251695
+    second: Boss Dodge_0
   - first:
-      213: 7883290596866527053
-    second: FFrog Link Attack_1
+      213: 5137594128257926043
+    second: Boss Dodge_1
   - first:
-      213: 513942839606777430
-    second: FFrog Link Attack_2
+      213: 2141965008912615980
+    second: Boss Dodge_2
   - first:
-      213: 147666984554972173
-    second: FFrog Link Attack_3
+      213: -1870270558251253826
+    second: Boss Dodge_3
   - first:
-      213: -2916384947547894606
-    second: FFrog Link Attack_4
+      213: -6698684913731234298
+    second: Boss Dodge_4
   - first:
-      213: 7700160860296692877
-    second: FFrog Link Attack_5
+      213: 5550068740411522642
+    second: Boss Dodge_5
   - first:
-      213: -4799486254145789637
-    second: FFrog Link Attack_6
+      213: -9090138619441761031
+    second: Boss Dodge_6
   - first:
-      213: -8426290738482868953
-    second: FFrog Link Attack_7
+      213: 4885223657759040401
+    second: Boss Dodge_7
   - first:
-      213: 4975869427057460841
-    second: FFrog Link Attack_8
+      213: 6052383656172204661
+    second: Boss Dodge_8
+  - first:
+      213: -8114240984798665393
+    second: Boss Dodge_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -61,7 +64,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -99,7 +102,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -137,155 +140,221 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FFrog Link Attack_0
+      name: Boss Dodge_0
       rect:
         serializedVersion: 2
-        x: 49
-        y: 19
-        width: 32
-        height: 30
+        x: 86
+        y: 0
+        width: 131
+        height: 68
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b38f8eb5a206af790800000000000000
-      internalID: -7495572894757881797
+      spriteID: f2fc79df814a66160800000000000000
+      internalID: 7018477496544251695
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FFrog Link Attack_1
+      name: Boss Dodge_1
       rect:
         serializedVersion: 2
-        x: 182
-        y: 19
-        width: 27
-        height: 30
+        x: 308
+        y: 0
+        width: 98
+        height: 66
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d4f0867c703176d60800000000000000
-      internalID: 7883290596866527053
+      spriteID: b9342f6b3a66c4740800000000000000
+      internalID: 5137594128257926043
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FFrog Link Attack_2
+      name: Boss Dodge_2
       rect:
         serializedVersion: 2
-        x: 302
-        y: 19
-        width: 35
-        height: 30
+        x: 531
+        y: 0
+        width: 102
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6561e952a44e12700800000000000000
-      internalID: 513942839606777430
+      spriteID: c2a8d85b3d9c9bd10800000000000000
+      internalID: 2141965008912615980
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FFrog Link Attack_3
+      name: Boss Dodge_3
       rect:
         serializedVersion: 2
-        x: 436
-        y: 12
-        width: 29
-        height: 37
+        x: 715
+        y: 0
+        width: 165
+        height: 57
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d04c37f075e9c0200800000000000000
-      internalID: 147666984554972173
+      spriteID: ebfff8d16d67b06e0800000000000000
+      internalID: -1870270558251253826
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FFrog Link Attack_4
+      name: Boss Dodge_4
       rect:
         serializedVersion: 2
-        x: 562
-        y: 3
-        width: 31
-        height: 46
+        x: 938
+        y: 0
+        width: 165
+        height: 53
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2bc8c15875be687d0800000000000000
-      internalID: -2916384947547894606
+      spriteID: 60618c6ef8d7903a0800000000000000
+      internalID: -6698684913731234298
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FFrog Link Attack_5
+      name: Boss Dodge_5
       rect:
         serializedVersion: 2
-        x: 689
-        y: 6
-        width: 32
-        height: 42
+        x: 1163
+        y: 0
+        width: 154
+        height: 67
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d84c95751877cda60800000000000000
-      internalID: 7700160860296692877
+      spriteID: 25e7a372d1ec50d40800000000000000
+      internalID: 5550068740411522642
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FFrog Link Attack_7
+      name: Boss Dodge_6
       rect:
         serializedVersion: 2
-        x: 815
-        y: 7
-        width: 34
-        height: 42
+        x: 1385
+        y: 0
+        width: 141
+        height: 77
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 72d809eb73dcf0b80800000000000000
-      internalID: -8426290738482868953
+      spriteID: 9f43d15561759d180800000000000000
+      internalID: -9090138619441761031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss Dodge_7
+      rect:
+        serializedVersion: 2
+        x: 1591
+        y: 2
+        width: 151
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 193ef01a80dcbc340800000000000000
+      internalID: 4885223657759040401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss Dodge_8
+      rect:
+        serializedVersion: 2
+        x: 1833
+        y: 0
+        width: 131
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 572368e4ed26ef350800000000000000
+      internalID: 6052383656172204661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss Dodge_9
+      rect:
+        serializedVersion: 2
+        x: 2052
+        y: 0
+        width: 129
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f45e82fb0dc646f80800000000000000
+      internalID: -8114240984798665393
       vertices: []
       indices: 
       edges: []
@@ -294,7 +363,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f692a16263cee473082e39edad758206
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -303,16 +372,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      FFrog Link Attack_0: -7495572894757881797
-      FFrog Link Attack_1: 7883290596866527053
-      FFrog Link Attack_2: 513942839606777430
-      FFrog Link Attack_3: 147666984554972173
-      FFrog Link Attack_4: -2916384947547894606
-      FFrog Link Attack_5: 7700160860296692877
-      FFrog Link Attack_6: -4799486254145789637
-      FFrog Link Attack_7: -8426290738482868953
-      FFrog Link Attack_8: 4975869427057460841
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

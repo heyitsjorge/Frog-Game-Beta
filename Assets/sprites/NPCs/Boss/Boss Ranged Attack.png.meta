@@ -1,34 +1,31 @@
 fileFormatVersion: 2
-guid: f40f7b1516d35420c8569454e2f8832b
+guid: 4775c70e736c5c34487f1086c6f5ed3f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7495572894757881797
-    second: FFrog Link Attack_0
+      213: -4654364639203928335
+    second: Boss Ranged Attack_0
   - first:
-      213: 7883290596866527053
-    second: FFrog Link Attack_1
+      213: 156796105212675612
+    second: Boss Ranged Attack_1
   - first:
-      213: 513942839606777430
-    second: FFrog Link Attack_2
+      213: -644003251413300901
+    second: Boss Ranged Attack_2
   - first:
-      213: 147666984554972173
-    second: FFrog Link Attack_3
+      213: -2879833835214948258
+    second: Boss Ranged Attack_3
   - first:
-      213: -2916384947547894606
-    second: FFrog Link Attack_4
+      213: 1994714235795681392
+    second: Boss Ranged Attack_4
   - first:
-      213: 7700160860296692877
-    second: FFrog Link Attack_5
+      213: -4081040511365525364
+    second: Boss Ranged Attack_5
   - first:
-      213: -4799486254145789637
-    second: FFrog Link Attack_6
+      213: 8934498194077016055
+    second: Boss Ranged Attack_6
   - first:
-      213: -8426290738482868953
-    second: FFrog Link Attack_7
-  - first:
-      213: 4975869427057460841
-    second: FFrog Link Attack_8
+      213: 901376523777548041
+    second: Boss Ranged Attack_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -61,7 +58,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -99,7 +96,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -137,155 +134,177 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FFrog Link Attack_0
+      name: Boss Ranged Attack_0
       rect:
         serializedVersion: 2
-        x: 49
-        y: 19
-        width: 32
-        height: 30
+        x: 86
+        y: 0
+        width: 131
+        height: 68
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b38f8eb5a206af790800000000000000
-      internalID: -7495572894757881797
+      spriteID: 1f65c114500686fb0800000000000000
+      internalID: -4654364639203928335
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FFrog Link Attack_1
+      name: Boss Ranged Attack_1
       rect:
         serializedVersion: 2
-        x: 182
-        y: 19
-        width: 27
-        height: 30
+        x: 310
+        y: 0
+        width: 125
+        height: 68
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d4f0867c703176d60800000000000000
-      internalID: 7883290596866527053
+      spriteID: c16cd591a3d0d2200800000000000000
+      internalID: 156796105212675612
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FFrog Link Attack_2
+      name: Boss Ranged Attack_2
       rect:
         serializedVersion: 2
-        x: 302
-        y: 19
-        width: 35
-        height: 30
+        x: 534
+        y: 0
+        width: 116
+        height: 67
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6561e952a44e12700800000000000000
-      internalID: 513942839606777430
+      spriteID: b594055747a0017f0800000000000000
+      internalID: -644003251413300901
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FFrog Link Attack_3
+      name: Boss Ranged Attack_3
       rect:
         serializedVersion: 2
-        x: 436
-        y: 12
-        width: 29
-        height: 37
+        x: 758
+        y: 0
+        width: 86
+        height: 67
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d04c37f075e9c0200800000000000000
-      internalID: 147666984554972173
+      spriteID: e58bcd78266c808d0800000000000000
+      internalID: -2879833835214948258
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FFrog Link Attack_4
+      name: Boss Ranged Attack_4
       rect:
         serializedVersion: 2
-        x: 562
-        y: 3
-        width: 31
-        height: 46
+        x: 956
+        y: 0
+        width: 112
+        height: 70
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2bc8c15875be687d0800000000000000
-      internalID: -2916384947547894606
+      spriteID: 070340d6706aeab10800000000000000
+      internalID: 1994714235795681392
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FFrog Link Attack_5
+      name: Boss Ranged Attack_5
       rect:
         serializedVersion: 2
-        x: 689
-        y: 6
-        width: 32
-        height: 42
+        x: 1125
+        y: 0
+        width: 167
+        height: 71
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d84c95751877cda60800000000000000
-      internalID: 7700160860296692877
+      spriteID: c805416f64b3d57c0800000000000000
+      internalID: -4081040511365525364
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FFrog Link Attack_7
+      name: Boss Ranged Attack_6
       rect:
         serializedVersion: 2
-        x: 815
-        y: 7
-        width: 34
-        height: 42
+        x: 1430
+        y: 0
+        width: 102
+        height: 67
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 72d809eb73dcf0b80800000000000000
-      internalID: -8426290738482868953
+      spriteID: 7ff545045c6bdfb70800000000000000
+      internalID: 8934498194077016055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss Ranged Attack_7
+      rect:
+        serializedVersion: 2
+        x: 1654
+        y: 0
+        width: 125
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90f13a43c25528c00800000000000000
+      internalID: 901376523777548041
       vertices: []
       indices: 
       edges: []
@@ -294,7 +313,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f692a16263cee473082e39edad758206
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -303,16 +322,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      FFrog Link Attack_0: -7495572894757881797
-      FFrog Link Attack_1: 7883290596866527053
-      FFrog Link Attack_2: 513942839606777430
-      FFrog Link Attack_3: 147666984554972173
-      FFrog Link Attack_4: -2916384947547894606
-      FFrog Link Attack_5: 7700160860296692877
-      FFrog Link Attack_6: -4799486254145789637
-      FFrog Link Attack_7: -8426290738482868953
-      FFrog Link Attack_8: 4975869427057460841
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

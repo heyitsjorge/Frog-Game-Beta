@@ -1,34 +1,34 @@
 fileFormatVersion: 2
-guid: f40f7b1516d35420c8569454e2f8832b
+guid: 6fa77354442d69840a9d06432dedac3a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7495572894757881797
-    second: FFrog Link Attack_0
+      213: -2595063242662596829
+    second: Boss Melee Attack1_0
   - first:
-      213: 7883290596866527053
-    second: FFrog Link Attack_1
+      213: 20731376003238456
+    second: Boss Melee Attack1_1
   - first:
-      213: 513942839606777430
-    second: FFrog Link Attack_2
+      213: -9008370918437725271
+    second: Boss Melee Attack1_2
   - first:
-      213: 147666984554972173
-    second: FFrog Link Attack_3
+      213: 8406956719732310076
+    second: Boss Melee Attack1_3
   - first:
-      213: -2916384947547894606
-    second: FFrog Link Attack_4
+      213: 7131739693362366924
+    second: Boss Melee Attack1_4
   - first:
-      213: 7700160860296692877
-    second: FFrog Link Attack_5
+      213: 5163780443301394556
+    second: Boss Melee Attack1_5
   - first:
-      213: -4799486254145789637
-    second: FFrog Link Attack_6
+      213: 4030784087376986684
+    second: Boss Melee Attack1_6
   - first:
-      213: -8426290738482868953
-    second: FFrog Link Attack_7
+      213: 8004276005988067647
+    second: Boss Melee Attack1_7
   - first:
-      213: 4975869427057460841
-    second: FFrog Link Attack_8
+      213: 4637867710271642745
+    second: Boss Melee Attack1_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -61,7 +61,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -99,7 +99,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -137,155 +137,199 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FFrog Link Attack_0
+      name: Boss Melee Attack1_0
       rect:
         serializedVersion: 2
-        x: 49
-        y: 19
-        width: 32
-        height: 30
+        x: 532
+        y: 0
+        width: 125
+        height: 94
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b38f8eb5a206af790800000000000000
-      internalID: -7495572894757881797
+      spriteID: 32f2c63eabb7cfbd0800000000000000
+      internalID: -2595063242662596829
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FFrog Link Attack_1
+      name: Boss Melee Attack1_1
       rect:
         serializedVersion: 2
-        x: 182
-        y: 19
-        width: 27
-        height: 30
+        x: 758
+        y: 0
+        width: 95
+        height: 94
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d4f0867c703176d60800000000000000
-      internalID: 7883290596866527053
+      spriteID: 83ac06e9317a94000800000000000000
+      internalID: 20731376003238456
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FFrog Link Attack_2
+      name: Boss Melee Attack1_2
       rect:
         serializedVersion: 2
-        x: 302
-        y: 19
-        width: 35
-        height: 30
+        x: 923
+        y: 0
+        width: 145
+        height: 100
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6561e952a44e12700800000000000000
-      internalID: 513942839606777430
+      spriteID: 9ab5f89c066dbf280800000000000000
+      internalID: -9008370918437725271
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FFrog Link Attack_3
+      name: Boss Melee Attack1_3
       rect:
         serializedVersion: 2
-        x: 436
-        y: 12
-        width: 29
-        height: 37
+        x: 1190
+        y: 77
+        width: 42
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d04c37f075e9c0200800000000000000
-      internalID: 147666984554972173
+      spriteID: c304ab938928ba470800000000000000
+      internalID: 8406956719732310076
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FFrog Link Attack_4
+      name: Boss Melee Attack1_4
       rect:
         serializedVersion: 2
-        x: 562
-        y: 3
-        width: 31
-        height: 46
+        x: 86
+        y: 0
+        width: 131
+        height: 68
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2bc8c15875be687d0800000000000000
-      internalID: -2916384947547894606
+      spriteID: cc9ca6d277709f260800000000000000
+      internalID: 7131739693362366924
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FFrog Link Attack_5
+      name: Boss Melee Attack1_5
       rect:
         serializedVersion: 2
-        x: 689
-        y: 6
-        width: 32
-        height: 42
+        x: 312
+        y: 0
+        width: 137
+        height: 68
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d84c95751877cda60800000000000000
-      internalID: 7700160860296692877
+      spriteID: c78b61d44fe69a740800000000000000
+      internalID: 5163780443301394556
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FFrog Link Attack_7
+      name: Boss Melee Attack1_6
       rect:
         serializedVersion: 2
-        x: 815
-        y: 7
-        width: 34
-        height: 42
+        x: 1147
+        y: 0
+        width: 145
+        height: 72
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 72d809eb73dcf0b80800000000000000
-      internalID: -8426290738482868953
+      spriteID: c32076e75c830f730800000000000000
+      internalID: 4030784087376986684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss Melee Attack1_7
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 0
+        width: 145
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f39e9157e96e41f60800000000000000
+      internalID: 8004276005988067647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss Melee Attack1_8
+      rect:
+        serializedVersion: 2
+        x: 1654
+        y: 0
+        width: 86
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97cdef92c140d5040800000000000000
+      internalID: 4637867710271642745
       vertices: []
       indices: 
       edges: []
@@ -294,7 +338,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f692a16263cee473082e39edad758206
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -303,16 +347,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      FFrog Link Attack_0: -7495572894757881797
-      FFrog Link Attack_1: 7883290596866527053
-      FFrog Link Attack_2: 513942839606777430
-      FFrog Link Attack_3: 147666984554972173
-      FFrog Link Attack_4: -2916384947547894606
-      FFrog Link Attack_5: 7700160860296692877
-      FFrog Link Attack_6: -4799486254145789637
-      FFrog Link Attack_7: -8426290738482868953
-      FFrog Link Attack_8: 4975869427057460841
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
