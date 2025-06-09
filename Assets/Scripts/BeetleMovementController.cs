@@ -20,13 +20,15 @@ public class BeetleMovementController : Enemy
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        base.Start();
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         Physics2D.IgnoreCollision(player.GetComponent<Collider2D>(), GetComponent<Collider2D>());
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
+        base.Update();
         Vector2 tempVelocity = gameObject.GetComponent<Rigidbody2D>().linearVelocity;
 
         if ((Physics2D.OverlapCircle(wallDetector.position, 0.05f, wallLayer)
@@ -44,14 +46,19 @@ public class BeetleMovementController : Enemy
 
         if (facingRight)
         {
-            tempVelocity.x = transform.right.x * moveSpeed * Time.fixedDeltaTime;
+            tempVelocity.x = transform.right.x * moveSpeed * Time.deltaTime;
         }
         else
         {
-            tempVelocity.x = transform.right.x * moveSpeed * Time.fixedDeltaTime * -1;
+            tempVelocity.x = transform.right.x * moveSpeed * Time.deltaTime * -1;
         }
-        tempVelocity.y = gameObject.GetComponent<Rigidbody2D>().linearVelocityY * dropMultiplier;
+        
+        tempVelocity.y = gameObject.GetComponent<Rigidbody2D>().linearVelocityY * dropMultiplier * Time.deltaTime;
 
+        if (tempVelocity.y > 0)
+        {
+            tempVelocity.y = 0;
+        }
 
         gameObject.GetComponent<Rigidbody2D>().linearVelocity = tempVelocity;
 

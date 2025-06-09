@@ -202,5 +202,14 @@ MonoBehaviour:
   moveSpeed: 5
   damage: 1
   doesContactDamage: 1
+  flashColor: {r: 1, g: 0, b: 0, a: 1}
   deathAnimationObject: {fileID: 0}
+  deathSound: {fileID: 0}
   animator: {fileID: 0}
+  speed: 2
+  damageRadius: 0.5
+  explodeRadius: 0.7
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  damageCooldown: 1
