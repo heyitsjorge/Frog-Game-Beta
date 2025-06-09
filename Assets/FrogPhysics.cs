@@ -102,7 +102,7 @@ public class FrogPhysics : MonoBehaviour
 
         moveInput = Input.GetAxisRaw("Horizontal");
         animator.SetFloat("Speed", Mathf.Abs(moveInput));
-        animator.SetFloat("FallSpeed", rb.velocity.y);
+        animator.SetFloat("FallSpeed", rb.linearVelocity.y);
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, ground);
         if (isGrounded)
@@ -157,7 +157,7 @@ public class FrogPhysics : MonoBehaviour
             isThrowing = true;
         }
 
-        if (rb.velocity.y <= 0)
+        if (rb.linearVelocity.y <= 0)
         {
             animator.SetBool("isJumping", false);
             animator.SetBool("isWallJumping", false);
@@ -199,7 +199,7 @@ public class FrogPhysics : MonoBehaviour
     {
         if (isWallJumping && wallJumpTimer > 0f)
         {
-            Debug.Log($"FixedUpdate START - isWallJumping: {isWallJumping}, wallJumpTimer: {wallJumpTimer:F2}, RB Velocity: {rb.velocity}");
+            Debug.Log($"FixedUpdate START - isWallJumping: {isWallJumping}, wallJumpTimer: {wallJumpTimer:F2}, RB Velocity: {rb.linearVelocity}");
         }
 
         if (isAttacking)
@@ -256,7 +256,7 @@ public class FrogPhysics : MonoBehaviour
             DisableSecondAttackWeaponCollider();
 
             float dashDirection = sr.flipX ? 1 : -1;
-            rb.velocity = new Vector2(dashDirection * dashSpeed, 0f);
+            rb.linearVelocity = new Vector2(dashDirection * dashSpeed, 0f);
             dashTimer -= Time.fixedDeltaTime;
 
             if (dashTimer <= 0f)
@@ -270,25 +270,25 @@ public class FrogPhysics : MonoBehaviour
 
         if (isWallJumping && wallJumpTimer > 0f)
         {
-            Debug.Log($"Before ApplyCustomGravity - RB Velocity: {rb.velocity}");
+            Debug.Log($"Before ApplyCustomGravity - RB Velocity: {rb.linearVelocity}");
         }
 
         ApplyCustomGravity();
         if (isWallJumping && wallJumpTimer > 0f)
         {
-            Debug.Log($"Before HandleHorizontalMovement - RB Velocity: {rb.velocity}");
+            Debug.Log($"Before HandleHorizontalMovement - RB Velocity: {rb.linearVelocity}");
         }
         HandleHorizontalMovement();
         if (isWallJumping && wallJumpTimer > 0f)
         {
-            Debug.Log($"FixedUpdate END - RB Velocity: {rb.velocity}");
+            Debug.Log($"FixedUpdate END - RB Velocity: {rb.linearVelocity}");
         }
 
     }
 
     void Jump()
     {
-        rb.velocity = new Vector2(rb.velocity.x, jumpVelocity);
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpVelocity);
         animator.SetBool("isJumping", true);
         animator.SetBool("isSheething", false);
 
@@ -306,13 +306,13 @@ public class FrogPhysics : MonoBehaviour
         float currentJumpHeight = transform.position.y - jumpStartY;
 
         // Preserve horizontal velocity if within wall-jump window
-        float preservedHorizontalVelocity = rb.velocity.x;
+        float preservedHorizontalVelocity = rb.linearVelocity.x;
 
-        if (rb.velocity.y > 0)
+        if (rb.linearVelocity.y > 0)
         {
             if (!jumpInputHeld || currentJumpHeight >= maxJumpHeight)
             {
-                rb.velocity = new Vector2(preservedHorizontalVelocity, 0);
+                rb.linearVelocity = new Vector2(preservedHorizontalVelocity, 0);
                 gravityStrength = gravityDown;
                 isJumpingUp = false;
             }
@@ -327,16 +327,16 @@ public class FrogPhysics : MonoBehaviour
             isJumpingUp = false;
         }
 
-        rb.velocity += Vector2.down * gravityStrength * Time.fixedDeltaTime;
+        rb.linearVelocity += Vector2.down * gravityStrength * Time.fixedDeltaTime;
 
         // Reapply preserved X if still wall-jumping
         if (isWallJumping && wallJumpTimer > 0f)
         {
-            rb.velocity = new Vector2(preservedHorizontalVelocity, Mathf.Max(rb.velocity.y, -gravityDown * 0.75f));
+            rb.linearVelocity = new Vector2(preservedHorizontalVelocity, Mathf.Max(rb.linearVelocity.y, -gravityDown * 0.75f));
         }
         else
         {
-            rb.velocity = new Vector2(rb.velocity.x, Mathf.Max(rb.velocity.y, -gravityDown * 0.75f));
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, Mathf.Max(rb.linearVelocity.y, -gravityDown * 0.75f));
         }
     }
 
@@ -351,26 +351,26 @@ public class FrogPhysics : MonoBehaviour
 
         // Normal horizontal movement (only when NOT wall jumping)
         float control = isGrounded ? 1f : airControl;
-        Vector2 oldVel = rb.velocity;
+        Vector2 oldVel = rb.linearVelocity;
 
         // Apply movement input
         if (moveInput != 0)
         {
             float newX = moveInput * moveSpeed * control;
-            rb.velocity = new Vector2(newX, oldVel.y);
+            rb.linearVelocity = new Vector2(newX, oldVel.y);
 
             Debug.Log($"[HandleX] Movement applied: oldX={oldVel.x:F2} → newX={newX:F2}, input={moveInput}");
         }
         // Apply air resistance when airborne and no input
         else if (!isGrounded && Mathf.Abs(oldVel.x) > 0.1f)
         {
-            rb.velocity = new Vector2(oldVel.x * 0.98f, oldVel.y);
-            Debug.Log($"[HandleX] Air resistance applied: {oldVel.x:F2} → {rb.velocity.x:F2}");
+            rb.linearVelocity = new Vector2(oldVel.x * 0.98f, oldVel.y);
+            Debug.Log($"[HandleX] Air resistance applied: {oldVel.x:F2} → {rb.linearVelocity.x:F2}");
         }
         // Stop horizontal movement when grounded and no input
         else if (isGrounded)
         {
-            rb.velocity = new Vector2(0f, oldVel.y);
+            rb.linearVelocity = new Vector2(0f, oldVel.y);
         }
     }
 

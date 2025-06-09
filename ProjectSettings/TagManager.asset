@@ -12,6 +12,8 @@ TagManager:
   - Kunai
   - MarioBeetle
   - DeathPlane
+  - Red_Beetle
+  - EdgeTrigger
   layers:
   - Default
   - TransparentFX

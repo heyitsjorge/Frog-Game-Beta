@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] float health = 5;
+    [SerializeField] protected float health = 5;
     public float moveSpeed = 5;
     [SerializeField] float damage = 1;
     [SerializeField] bool doesContactDamage;
@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
         // just to reduce reused code
     } 
 
-    public void OnHit(float damage)
+    public virtual void OnHit(float damage)
     {
         health -= damage;
         if (health <= 0)

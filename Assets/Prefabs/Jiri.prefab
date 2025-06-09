@@ -461,7 +461,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2528714268271422980
 Transform:
@@ -701,6 +701,7 @@ GameObject:
   - component: {fileID: 1303343481013335083}
   - component: {fileID: 8535103249067779937}
   - component: {fileID: 35753016659347109}
+  - component: {fileID: 2104588873119772981}
   m_Layer: 0
   m_Name: Jiri
   m_TagString: Player
@@ -856,6 +857,8 @@ MonoBehaviour:
   kunaiSpawnPoint: {fileID: 2528714268271422980}
   kunaiSpeed: 15
   throwCooldownTime: 0
+  respawnPoint: {fileID: 0}
+  maxHealth: 3
   health: 5
   weaponFirstAttackFirstCollider1: {fileID: 6273438129774502877}
   weaponFirstAttackFirstCollider2: {fileID: 2063981218023226943}
@@ -971,6 +974,24 @@ MonoBehaviour:
   wallJumpCooldown: 0.2
   animator: {fileID: 8535103249067779937}
   wallJumpTimer: 0
+--- !u!114 &2104588873119772981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4905231276243913265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46b2d79a68f51447aab93fedbc7c8917, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundPoundParticlesPrefab: {fileID: 0}
+  poundForce: -10
+  damageRadius: 3.5
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!1 &6452429533328965592
 GameObject:
   m_ObjectHideFlags: 0
