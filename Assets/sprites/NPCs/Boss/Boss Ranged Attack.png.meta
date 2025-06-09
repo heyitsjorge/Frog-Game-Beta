@@ -322,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Boss Ranged Attack_0: -4654364639203928335
+      Boss Ranged Attack_1: 156796105212675612
+      Boss Ranged Attack_2: -644003251413300901
+      Boss Ranged Attack_3: -2879833835214948258
+      Boss Ranged Attack_4: 1994714235795681392
+      Boss Ranged Attack_5: -4081040511365525364
+      Boss Ranged Attack_6: 8934498194077016055
+      Boss Ranged Attack_7: 901376523777548041
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
