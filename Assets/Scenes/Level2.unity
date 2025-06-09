@@ -127,6 +127,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8229421698484948710, guid: 761023f840232d445a6156df5a476d42, type: 3}
+      propertyPath: walkOffPlatform
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4315813923553871743, guid: 761023f840232d445a6156df5a476d42, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.55
