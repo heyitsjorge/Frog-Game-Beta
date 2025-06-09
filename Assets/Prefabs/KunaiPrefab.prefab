@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5547611191541684351}
   - component: {fileID: 5439019763885058022}
   - component: {fileID: 2539730107105467323}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: KunaiPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
