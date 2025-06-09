@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GroundPound : MonoBehaviour
 {
-    public GameObject groundPoundParticlesPrefab;
+    public GameObject GroundPoundEffectsPrefab;
     public float poundForce = -10f;
     public float damageRadius = 5f;
     public LayerMask enemyLayer;
@@ -60,20 +60,11 @@ public class GroundPound : MonoBehaviour
     void PerformGroundPoundImpact()
     {
 
-        if (groundPoundParticlesPrefab != null)
-        {      
-            GameObject effect = Instantiate(groundPoundParticlesPrefab, transform.position, Quaternion.identity);
+        if (GroundPoundEffectsPrefab != null)
+        {
+        Instantiate(GroundPoundEffectsPrefab, transform.position, Quaternion.identity);
+        }
 
-        ParticleSystem ps = effect.GetComponent<ParticleSystem>();
-        if (ps != null)
-        {
-            Destroy(effect, ps.main.duration + ps.main.startLifetime.constantMax);
-        }
-        else
-        {
-            Destroy(effect, 1f); 
-        }
-        }
         Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(transform.position, damageRadius, enemyLayer);
 
         foreach (Collider2D enemy in enemiesHit)

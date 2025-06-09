@@ -3,6 +3,7 @@ using UnityEngine;
 public class KunaiProjectile : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 10f;
+    [SerializeField] private AudioSource audioSource; 
 
     public void InititializeProjectile(Vector2 direction, Rigidbody2D rb, SpriteRenderer sr)
     {
@@ -23,6 +24,12 @@ public class KunaiProjectile : MonoBehaviour
             Enemy enemy = collision.GetComponent<Enemy>();
             enemy.OnHit(1);
         }
-        Destroy(gameObject);
+
+        if (audioSource != null)
+        {
+            audioSource.Play();
+        }
+
+        Destroy(gameObject, 0.1f); 
     }
 }
