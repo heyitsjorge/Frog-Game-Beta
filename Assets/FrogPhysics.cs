@@ -168,11 +168,12 @@ public class FrogPhysics : MonoBehaviour
             animator.SetBool("isWallJumping", false);
         }
 
-        if (moveInput != 0)
+        if (moveInput != 0 && !isWallJumping && !isDashing && !isAttacking && !isSecondAttackSet)
         {
+            // Flip
             bool prevFlipX = sr.flipX;
             sr.flipX = moveInput > 0;
-            if (prevFlipX != sr.flipX)
+            if (prevFlipX != sr.flipX )
             {
                 FlipWeaponColliders();
                 FlipKunaiSpawnPoint();
