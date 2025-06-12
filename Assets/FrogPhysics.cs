@@ -168,14 +168,14 @@ public class FrogPhysics : MonoBehaviour
             animator.SetBool("isWallJumping", false);
         }
 
-        if (moveInput != 0)
+        if (moveInput != 0 && !isWallJumping && !isDashing && !isAttacking && !isSecondAttackSet)
         {
+            // Flip
             bool prevFlipX = sr.flipX;
             sr.flipX = moveInput > 0;
-            if (prevFlipX != sr.flipX)
+            if (prevFlipX != sr.flipX )
             {
                 FlipWeaponColliders();
-                FlipKunaiSpawnPoint();
             }
         }
 
@@ -500,13 +500,6 @@ public class FrogPhysics : MonoBehaviour
         Flip(weaponFirstAttackSecondCollider3);
         Flip(weaponSecondAttackFirstCollider1);
         Flip(weaponSecondAttackSecondCollider1);
-    }
-
-    private void FlipKunaiSpawnPoint()
-    {
-        Vector3 spawnPosition = kunaiSpawnPoint.localPosition;
-        spawnPosition.x = -spawnPosition.x;
-        kunaiSpawnPoint.localPosition = spawnPosition;
     }
 
     public void ThrowKunai()
