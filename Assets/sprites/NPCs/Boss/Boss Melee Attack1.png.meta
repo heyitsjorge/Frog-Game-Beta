@@ -140,10 +140,10 @@ TextureImporter:
       name: Boss Melee Attack1_0
       rect:
         serializedVersion: 2
-        x: 532
+        x: 533
         y: 0
-        width: 125
-        height: 94
+        width: 123
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,10 +162,10 @@ TextureImporter:
       name: Boss Melee Attack1_1
       rect:
         serializedVersion: 2
-        x: 758
+        x: 759
         y: 0
-        width: 95
-        height: 94
+        width: 93
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,10 +184,10 @@ TextureImporter:
       name: Boss Melee Attack1_2
       rect:
         serializedVersion: 2
-        x: 923
+        x: 924
         y: 0
-        width: 145
-        height: 100
+        width: 143
+        height: 99
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,10 +206,10 @@ TextureImporter:
       name: Boss Melee Attack1_3
       rect:
         serializedVersion: 2
-        x: 1190
-        y: 77
-        width: 42
-        height: 16
+        x: 1191
+        y: 78
+        width: 40
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,10 +228,10 @@ TextureImporter:
       name: Boss Melee Attack1_4
       rect:
         serializedVersion: 2
-        x: 86
+        x: 87
         y: 0
-        width: 131
-        height: 68
+        width: 129
+        height: 67
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,10 +250,10 @@ TextureImporter:
       name: Boss Melee Attack1_5
       rect:
         serializedVersion: 2
-        x: 312
+        x: 313
         y: 0
-        width: 137
-        height: 68
+        width: 135
+        height: 67
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -272,10 +272,10 @@ TextureImporter:
       name: Boss Melee Attack1_6
       rect:
         serializedVersion: 2
-        x: 1147
+        x: 1148
         y: 0
-        width: 145
-        height: 72
+        width: 143
+        height: 71
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,10 +294,10 @@ TextureImporter:
       name: Boss Melee Attack1_7
       rect:
         serializedVersion: 2
-        x: 1371
+        x: 1372
         y: 0
-        width: 145
-        height: 65
+        width: 143
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -316,10 +316,10 @@ TextureImporter:
       name: Boss Melee Attack1_8
       rect:
         serializedVersion: 2
-        x: 1654
+        x: 1655
         y: 0
-        width: 86
-        height: 66
+        width: 84
+        height: 65
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -338,7 +338,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b2f9d23b8097f4eb8a64572f7dc44ba8
     internalID: 0
     vertices: []
     indices: 
@@ -346,7 +346,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Boss Melee Attack1_0: -2595063242662596829
       Boss Melee Attack1_1: 20731376003238456
