@@ -12,5 +12,13 @@ public class DeathBarrier : MonoBehaviour
                 player.OnDeath(); // Triggers your existing death method
             }
         }
+        if (collision.CompareTag("Enemy"))
+        {
+            Enemy enemy = collision.GetComponent<Enemy>();
+            if (enemy != null)
+            {
+                enemy.OnDeath(); // trigger existing enemy death method
+            }
+        }
     }
 }
