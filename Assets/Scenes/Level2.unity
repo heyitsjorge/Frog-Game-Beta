@@ -374,7 +374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VictorySound: {fileID: 8300000, guid: e456091f65f2b4a4ebb950d46032d48e, type: 3}
-  nextSceneName: TestScene
+  nextSceneName: Level3-maybe
   delayBeforeLoad: 5
 --- !u!212 &444155902
 SpriteRenderer:
@@ -106992,6 +106992,10 @@ PrefabInstance:
     - target: {fileID: 4013280550581318773, guid: 67d04dc3191965d4b8004f9bdefdbb49, type: 3}
       propertyPath: spawningDelay
       value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013280550581318773, guid: 67d04dc3191965d4b8004f9bdefdbb49, type: 3}
+      propertyPath: spawnedMoveSpeed
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6543729619022763371, guid: 67d04dc3191965d4b8004f9bdefdbb49, type: 3}
       propertyPath: m_LocalPosition.x
