@@ -63,7 +63,7 @@ public class WallJump : MonoBehaviour
         // Only log this occasionally to avoid spam
         if (Time.fixedTime % 1f < Time.fixedDeltaTime)
         {
-            Debug.Log("No wall jump requested this frame");
+            // Debug.Log("No wall jump requested this frame");
         }
     }
 }
@@ -96,11 +96,11 @@ public class WallJump : MonoBehaviour
     }
 
     // Flip sprite to face away from wall
-    if (wallSide != 0)
-    {
-        bool shouldFlipX = wallSide < 0; // If wall is on left (wallSide = -1), flip to face right
-        sr.flipX = shouldFlipX;
-    }
+    // if (wallSide != 0)
+    // {
+    //     bool shouldFlipX = wallSide < 0; // If wall is on left (wallSide = -1), flip to face right
+    //     sr.flipX = shouldFlipX;
+    // }
 
     // Check velocity on next physics frame
     StartCoroutine(DebugVelocityNextFrame());

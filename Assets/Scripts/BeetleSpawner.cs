@@ -5,11 +5,13 @@ public class BeetleSpawner : MonoBehaviour
     [SerializeField] float spawningDelay = 20;
     [SerializeField] bool spawnFacingRight = true;
     [SerializeField] BeetleMovementController beetle;
+    [SerializeField] float spawnedMoveSpeed = 3;
     private float tempDelay;
     void Start()
     {
         tempDelay = spawningDelay;
         beetle.facingRight = spawnFacingRight;
+        beetle.moveSpeed = spawnedMoveSpeed;
     }
     void FixedUpdate()
     {

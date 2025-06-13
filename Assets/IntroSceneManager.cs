@@ -41,7 +41,7 @@ public class IntroSceneManager : MonoBehaviour
         yield return StartCoroutine(FadeToBlack());
 
         // Load Level 1
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Level1Tileset");
     }
 
     IEnumerator MoveJiri(){
