@@ -9,6 +9,8 @@ public class Boss_Move : StateMachineBehaviour
 
     BossBrain bossBrain;
 
+    BossWeapon bossWeapon;
+
     public float speed = 6f;
     public float meleeRange = 3f;
 
@@ -20,24 +22,44 @@ public class Boss_Move : StateMachineBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = animator.GetComponent<Rigidbody2D>();
 
+
         // Get the BossBrain component
         bossBrain = animator.GetComponent<BossBrain>();
+        bossWeapon = animator.GetComponent<BossWeapon>();
+        bossWeapon.playerTransform = player;
 
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+
+        bossWeapon.TickDashCooldown();
+        Debug.Log($"[MoveState] rb.velocity = {rb.velocity}");
+
+
         bossBrain.LookAtPlayer();
         Vector2 target = new Vector2(player.position.x, rb.position.y);
         Vector2 new_position = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
-        rb.MovePosition(new_position);
+        float dist = Vector2.Distance(player.position, rb.position);
 
-        if (Vector2.Distance(player.position, rb.position) <= meleeRange)
+        if (!bossWeapon.isDashing && !bossWeapon.isDodging)
+        {
+            rb.MovePosition(new_position);
+        }
+
+        if (dist <= meleeRange)
         {
             animator.SetTrigger("MeleeAttack");
+                animator.ResetTrigger("Dash");
+            }
+        if (dist > meleeRange && dist <= bossWeapon.dashAttackRange && bossWeapon.dashCooldownTimer <= 0 && !bossWeapon.isDodging)
+        {
+            animator.SetTrigger("Dash");
+            animator.ResetTrigger("MeleeAttack");
+            bossWeapon.dashMovement();
         }
-        
+
 
     }
 
@@ -45,6 +67,8 @@ public class Boss_Move : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.ResetTrigger("MeleeAttack");
+        animator.ResetTrigger("Dash");
+        bossWeapon.isDashing = false;
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
