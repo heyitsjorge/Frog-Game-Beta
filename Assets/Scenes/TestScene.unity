@@ -3808,7 +3808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d412c1b49c278434fa02245c2618f430, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 200
+  maxHP: 125
   currHP: 0
 --- !u!4 &1226429475 stripped
 Transform:
