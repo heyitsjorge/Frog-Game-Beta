@@ -219,12 +219,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
-  moveSpeed: 150
+  moveSpeed: 3
   damage: 1
   doesContactDamage: 1
   flashColor: {r: 1, g: 0, b: 0, a: 1}
   deathAnimationObject: {fileID: 2219413098735270920, guid: 9df09804eeec62243b7f5a76f716037a, type: 3}
-  dropMultiplier: 1.1
+  dropMultiplier: 1
   floorDetector: {fileID: 1919922105640939944}
   wallDetector: {fileID: 502259653247756489}
   groundedDetector: {fileID: 6681568339251639776}

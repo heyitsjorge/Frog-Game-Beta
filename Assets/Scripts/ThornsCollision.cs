@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DeathBarrier : MonoBehaviour
+public class ThornsCollision : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -12,13 +12,6 @@ public class DeathBarrier : MonoBehaviour
                 player.OnDeath(); // Triggers your existing death method
             }
         }
-        if (collision.CompareTag("Enemy"))
-        {
-            Enemy enemy = collision.GetComponent<Enemy>();
-            if (enemy != null)
-            {
-                Destroy(enemy); // trigger existing enemy death method
-            }
-        }
     }
+    
 }

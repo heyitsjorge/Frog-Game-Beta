@@ -13,7 +13,7 @@ public class BeetleMovementController : Enemy
 
     [SerializeField] private GameObject deathAnimation;
 
-    [SerializeField] bool facingRight;
+    public bool facingRight;
 
 
     [SerializeField] bool walkOffPlatform;
@@ -23,6 +23,7 @@ public class BeetleMovementController : Enemy
         base.Start();
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         Physics2D.IgnoreCollision(player.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+        GetComponent<Rigidbody2D>().gravityScale = dropMultiplier;
     }
 
     // Update is called once per frame
@@ -31,29 +32,21 @@ public class BeetleMovementController : Enemy
         base.Update();
         Vector2 tempVelocity = gameObject.GetComponent<Rigidbody2D>().linearVelocity;
 
-        if ((Physics2D.OverlapCircle(wallDetector.position, 0.05f, wallLayer)
+        if (Physics2D.OverlapCircle(wallDetector.position, 0.05f, wallLayer)
             || Physics2D.OverlapCircle(wallDetector.position, 0.05f, enemyLayer))
-            && Physics2D.OverlapCircle(groundedDetector.position, 0.05f, wallLayer))
         {
             Debug.Log("green koopa flip");
             FlipSprite();
         }
-        else if (!walkOffPlatform && (!Physics2D.OverlapCircle(floorDetector.position, 0.05f, wallLayer)))
+        else if (!walkOffPlatform && !Physics2D.OverlapCircle(floorDetector.position, 0.05f, wallLayer) && Physics2D.OverlapCircle(groundedDetector.position, 0.05f, wallLayer))
         {
             Debug.Log("red koopa flip");
             FlipSprite();
         }
 
-        if (facingRight)
-        {
-            tempVelocity.x = transform.right.x * moveSpeed * Time.deltaTime;
-        }
-        else
-        {
-            tempVelocity.x = transform.right.x * moveSpeed * Time.deltaTime * -1;
-        }
-        
-        tempVelocity.y = gameObject.GetComponent<Rigidbody2D>().linearVelocityY * dropMultiplier;
+        tempVelocity.x = facingRight ? moveSpeed : -moveSpeed;
+
+        tempVelocity.y = gameObject.GetComponent<Rigidbody2D>().linearVelocityY;
 
         if (tempVelocity.y > 0)
         {
