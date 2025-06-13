@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] Color flashColor;
     private Color tempColor;
     [SerializeField] GameObject deathAnimationObject;
+    [SerializeField] bool isImmortal = false;
 
     public void Start()
     {
@@ -45,7 +46,7 @@ public class Enemy : MonoBehaviour
             tempColor = enemySprite.color;
             enemySprite.color = flashColor;
         }
-        if (health <= 0)
+        if (health <= 0 && !isImmortal)
         {
             enemySprite.color = tempColor;
             OnDeath();
