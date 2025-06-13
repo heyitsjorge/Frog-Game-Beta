@@ -17,12 +17,27 @@ public class KunaiProjectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Hit " + collision.name);
-        if (collision.CompareTag("Enemy"))
+        Debug.Log("Kunai hit: " + collision.name);
+
+        bool didHit = false;
+
+        // 1) Hit generic Enemy?
+        var enemy = collision.GetComponent<Enemy>();
+        if (enemy != null)
         {
-            Enemy enemy = collision.GetComponent<Enemy>();
             enemy.OnHit(1);
+            didHit = true;
         }
-        Destroy(gameObject);
+
+        // 2) Hit Yama (boss)?
+        var boss = collision.GetComponentInParent<Boss_Health>();
+        if (boss != null)
+        {
+            boss.OnHit(1);
+            didHit = true;
+        }
+
+        if (didHit)
+            Destroy(gameObject);
     }
 }

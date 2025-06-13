@@ -17,10 +17,21 @@ public class PlayerSwordHitbox : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Hit " + collision.name);
-        if (collision.CompareTag("Enemy"))
+
+
+        Enemy enemy = collision.GetComponent<Enemy>();
+        if (collision.CompareTag("Enemy") && enemy != null)
         {
-            Enemy enemy = collision.GetComponent<Enemy>();
             enemy.OnHit(1);
+        }
+
+        Boss_Health boss = collision.GetComponentInParent<Boss_Health>();
+        {
+            if (boss != null)
+            {
+                boss.OnHit(1);
+                Debug.Log("Boss hit for 1 damage");
+            }
         }
     }
 }

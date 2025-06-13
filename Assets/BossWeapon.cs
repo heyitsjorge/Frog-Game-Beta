@@ -10,12 +10,11 @@ public class BossWeapon : MonoBehaviour
     Rigidbody2D rb;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public int meleeDamage = 4;
-    public int rangedDamage = 10;
 
     public Vector3 attackOffset;
 
     public float meleeRange = 3f;
-    public float rangedRange = 10f;
+   
     public LayerMask attackMask;
 
     //dash attack variables
@@ -30,6 +29,18 @@ public class BossWeapon : MonoBehaviour
 
     //Dodging varaibles
     public bool isDodging = false;
+    //ranged attack variables
+    public int rangedDamage = 10;
+    public float rangedRange = 10f;
+
+    public GameObject rockPrefab;
+    public Transform rockSpawnPoint;
+    public float      projectileSpeed = 8f;
+    public float      rangedCooldown  = 2f;
+    public float     rangedCooldownTimer = 0f;
+
+    public LayerMask rangedMask;
+
     public void meleeAttack()
     {
         Vector3 pos = transform.position;
@@ -112,8 +123,45 @@ private IEnumerator DoDash()
         }
     }
 
+    void Update()
+    {
+        // tick your ranged cooldown back toward zero
+        if (rangedCooldownTimer > 0f)
+            rangedCooldownTimer -= Time.deltaTime;
+    }
 
+    public void RangedAttack()
+    {
+        // Only fire if off cooldown and prefab assigned
+        if (rangedCooldownTimer > 0f || rockPrefab == null || playerTransform == null)
+            return;
 
+        // Determine spawn position
+        Vector3 spawnPos = rockSpawnPoint != null
+            ? rockSpawnPoint.position
+            : transform.position;
+
+        // Compute direction towards player
+        Vector2 dir = (playerTransform.position - spawnPos).normalized;
+
+        // Instantiate and initialize projectile
+        GameObject rock = Instantiate(rockPrefab, spawnPos, Quaternion.identity);
+        var proj = rock.GetComponent<RockProjectile>();
+        if (proj != null)
+        {
+            proj.Initialize(dir, projectileSpeed, rangedDamage, rangedMask);
+        }
+        else
+        {
+            // Fallback: direct Rigidbody2D velocity
+            var rb = rock.GetComponent<Rigidbody2D>();
+            if (rb != null)
+                rb.velocity = dir * projectileSpeed;
+        }
+
+        // Restart cooldown
+        rangedCooldownTimer = rangedCooldown;
+    }
 
     void OnDrawGizmosSelected()
     {

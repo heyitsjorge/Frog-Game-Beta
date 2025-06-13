@@ -51,14 +51,21 @@ public class Boss_Move : StateMachineBehaviour
         if (dist <= meleeRange)
         {
             animator.SetTrigger("MeleeAttack");
-                animator.ResetTrigger("Dash");
-            }
+            animator.ResetTrigger("Dash");
+        }
         if (dist > meleeRange && dist <= bossWeapon.dashAttackRange && bossWeapon.dashCooldownTimer <= 0 && !bossWeapon.isDodging)
         {
             animator.SetTrigger("Dash");
             animator.ResetTrigger("MeleeAttack");
             bossWeapon.dashMovement();
         }
+        if (dist > meleeRange && dist <= bossWeapon.rangedRange && bossWeapon.rangedCooldownTimer <= 0 && !bossWeapon.isDodging)
+        {
+            animator.SetTrigger("RangedAttack");
+            animator.ResetTrigger("MeleeAttack");
+            bossWeapon.RangedAttack();
+        }
+        
 
 
     }
