@@ -5,6 +5,6 @@ public class SkipCutsceneButton : MonoBehaviour
 {
     public void SkipCutscene()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Level1TileSet");
     }
 }
