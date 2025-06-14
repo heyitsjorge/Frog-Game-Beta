@@ -13,7 +13,7 @@ public class ClosingScene : MonoBehaviour
     void Start()
     {
         StartCoroutine(ShowDialogLines(new string[]{
-            "stay tuned for the next chapter of...",
+            "Thanks For Playing!",
             "Jiri's Leap!"
         }));
     }

@@ -1079,11 +1079,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3970415448693847119, guid: 22aa582efe1664a73bff25358ceb500e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 44.7
+      value: 49.2
       objectReference: {fileID: 0}
     - target: {fileID: 3970415448693847119, guid: 22aa582efe1664a73bff25358ceb500e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3970415448693847119, guid: 22aa582efe1664a73bff25358ceb500e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4456,7 +4456,6 @@ GameObject:
   - component: {fileID: 1131272941}
   - component: {fileID: 1131272940}
   - component: {fileID: 1131272939}
-  - component: {fileID: 1131272938}
   - component: {fileID: 1131272937}
   - component: {fileID: 1131272942}
   m_Layer: 9
@@ -4478,44 +4477,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d8c3bd57ff424e18b6e959377c29a93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1131272938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1131272936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0849493c2f2344d6b295d15c74a8f90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTransform: {fileID: 64306223}
-  meleeDamage: 4
-  attackOffset: {x: 0, y: 0, z: 0}
-  meleeRange: 3
-  attackMask:
-    serializedVersion: 2
-    m_Bits: 1
-  isDashing: 0
-  dashAttackRange: 6
-  dashDamage: 3
-  dashSpeed: 10
-  dashHitBoxRadius: 1.5
-  dashDuration: 0.5
-  dashCooldown: 3
-  dashCooldownTimer: 0
-  isDodging: 0
-  rangedDamage: 10
-  rangedRange: 20
-  rockPrefab: {fileID: 1131272936}
-  rockSpawnPoint: {fileID: 2065111768}
-  projectileSpeed: 20
-  rangedCooldown: 2
-  rangedCooldownTimer: 0
-  rangedMask:
-    serializedVersion: 2
-    m_Bits: 1
 --- !u!50 &1131272939
 Rigidbody2D:
   serializedVersion: 5
@@ -4607,7 +4568,7 @@ Transform:
   m_GameObject: {fileID: 1131272936}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.31, y: -3.34, z: 0}
+  m_LocalPosition: {x: 14.3, y: -33.5, z: 0}
   m_LocalScale: {x: 7, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5130,8 +5091,8 @@ Transform:
   m_GameObject: {fileID: 1618473852}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.6, y: -2.06, z: 10}
-  m_LocalScale: {x: 14.245201, y: 14.9556, z: 1}
+  m_LocalPosition: {x: 16.7, y: 13.1, z: 10}
+  m_LocalScale: {x: 13.21, y: 14.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1548919377}
@@ -5180,7 +5141,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8559549211684105477, guid: 27ccfa4d8ed7ae54f9b58afed5f5e1c9, type: 3}
+  m_Sprite: {fileID: -1955448553306655712, guid: d21a3fc4928abda4797959045d4eba15, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

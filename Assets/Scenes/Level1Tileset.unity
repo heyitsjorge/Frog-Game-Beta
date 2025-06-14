@@ -1448,7 +1448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VictorySound: {fileID: 8300000, guid: e456091f65f2b4a4ebb950d46032d48e, type: 3}
-  nextSceneName: TestScene
+  nextSceneName: Level2
   delayBeforeLoad: 5
 --- !u!212 &835154451
 SpriteRenderer:
