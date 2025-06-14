@@ -88,8 +88,17 @@ public class GroundPound : MonoBehaviour
             {
                 e.OnHit(5);
             }
+
+            Boss_Health boss = enemy.GetComponent<Boss_Health>();
+            if (boss != null)
+            {
+                boss.OnHit(5);
+                Debug.Log("Boss hit for 5 damage");
+             }
+            
         }
 
+        
         Debug.Log("Ground pound impact!");
     }
 
